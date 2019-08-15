@@ -1,0 +1,45 @@
+﻿
+
+
+
+it's the graphical interface that the user must use to see and edit the map.
+it's basically a picture box where we make an image inside and show it to the user.
+the map editer do/handles almost everything.
+
+
+
+
+
+
+
+
+Shown Image :
+what the user see most of the time is the image assigned to the picture box and nothing else.
+
+when the user add an object, move an object or move the map :
+the image inside the picture box IS NOT modified. when needed (in mousemove event or from a timer) a Graphics object is made from picturebox.CreateGraphics() and this object
+is used to draw things on the picturebox. things draw with this object are temporary and will "go away" when the picture box will be refreshed.
+
+for addmode and moving objects, the cercle/rectangle that follow the mouse are inside the mousemove.
+for moving the map, it's from a timer at the bottom of the file.
+
+the RefreshImage void begins by drawing the links and THEN it sraw the object. so links are under the objects and objects are not hidden because of the links.
+
+
+
+
+
+
+there are two central function that convert coordinates between ui and virtual and these functions are ConvertUiToVirtual  and  ConvertVirtualToUi.
+the vertical virtual Y axis is not reversed. this means that y positive is ~"up" (upwards ?) and y negative is ~"down" (downwards ?)
+
+
+
+
+
+
+keys events are recorded by Form1. Form1 has KeyPreview. when Form1 receive an keyup/down events, it call the KeyUp/KeyDown voids of the map editer.
+
+
+
+
