@@ -15,7 +15,7 @@ The game is very stable and optimized for building massive factories. You can cr
 About FactorioOrganizer :
 It's a program i made to help design factories. You can place areas and belts and the program will draw links between areas and what they need.
 
-
+See the wiki for explications.
 
 
 
