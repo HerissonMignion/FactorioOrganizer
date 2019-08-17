@@ -39,32 +39,9 @@ namespace FactorioOrganizer
 		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			//this.GenTestMap();
 
-			this.ButtonTest.Visible = false;
 			this.ButtonTopMost.Text = "Top Most : " + this.TopMost.ToString();
 			this.RefreshSize();
-		}
-		private void ButtonTest_Click(object sender, EventArgs e)
-		{
-			//this.Editer.StartAddMode(new MapObject(MOType.Machine, FOType.CopperCable));
-
-			//List<FOType> allt = Utilz.GetListOfAllFOType();
-			//foreach (FOType t in allt)
-			//{
-			//	Program.wdebug(t.ToString());
-			//}
-
-
-
-			//Random rnd = new Random();
-			//for (int i = 0; i < 100; i++)
-			//{
-			//	string str = ((float)(rnd.NextDouble() * rnd.NextDouble() * rnd.NextDouble() * rnd.NextDouble() * rnd.NextDouble() * rnd.NextDouble() * 10000d)).ToString("N20");
-			//	Program.wdebug(oMap.TrimStrNumber(str)); //it was public static for the tests
-			//}
-
-
 		}
 		private void Form1_KeyDown(object sender, KeyEventArgs e)
 		{
@@ -146,49 +123,7 @@ namespace FactorioOrganizer
 
 
 		}
-
-
-
-
-		private void GenTestMap()
-		{
-			//belt iron
-			for (int i = 0; i < 20; i++)
-			{
-				MapObject mo = new MapObject(MOType.Belt, FOType.IronPlate);
-				mo.vpos.X = (float)i * 1.5f;
-				mo.vpos.Y = 0f;
-				this.Map.listMO.Add(mo);
-			}
-			//belt cooper
-			for (int i = 0; i < 20; i++)
-			{
-				MapObject mo = new MapObject(MOType.Belt, FOType.CopperPlate);
-				mo.vpos.X = (float)i * 1.5f;
-				mo.vpos.Y = -2f;
-				this.Map.listMO.Add(mo);
-			}
-
-			//machine gear
-			for (int i = 0; i < 10; i++)
-			{
-				MapObject mo = new MapObject(MOType.Machine, FOType.IronGear);
-				mo.vpos.X = (float)i * 4f;
-				mo.vpos.Y = 3f;
-				this.Map.listMO.Add(mo);
-			}
-
-			//belt gear
-			for (int i = 0; i < 20; i++)
-			{
-				MapObject mo = new MapObject(MOType.Belt, FOType.IronGear);
-				mo.vpos.X = (float)i * 1.5f;
-				mo.vpos.Y = 8f;
-				this.Map.listMO.Add(mo);
-			}
-
-
-		}
+		
 
 	}
 }

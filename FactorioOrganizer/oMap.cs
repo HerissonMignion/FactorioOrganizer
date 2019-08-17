@@ -118,27 +118,7 @@ namespace FactorioOrganizer
 					}
 				}
 			}
-
-			//before output reform
-
-			//lco = listMO.FindAll(x => x.OutType == ft);
-			//try
-			//{
-			//	lco.Remove(mo);
-			//}
-			//catch { }
-			//if (lco.Count > 0)
-			//{
-			//	lco = lco.OrderBy(x => x.DistTo(mo.vpos.X, mo.vpos.Y)).ToList();
-			//	foreach (MapObject submo in lco)
-			//	{
-			//		if (submo.MapType == MapType)
-			//		{
-			//			mo1 = submo;
-			//			break;
-			//		}
-			//	}
-			//}
+			
 			return mo1;
 		}
 

@@ -15,42 +15,12 @@ namespace FactorioOrganizer
 		public MOType MapType;
 		
 		
-		public FOType OutType
-		{
-			get
-			{
-				try
-				{
-					if (this.MapType == MOType.Belt)
-					{
-						return this.BeltOutput;
-					}
-					//before, output wasn't an array. there was only one output. when i made output an array, i did that to keep the code compatible until i change everything and i leave it there. 
-					if (this.MapType == MOType.Machine)
-					{
-						return this.Outputs[0];
-					}
-				}
-				catch
-				{
-					return FOType.none;
-				}
-				return FOType.none;
-			}
-		}
 
 
 		public FOType BeltOutput = FOType.none; //content of the belt, if this is a belt ////    contenue de la belt
 
 		public FOType[] Outputs = new FOType[] { };
-		public void SetOutput(FOType newout)
-		{
-			this.Outputs = new FOType[] { newout };
-		}
-		public void SetOutput(FOType[] newouts)
-		{
-			this.Outputs = newouts;
-		}
+		
 
 		public FOType[] Inputs = new FOType[] { };
 
@@ -115,15 +85,7 @@ namespace FactorioOrganizer
 				this.SetRecipe(StartOut);
 			}
 		}
-		//public MapObject(MOType StartMapType, FOType[] StartOutputs)
-		//{
-		//	this.MapType = StartMapType;
-		//	this.SetOutput(StartOutputs);
-		//	if (this.MapType == MOType.Machine)
-		//	{
-		//		this.SetRecipe(StartOutputs[0]);
-		//	}
-		//}
+
 
 
 
@@ -132,7 +94,7 @@ namespace FactorioOrganizer
 		{
 			if (this.MapType == MOType.Belt)
 			{
-				this.SetOutput(Recipe);
+				this.BeltOutput = Recipe;
 			}
 			if (this.MapType == MOType.Machine)
 			{
@@ -154,6 +116,7 @@ namespace FactorioOrganizer
 			if (deltay < 0f) { deltay = this.vpos.Y - vy; }
 			if (this.MapType == MOType.Machine)
 			{
+				//machines are square. we don't analyse radius/dist to middle
 				return deltax <= this.VirtualWidth / 2f && deltay <= this.VirtualWidth / 2f;
 			}
 			else

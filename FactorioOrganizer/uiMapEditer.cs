@@ -114,7 +114,6 @@ namespace FactorioOrganizer
 					//if rep == null, the user clicked ~"in the void"=(user didn't clicked on any object) so we begin drag and drop //// si rep == null, l'utilisateur a clické dans le vide et on fait un drag and drop
 					if (mo == null)
 					{
-						//Program.wdebug("INSIDE");
 						this.StartDragAndDrop();
 
 
@@ -249,9 +248,7 @@ namespace FactorioOrganizer
 			if (this.IsDragAndDropMO)
 			{
 				this.dadmoMO.vpos = this.MouseVirtualPos;
-
-				//this.RefreshImage();
-
+				
 				this.ImageBox.Refresh();
 				Graphics g = this.ImageBox.CreateGraphics();
 				int uiradius = (int)(this.dadmoMO.VirtualWidth * (float)(this.Width) / this.VirtualWidth / 2f + 0.5f); //graphical radius ////    rayon graphique de l'objet
@@ -386,13 +383,7 @@ namespace FactorioOrganizer
 								g.DrawLine(Pens.Orchid, mouipos, mouipos2); // Crimson
 							}
 						}
-						//MapObject closemo = this.Map.FindClosestMoWithOutput(mo, MOType.Belt, mo.Outputs[0]);
-						//if (closemo != null)
-						//{
-						//	Point mouipos2 = this.ConvertVirtualToUi(closemo.vpos.X, closemo.vpos.Y);
-						//	g.DrawLine(Pens.Red, mouipos, mouipos2);
-						//}
-
+						
 
 						//draw links of every inputs
 						mo.IsAllInputPresent = true;

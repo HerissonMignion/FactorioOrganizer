@@ -88,22 +88,7 @@ namespace FactorioOrganizer
 
 		private void CreateControls()
 		{
-
-			//this.CreateNewButtonBelt(FactorioOrganizer.Properties.Resources.iron_plate, FOType.IronPlate);
-			//this.CreateNewButtonBelt(FactorioOrganizer.Properties.Resources.copper_plate, FOType.CopperPlate);
-			//this.CreateNewButtonBelt(FactorioOrganizer.Properties.Resources.iron_gear_wheel, FOType.IronGear);
-			//this.CreateNewButtonBelt(FactorioOrganizer.Properties.Resources.copper_cable, FOType.CopperCable);
-			//this.CreateNewButtonBelt(FactorioOrganizer.Properties.Resources.transport_belt, FOType.Belt);
-			//this.CreateNewButtonBelt(FactorioOrganizer.Properties.Resources.electronic_circuit, FOType.GreenCircuit);
-
-			//this.CreateNewButtonMachine(FactorioOrganizer.Properties.Resources.iron_gear_wheel, FOType.IronGear);
-			//this.CreateNewButtonMachine(FactorioOrganizer.Properties.Resources.copper_cable, FOType.CopperCable);
-			//this.CreateNewButtonMachine(FactorioOrganizer.Properties.Resources.transport_belt, FOType.Belt);
-			//this.CreateNewButtonMachine(FactorioOrganizer.Properties.Resources.electronic_circuit, FOType.GreenCircuit);
-
-
-
-			//this.CreateNewButonBoth(FOType.TEST);
+			
 			this.CreateNewButtonBoth(FOType.OreIron);
 			this.CreateNewButtonBoth(FOType.OreCopper);
 			this.CreateNewButtonBoth(FOType.IronPlate);
@@ -312,13 +297,13 @@ namespace FactorioOrganizer
 			{
 				if (mt == MOType.Belt)
 				{
-					if (Utilz.IsBeltable(ft))
+					if (Utilz.IsBeltable(ft)) //we set addmode only if the item can be a belt
 					{
 						MapObject newmo = new MapObject(mt, ft);
 						this.Editer.StartAddMode(newmo);
 					}
 				}
-				if (mt == MOType.Machine)
+				if (mt == MOType.Machine) //we set addmode only if the item can be a machine
 				{
 					if (Utilz.IsRecipe(ft))
 					{
@@ -337,6 +322,7 @@ namespace FactorioOrganizer
 				rc.AddChoice(ft.ToString());
 				rc.AddSeparator();
 				rc.AddSeparator();
+				//add every outputs and inputs for the user
 				rc.AddChoice("Outputs :");
 				foreach (FOType subft in arrayOutputs)
 				{

@@ -28,23 +28,11 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.ButtonTest = new System.Windows.Forms.Button();
 			this.ButtonSave = new System.Windows.Forms.Button();
 			this.ButtonOpen = new System.Windows.Forms.Button();
 			this.ButtonHelp = new System.Windows.Forms.Button();
 			this.ButtonTopMost = new System.Windows.Forms.Button();
 			this.SuspendLayout();
-			// 
-			// ButtonTest
-			// 
-			this.ButtonTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.ButtonTest.Location = new System.Drawing.Point(457, 95);
-			this.ButtonTest.Name = "ButtonTest";
-			this.ButtonTest.Size = new System.Drawing.Size(57, 28);
-			this.ButtonTest.TabIndex = 0;
-			this.ButtonTest.Text = "Test";
-			this.ButtonTest.UseVisualStyleBackColor = true;
-			this.ButtonTest.Click += new System.EventHandler(this.ButtonTest_Click);
 			// 
 			// ButtonSave
 			// 
@@ -108,7 +96,6 @@
 			this.Controls.Add(this.ButtonHelp);
 			this.Controls.Add(this.ButtonOpen);
 			this.Controls.Add(this.ButtonSave);
-			this.Controls.Add(this.ButtonTest);
 			this.KeyPreview = true;
 			this.Name = "Form1";
 			this.Text = "Factorio Organizer";
@@ -118,8 +105,6 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Button ButtonTest;
 		private System.Windows.Forms.Button ButtonSave;
 		private System.Windows.Forms.Button ButtonOpen;
 		private System.Windows.Forms.Button ButtonHelp;
