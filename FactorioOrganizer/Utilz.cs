@@ -24,9 +24,7 @@ namespace FactorioOrganizer
 			}
 			return FOType.none;
 		}
-
-
-
+		
 		
 		public static Bitmap GetAssociatedIcon(FOType ft)
 		{
@@ -202,7 +200,7 @@ namespace FactorioOrganizer
 		}
 
 
-		//return true si c'est élément est fabriqué à l'intérieur d'un four
+		//return true if this element is made inside a furnace ////    return true si c'est élément est fabriqué à l'intérieur d'un four
 		public static bool IsRecipeMadeInFurnace(FOType Recipe)
 		{
 			if (Recipe == FOType.IronPlate) { return true; }
@@ -395,12 +393,7 @@ namespace FactorioOrganizer
 
 			return new FOType[] { Recipe }; //most objects ////    la plupart des object
 		}
-
 		
-		// ////    une recette n'est jamais un tableau. toute les recette sont désigné par un object du jeu.
-		// ////    les input et les output sont toujours des array qui peuvent contenir un ou plusieur élément.
-		// ////    une recette spécifie quel sont les input et les output. une receipe n'est pas toujours possible en version belt.
-
 		//a recipe is never an array. every recipe are designed from an object of the game.
 		//inputs and outputs are always arrays that can contain one or more elements.
 		//a recipe specify what are the inputs and outputs. a recipe isn't always possible as a belt for exemple : oil processing things

@@ -8,7 +8,7 @@ using System.Drawing;
 namespace FactorioOrganizer
 {
 
-	//une belt. c'est plus petit qu'une machine
+
 	public class MapObject
 	{
 
@@ -68,9 +68,7 @@ namespace FactorioOrganizer
 
 
 
-
-		// ////   pour une belt, StartOut est le contenue qu'elle transporte. pour une machine, StartOut est le recipe
-
+		
 		//for a belt, StartOut is its content. for a machine, StartOut is the recipe
 		public MapObject(MOType StartMapType = MOType.Belt, FOType StartOut = FOType.none)
 		{
@@ -92,12 +90,13 @@ namespace FactorioOrganizer
 		//define inputs and outputs according to the recipe ////    défini les input et output qui vont avec la recette spécifié
 		public void SetRecipe(FOType Recipe)
 		{
-			if (this.MapType == MOType.Belt)
+			if (this.MapType == MOType.Belt) //SetRecipe is usually not called for belts
 			{
 				this.BeltOutput = Recipe;
 			}
 			if (this.MapType == MOType.Machine)
 			{
+				//set the recipe and set everything
 				this.TheRecipe = Recipe;
 				this.Outputs = Utilz.GetRecipeOutputs(Recipe);
 				this.Inputs = Utilz.GetRecipeInputs(Recipe);
@@ -110,16 +109,17 @@ namespace FactorioOrganizer
 		//return if this map object touch to a specific virtual coordinate ////    retourne si this touche à une coordonné
 		public bool IsTouch(float vx, float vy)
 		{
+			//get pos difference in absolute value. abosule values are very usefull when not using pythagore theorem
 			float deltax = vx - this.vpos.X;
 			if (deltax < 0f) { deltax = this.vpos.X - vx; }
 			float deltay = vy - this.vpos.Y;
 			if (deltay < 0f) { deltay = this.vpos.Y - vy; }
-			if (this.MapType == MOType.Machine)
+			if (this.MapType == MOType.Machine) //if this is a machine, we check absolute pos difference a see if it fits inside the square
 			{
 				//machines are square. we don't analyse radius/dist to middle
 				return deltax <= this.VirtualWidth / 2f && deltay <= this.VirtualWidth / 2f;
 			}
-			else
+			else //if this is a belt, we use pythagore theorem and check if it fits inside the radius
 			{
 				return Math.Sqrt((deltax * deltax) + (deltay * deltay)) <= this.VirtualWidth / 2f;
 			}

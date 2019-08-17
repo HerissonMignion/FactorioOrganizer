@@ -330,6 +330,7 @@ namespace FactorioOrganizer
 
 		public void RefreshImage()
 		{
+			//check are very usefull when minimizing the form.
 			int imgWidth = this.Width;
 			int imgHeight = this.Height;
 			if (imgWidth < 100) { imgWidth = 100; }
@@ -338,6 +339,8 @@ namespace FactorioOrganizer
 			Graphics g = Graphics.FromImage(img);
 			g.Clear(Color.FromArgb(32, 32, 32));
 
+
+			//machine has the property IsAllInputPresent (belts too but it's only useful for machines). in the part of drawing the links, we "compute" is this property true or false. in the second part of refreshimage, this property defines the back color.
 
 
 			//draw links between objects ////    dessine les lien entre les object
@@ -349,7 +352,7 @@ namespace FactorioOrganizer
 				{
 					if (mo.MapType == MOType.Belt)
 					{
-						MapObject[] twomo = this.Map.GetCompatible2ObjsCloseTo(mo);
+						MapObject[] twomo = this.Map.GetCompatible2BeltsCloseTo(mo);
 						if (twomo[0] != null)
 						{
 							Point mouipos2 = this.ConvertVirtualToUi(twomo[0].vpos.X, twomo[0].vpos.Y);
