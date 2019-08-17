@@ -199,6 +199,10 @@ namespace FactorioOrganizer
 			return FactorioOrganizer.Properties.Resources.assembling_machine_0;
 		}
 
+		public static Bitmap GetAssociatedIcon(string sft)
+		{
+			return Utilz.GetAssociatedIcon(Utilz.GetFOTypeAssociatedToString(sft));
+		}
 
 		//return true if this element is made inside a furnace ////    return true si c'est élément est fabriqué à l'intérieur d'un four
 		public static bool IsRecipeMadeInFurnace(FOType Recipe)

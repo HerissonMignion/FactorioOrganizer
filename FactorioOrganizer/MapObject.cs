@@ -34,7 +34,16 @@ namespace FactorioOrganizer
 
 		public bool IsFurnace = false;
 		public bool NeedCoal = true; //if this is a furnace, indicate if this need coal ////    si this est une furnace, indique si this a besoin de coal
-		
+
+		//i guess that some mods require other things than coal to make things so, in the future, we might have to replace NeedCoal by NeededCombustibles which will be an array of sItem and a static list of arrays in Crafts who describe every combustibles options to toggle.
+		//we can also make the change of NeedCoal to NeededCombustibles only if any mods were loaded. if no mod loaded, we stay with NeedCoal.
+
+		//or a lazy and less user friendly option is to remove NeedCoal and possibly IsFurnace and make one recipe for every combination of for what would be every combinaison of NeededCombustibles.
+
+		//another preferable solution we be leave it like that. current vanilla items won't be affected. modded items will have one recipe for every combinaisons of what represented NeededCombustibles in the other solution.
+
+
+
 
 
 

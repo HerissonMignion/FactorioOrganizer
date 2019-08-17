@@ -39,6 +39,7 @@ namespace FactorioOrganizer
 		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			this.GenDefaultItems();
 
 			this.ButtonTopMost.Text = "Top Most : " + this.TopMost.ToString();
 			this.RefreshSize();
@@ -124,6 +125,26 @@ namespace FactorioOrganizer
 
 		}
 		
+
+
+
+
+
+
+
+		//this void generates default item. in the futur, this void could become a backup in case the user don't have a specified file
+		public void GenDefaultItems()
+		{
+
+
+
+
+
+		}
+
+
+
+
 
 	}
 }
