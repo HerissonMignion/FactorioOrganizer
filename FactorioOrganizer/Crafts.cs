@@ -17,6 +17,34 @@ namespace FactorioOrganizer
 		public static List<Bitmap> listIcons = new List<Bitmap>(); //this list constains every existing icons of items.
 
 
+
+		public static sItem ConvertFotTosItem(FOType ft)
+		{
+			string sft = ft.ToString();
+			int index = 0;
+			while (index < Crafts.listItems.Count)
+			{
+				if (Crafts.listItems[index].Name == sft)
+				{
+					return Crafts.listItems[index];
+				}
+				//next iteration
+				index++;
+			}
+			return new sItem("none", false, false, "");
+		}
+		public static sItem[] ConvertArrayFotTosItem(FOType[] fts)
+		{
+			List<sItem> rep = new List<sItem>();
+			foreach (FOType ft in fts)
+			{
+				rep.Add(Crafts.ConvertFotTosItem(ft));
+			}
+			return rep.ToArray();
+		}
+
+
+
 		//for both items and crafts (especialy crafts), if it already exist, we should override the aleady existing one. this would allow us to make a backup object list inside the program if the user don't have any files.
 
 		public static void AddItem(sItem newitem, Bitmap ItemIcon)

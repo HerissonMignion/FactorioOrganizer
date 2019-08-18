@@ -25,6 +25,38 @@ namespace FactorioOrganizer
 			this.IsMadeInFurnace = sIsFurnace;
 		}
 
+		public override string ToString()
+		{
+			string rep = "CRAFT(";
+			rep += this.Recipe.Name + ",";
+			//inputs
+			rep += "input(";
+			bool isfirst = true;
+			foreach (sItem i in this.Inputs)
+			{
+				if (!isfirst) { rep += ","; }
+				rep += i.Name;
+				//next iteration
+				isfirst = false;
+			}
+			rep += "),";
 
+			//outputs
+			rep += "outputs(";
+			isfirst = true;
+			foreach (sItem i in this.Outputs)
+			{
+				if (!isfirst) { rep += ","; }
+				rep += i.Name;
+				//next iteration
+				isfirst = false;
+			}
+			rep += "),";
+
+			if (!this.IsMadeInFurnace) { rep += "NOT"; }
+			rep += "madeInFurnace";
+			rep += ")";
+			return rep;
+		}
 	}
 }

@@ -662,7 +662,7 @@ namespace FactorioOrganizer
 							}
 							if (mo.MapType == MOType.Belt)
 							{
-								FOType ft = mo.BeltOutput;
+								FOType ft = mo.oldBeltOutput;
 								MapObject copy = new MapObject(MOType.Machine, ft);
 								this.StartAddMode(copy);
 							}

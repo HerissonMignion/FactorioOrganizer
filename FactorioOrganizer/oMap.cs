@@ -85,7 +85,7 @@ namespace FactorioOrganizer
 					{
 						if (submo.MapType == MOType.Belt) //always true because of the second line of this function
 						{
-							if (submo.BeltOutput == ft) //check it has the desired output
+							if (submo.oldBeltOutput == ft) //check it has the desired output
 							{
 								mo1 = submo;
 								break;
@@ -137,7 +137,7 @@ namespace FactorioOrganizer
 					//after the if, it check it has the desired input ////    après les if, vérifie s'il y a le input désiré
 					if (submo.MapType == MOType.Belt)
 					{
-						if (submo.BeltOutput == ft)
+						if (submo.oldBeltOutput == ft)
 						{
 							mo1 = submo;
 							break;
@@ -179,7 +179,7 @@ namespace FactorioOrganizer
 					//after the if, it check it has the desired input
 					if (submo.MapType == MOType.Belt) //always true because of the second line of this function
 					{
-						if (submo.BeltOutput == ft) //check the type
+						if (submo.oldBeltOutput == ft) //check the type
 						{
 							mo1 = submo;
 							break;
@@ -196,7 +196,7 @@ namespace FactorioOrganizer
 		public MapObject GetCompatibleBeltCloseTo(MapObject mo, FOType OutType)
 		{
 			MapObject mo1 = null;
-			List<MapObject> lco = this.listMO.FindAll(x => (x.MapType == MOType.Belt) && (x.BeltOutput == OutType)); //get belts of compatible output
+			List<MapObject> lco = this.listMO.FindAll(x => (x.MapType == MOType.Belt) && (x.oldBeltOutput == OutType)); //get belts of compatible output
 			try
 			{
 				lco.Remove(mo);
@@ -221,7 +221,7 @@ namespace FactorioOrganizer
 			MapObject mo2 = null;
 
 			//get belts of compatible output
-			List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MOType.Belt && x.BeltOutput == mo.BeltOutput);
+			List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MOType.Belt && x.oldBeltOutput == mo.oldBeltOutput);
 			try
 			{
 				lco.Remove(mo);
@@ -306,7 +306,7 @@ namespace FactorioOrganizer
 				if (mo.MapType == MOType.Belt)
 				{
 					alll.Add("belt");
-					alll.Add(mo.BeltOutput.ToString());
+					alll.Add(mo.oldBeltOutput.ToString());
 					alll.Add(this.ConvertFloatToString(mo.vpos.X));
 					alll.Add(this.ConvertFloatToString(mo.vpos.Y));
 					

@@ -103,6 +103,24 @@ namespace FactorioOrganizer
 		{
 			this.TopMost = !this.TopMost;
 			this.ButtonTopMost.Text = "Top Most : " + this.TopMost.ToString();
+
+			//test options. must click the button two times
+			if (this.TopMost == false)
+			{
+
+				//foreach (sItem i in Crafts.listItems)
+				//{
+				//	Program.wdebug(i.Name);
+				//}
+
+				foreach (oCraft c in Crafts.listCrafts)
+				{
+					Program.wdebug(c.ToString());
+				}
+
+
+			}
+
 		}
 
 
@@ -136,8 +154,30 @@ namespace FactorioOrganizer
 		public void GenDefaultItems()
 		{
 
+			List<FOType> allfot = Utilz.GetListOfAllFOType();
 
+			//create items
+			foreach (FOType ft in allfot)
+			{
+				string itemname = ft.ToString();
+				string modname = "";
+				bool isbelt = Utilz.IsBeltable(ft);
+				bool isrecipe = Utilz.IsRecipe(ft);
+				sItem newitem = new sItem(itemname, isbelt, isrecipe, modname);
+				Crafts.AddItem(newitem, Utilz.GetAssociatedIcon(ft));
 
+				//create crafts
+				if (isrecipe)
+				{
+					FOType[] inputs = Utilz.GetRecipeInputs(ft);
+					FOType[] outputs = Utilz.GetRecipeOutputs(ft);
+					bool isfurnace = Utilz.IsRecipeMadeInFurnace(ft);
+
+					oCraft newc = new oCraft(Crafts.ConvertFotTosItem(ft), Crafts.ConvertArrayFotTosItem(inputs), Crafts.ConvertArrayFotTosItem(outputs), isfurnace);
+					Crafts.AddCraft(newc);
+				}
+			}
+			
 
 
 		}

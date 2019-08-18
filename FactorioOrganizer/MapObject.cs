@@ -17,7 +17,7 @@ namespace FactorioOrganizer
 		
 
 
-		public FOType BeltOutput = FOType.none; //content of the belt, if this is a belt ////    contenue de la belt
+		public FOType oldBeltOutput = FOType.none; //content of the belt, if this is a belt ////    contenue de la belt
 
 		public FOType[] Outputs = new FOType[] { };
 		
@@ -51,7 +51,7 @@ namespace FactorioOrganizer
 		{
 			if (this.MapType == MOType.Belt)
 			{
-				return Utilz.GetAssociatedIcon(this.BeltOutput);
+				return Utilz.GetAssociatedIcon(this.oldBeltOutput);
 			}
 			if (this.MapType == MOType.Machine)
 			{
@@ -85,7 +85,7 @@ namespace FactorioOrganizer
 
 			if (this.MapType == MOType.Belt)
 			{
-				this.BeltOutput = StartOut; //define the output ////    set la sortie/contenue de la belt sur l'élément spécifié
+				this.oldBeltOutput = StartOut; //define the output ////    set la sortie/contenue de la belt sur l'élément spécifié
 			}
 			if (this.MapType == MOType.Machine)
 			{
@@ -101,7 +101,7 @@ namespace FactorioOrganizer
 		{
 			if (this.MapType == MOType.Belt) //SetRecipe is usually not called for belts
 			{
-				this.BeltOutput = Recipe;
+				this.oldBeltOutput = Recipe;
 			}
 			if (this.MapType == MOType.Machine)
 			{
@@ -150,7 +150,7 @@ namespace FactorioOrganizer
 		public MapObject GetCopy()
 		{
 			//prepare the content to send to the constructor ////    obtient les contenue à envoyer au constructeur
-			FOType copyrecipe = this.BeltOutput;
+			FOType copyrecipe = this.oldBeltOutput;
 			if (this.MapType == MOType.Machine)
 			{
 				copyrecipe = this.TheRecipe;
