@@ -19,6 +19,19 @@ namespace FactorioOrganizer
 
 
 
+		private void SetTitle(string text)
+		{
+			if (text.Length > 0)
+			{
+				this.Text = "Factorio Organizer - " + text;
+			}
+			else
+			{
+				this.Text = "Factorio Organizer";
+			}
+		}
+
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -40,6 +53,7 @@ namespace FactorioOrganizer
 		private void Form1_Load(object sender, EventArgs e)
 		{
 
+			this.SetTitle("");
 			this.ButtonTopMost.Text = "Top Most : " + this.TopMost.ToString();
 			this.RefreshSize();
 		}
@@ -60,8 +74,10 @@ namespace FactorioOrganizer
 			{
 				string filepath = sfd.FileName;
 				if (System.IO.Path.GetExtension(filepath) != ".factory") { filepath += ".factory"; }
-
+				
 				this.Editer.Map.Save(filepath);
+				string filename = System.IO.Path.GetFileName(filepath);
+				this.SetTitle(filename);
 			}
 		}
 		private void ButtonOpen_MouseClick(object sender, MouseEventArgs e)
@@ -89,6 +105,10 @@ namespace FactorioOrganizer
 				this.Editer.vpos.Y = my / (float)count;
 				this.Editer.RefreshImage();
 
+
+				string filename = System.IO.Path.GetFileName(filepath);
+				this.SetTitle(filename);
+
 			}
 		}
 		private void ButtonHelp_MouseClick(object sender, MouseEventArgs e)
@@ -106,92 +126,6 @@ namespace FactorioOrganizer
 			//test options. must click the button two times
 			if (this.TopMost == false)
 			{
-				//foreach (sItem i in Crafts.listItems)
-				//{
-				//	Program.wdebug(i.Name);
-				//}
-				//foreach (oCraft c in Crafts.listCrafts)
-				//{
-				//	Program.wdebug(c.ToString());
-				//}
-
-				string modname = "vanilla";
-
-
-				//List<FOType> allft = Utilz.GetListOfAllFOType();
-				//foreach (FOType ft in allft)
-				//{
-				//	string strname = ft.ToString();
-				//	bool isbelt = Utilz.IsBeltable(ft);
-				//	bool isrecipe = Utilz.IsRecipe(ft);
-				//	string newl = "Crafts.AddItem(new sItem(\"" + strname + "\", " + isbelt.ToString().ToLower() + ", " + isrecipe.ToString().ToLower() + ", \"" + modname + "\"), imghere);";
-
-				//	Program.wdebug(newl);
-
-				//}
-
-
-
-				////create crafts
-				//foreach (FOType ft in allft)
-				//{
-				//	string itemname = ft.ToString();
-				//	if (itemname != "none")
-				//	{
-				//		bool isbelt = Utilz.IsBeltable(ft);
-				//		bool isrecipe = Utilz.IsRecipe(ft);
-				//		//create crafts
-				//		if (isrecipe)
-				//		{
-				//			string strinputs = "new sItem[] { ";
-				//			FOType[] inputs = Utilz.GetRecipeInputs(ft);
-				//			bool isfirst = true;
-				//			foreach (FOType ft2 in inputs)
-				//			{
-				//				//Crafts.GetItemFromName
-				//				if (!isfirst) { strinputs += ", "; }
-
-				//				strinputs += "Crafts.GetItemFromName(\"" + ft2.ToString() + "\")";
-
-				//				isfirst = false;
-				//			}
-				//			strinputs += " }";
-
-				//			string stroutputs = "new sItem[] { ";
-				//			FOType[] outputs = Utilz.GetRecipeOutputs(ft);
-				//			isfirst = true;
-				//			foreach (FOType ft2 in outputs)
-				//			{
-				//				//Crafts.GetItemFromName
-				//				if (!isfirst) { strinputs += ", "; }
-
-				//				stroutputs += "Crafts.GetItemFromName(\"" + ft2.ToString() + "\")";
-
-				//				isfirst = false;
-				//			}
-				//			stroutputs += " }";
-
-				//			//Program.wdebug(stroutputs);
-
-
-				//			bool isfurnace = Utilz.IsRecipeMadeInFurnace(ft);
-
-				//			//oCraft newc = new oCraft(Crafts.ConvertFotTosItem(ft), Crafts.ConvertArrayFotTosItem(inputs), Crafts.ConvertArrayFotTosItem(outputs), isfurnace);
-				//			//Crafts.AddCraft(newc);
-
-				//			//Crafts.AddCraft(new oCraft())
-
-				//			string repcode = "Crafts.AddCraft(new oCraft(Crafts.GetItemFromName(\"" + ft.ToString() + "\"), " + strinputs + ", " + stroutputs + ", " + isfurnace.ToString().ToLower() + "));";
-				//			Program.wdebug(repcode);
-
-
-
-
-				//		}
-				//	}
-				//}
-
-
 
 
 

@@ -89,174 +89,175 @@ namespace FactorioOrganizer
 		private void CreateControls()
 		{
 			
-			this.CreateNewButtonBoth(FOType.OreIron);
-			this.CreateNewButtonBoth(FOType.OreCopper);
-			this.CreateNewButtonBoth(FOType.IronPlate);
-			this.CreateNewButtonBoth(FOType.CopperPlate);
-			this.CreateNewButtonBoth(FOType.Coal);
-			this.CreateNewButtonBoth(FOType.Stone);
-			this.CreateNewButtonBoth(FOType.Wood);
-			this.CreateNewButtonBoth(FOType.SteelPlate);
-			this.CreateNewButtonBoth(FOType.Plastic);
-			this.CreateNewButtonBoth(FOType.StoneBrick);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("OreIron"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("OreCopper"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("IronPlate"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("CopperPlate"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Coal"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Stone"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Wood"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SteelPlate"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Plastic"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("StoneBrick"));
 
-			this.CreateNewButtonBoth(FOType.IronGear);
-			this.CreateNewButtonBoth(FOType.IronStick);
-			this.CreateNewButtonBoth(FOType.CopperCable);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("IronGear"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("IronStick"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("CopperCable"));
 
-			this.CreateNewButtonBoth(FOType.ChestWood);
-			this.CreateNewButtonBoth(FOType.ChestIron);
-			this.CreateNewButtonBoth(FOType.ChestSteel);
-			this.CreateNewButtonBoth(FOType.ChestLogistic);
-			this.CreateNewButtonBoth(FOType.StorageTank);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ChestWood"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ChestIron"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ChestSteel"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ChestLogistic"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("StorageTank"));
 
-			this.CreateNewButtonBoth(FOType.Belt);
-			this.CreateNewButtonBoth(FOType.BeltUnderground);
-			this.CreateNewButtonBoth(FOType.BeltSplitter);
-			this.CreateNewButtonBoth(FOType.BeltFast);
-			this.CreateNewButtonBoth(FOType.BeltFastUnderground);
-			this.CreateNewButtonBoth(FOType.BeltFastSplitter);
-			this.CreateNewButtonBoth(FOType.BeltExpress);
-			this.CreateNewButtonBoth(FOType.BeltExpressUnderground);
-			this.CreateNewButtonBoth(FOType.BeltExpressSplitter);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Belt"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltUnderground"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltSplitter"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltFast"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltFastUnderground"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltFastSplitter"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltExpress"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltExpressUnderground"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltExpressSplitter"));
 
-			this.CreateNewButtonBoth(FOType.Boiler);
-			this.CreateNewButtonBoth(FOType.SteamEngine);
-			this.CreateNewButtonBoth(FOType.SteamTurbine);
-			this.CreateNewButtonBoth(FOType.SolarPanel);
-			this.CreateNewButtonBoth(FOType.Accumulator);
-			this.CreateNewButtonBoth(FOType.NuclearReactor);
-			this.CreateNewButtonBoth(FOType.HeatExchanger);
-			this.CreateNewButtonBoth(FOType.HeatPipe);
-			this.CreateNewButtonBoth(FOType.ElectricMiningDrill);
-			this.CreateNewButtonBoth(FOType.OffshorePump);
-			this.CreateNewButtonBoth(FOType.Pumpjack);
-			this.CreateNewButtonBoth(FOType.FurnaceStone);
-			this.CreateNewButtonBoth(FOType.FurnaceSteel);
-			this.CreateNewButtonBoth(FOType.FurnaceElectric);
-			this.CreateNewButtonBoth(FOType.GreenCircuit);
-			this.CreateNewButtonBoth(FOType.RedCircuit);
-			this.CreateNewButtonBoth(FOType.ProcessingUnit);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Boiler"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SteamEngine"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SteamTurbine"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SolarPanel"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Accumulator"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("NuclearReactor"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("HeatExchanger"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("HeatPipe"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ElectricMiningDrill"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("OffshorePump"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Pumpjack"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("FurnaceStone"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("FurnaceSteel"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("FurnaceElectric"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("GreenCircuit"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("RedCircuit"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ProcessingUnit"));
 
-			this.CreateNewButtonBoth(FOType.ElectricPole);
-			this.CreateNewButtonBoth(FOType.MediumElectricPole);
-			this.CreateNewButtonBoth(FOType.BigElectricPole);
-			this.CreateNewButtonBoth(FOType.Pipe);
-			this.CreateNewButtonBoth(FOType.PipeUnderground);
-			this.CreateNewButtonBoth(FOType.Pump);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ElectricPole"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("MediumElectricPole"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BigElectricPole"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Pipe"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PipeUnderground"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Pump"));
 
-			this.CreateNewButtonBoth(FOType.Inserter);
-			this.CreateNewButtonBoth(FOType.InserterLong);
-			this.CreateNewButtonBoth(FOType.InserterFast);
-			this.CreateNewButtonBoth(FOType.InserterFilter);
-			this.CreateNewButtonBoth(FOType.InserterStack);
-			this.CreateNewButtonBoth(FOType.InserterStackFilter);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Inserter"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("InserterLong"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("InserterFast"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("InserterFilter"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("InserterStack"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("InserterStackFilter"));
 
-			this.CreateNewButtonBoth(FOType.AssemblingMachine);
-			this.CreateNewButtonBoth(FOType.AssemblingMachine2);
-			this.CreateNewButtonBoth(FOType.AssemblingMachine3);
-			this.CreateNewButtonBoth(FOType.OilRefinery);
-			this.CreateNewButtonBoth(FOType.ChemicalPlant);
-			this.CreateNewButtonBoth(FOType.Centrifuge);
-			this.CreateNewButtonBoth(FOType.Lab);
-
-
-			this.CreateNewButtonBoth(FOType.ScienceRed);
-			this.CreateNewButtonBoth(FOType.ScienceGreen);
-			this.CreateNewButtonBoth(FOType.ScienceGrey);
-			this.CreateNewButtonBoth(FOType.ScienceBlue);
-			this.CreateNewButtonBoth(FOType.ScienceViolet);
-			this.CreateNewButtonBoth(FOType.ScienceYellow);
-
-			this.CreateNewButtonBoth(FOType.Rail);
-			this.CreateNewButtonBoth(FOType.TrainStop);
-			this.CreateNewButtonBoth(FOType.RailSignal);
-			this.CreateNewButtonBoth(FOType.RailChainSignal);
-			this.CreateNewButtonBoth(FOType.Locomotive);
-			this.CreateNewButtonBoth(FOType.CargoWagon);
-			this.CreateNewButtonBoth(FOType.FluidWagon);
-			this.CreateNewButtonBoth(FOType.ArtilleryWagon);
-			this.CreateNewButtonBoth(FOType.Car);
-			this.CreateNewButtonBoth(FOType.Tank);
-
-			this.CreateNewButtonBoth(FOType.EngineUnit);
-			this.CreateNewButtonBoth(FOType.EngineElectricUnit);
-			this.CreateNewButtonBoth(FOType.FlyingRobotFrame);
-			this.CreateNewButtonBoth(FOType.LogisticRobot);
-			this.CreateNewButtonBoth(FOType.ConstructionRobot);
-			this.CreateNewButtonBoth(FOType.RocketControlUnit);
-			this.CreateNewButtonBoth(FOType.LowDensityStructure);
-			this.CreateNewButtonBoth(FOType.RocketFuel);
-
-			this.CreateNewButtonBoth(FOType.Grenade);
-			this.CreateNewButtonBoth(FOType.MagazineFirearm);
-			this.CreateNewButtonBoth(FOType.MagazinePiercing);
-			this.CreateNewButtonBoth(FOType.ShotgunShells);
-			this.CreateNewButtonBoth(FOType.ShotgunPiercingShells);
-			this.CreateNewButtonBoth(FOType.Pistol);
-			this.CreateNewButtonBoth(FOType.SubmachineGun);
-			this.CreateNewButtonBoth(FOType.Shotgun);
-			this.CreateNewButtonBoth(FOType.CombatShotgun);
-			this.CreateNewButtonBoth(FOType.LandMine);
-			this.CreateNewButtonBoth(FOType.Concrete);
-			this.CreateNewButtonBoth(FOType.Wall);
-			this.CreateNewButtonBoth(FOType.GunTurret);
-			this.CreateNewButtonBoth(FOType.LaserTurret);
-			this.CreateNewButtonBoth(FOType.FlamethrowerTurret);
-			this.CreateNewButtonBoth(FOType.ArtilleryTurret);
-			this.CreateNewButtonBoth(FOType.Radar);
-			this.CreateNewButtonBoth(FOType.RocketSilo);
-
-			this.CreateNewButtonBoth(FOType.Sulfur);
-			this.CreateNewButtonBoth(FOType.SolidFuel);
-			this.CreateNewButtonBoth(FOType.Battery);
-			this.CreateNewButtonBoth(FOType.Explosives);
-			this.CreateNewButtonBoth(FOType.CliffExplosives);
-			this.CreateNewButtonBoth(FOType.EmptyBarrel);
-
-			this.CreateNewButtonBoth(FOType.OilCrude);
-			this.CreateNewButtonBoth(FOType.OilLight);
-			this.CreateNewButtonBoth(FOType.OilHeavy);
-			this.CreateNewButtonBoth(FOType.Lubricant);
-			this.CreateNewButtonBoth(FOType.PetroleumGas);
-			this.CreateNewButtonBoth(FOType.SulfuricAcid);
-			this.CreateNewButtonBoth(FOType.Water);
-			this.CreateNewButtonBoth(FOType.Steam);
-			this.CreateNewButtonBoth(FOType.BasicOilProcessing);
-			this.CreateNewButtonBoth(FOType.AdvancedOilProcessing);
-			this.CreateNewButtonBoth(FOType.HeavyOilCracking);
-			this.CreateNewButtonBoth(FOType.LightOilCracking);
-			this.CreateNewButtonBoth(FOType.CoalLiquefaction);
-			this.CreateNewButtonBoth(FOType.SolidFuelFromOilHeavy);
-			this.CreateNewButtonBoth(FOType.SolidFuelFromOilLight);
-			this.CreateNewButtonBoth(FOType.SolidFuelFromPetroleumGas);
-
-			this.CreateNewButtonBoth(FOType.PortableSolarPanel);
-			this.CreateNewButtonBoth(FOType.PortableFusionReactor);
-			this.CreateNewButtonBoth(FOType.EnergyShield);
-			this.CreateNewButtonBoth(FOType.EnergyShieldMK2);
-			this.CreateNewButtonBoth(FOType.PersonalBattery);
-			this.CreateNewButtonBoth(FOType.PersonalBatteryMK2);
-			this.CreateNewButtonBoth(FOType.PersonalLaserDefense);
-			this.CreateNewButtonBoth(FOType.DischargeDefense);
-			this.CreateNewButtonBoth(FOType.BeltImmunity);
-			this.CreateNewButtonBoth(FOType.Exoskeleton);
-			this.CreateNewButtonBoth(FOType.PersonalRoboport);
-			this.CreateNewButtonBoth(FOType.PersonalRoboportMK2);
-			this.CreateNewButtonBoth(FOType.NightVision);
-
-			this.CreateNewButtonBoth(FOType.Beacon);
-			this.CreateNewButtonBoth(FOType.ModuleSpeed1);
-			this.CreateNewButtonBoth(FOType.ModuleSpeed2);
-			this.CreateNewButtonBoth(FOType.ModuleSpeed3);
-			this.CreateNewButtonBoth(FOType.ModuleProductivity1);
-			this.CreateNewButtonBoth(FOType.ModuleProductivity2);
-			this.CreateNewButtonBoth(FOType.ModuleProductivity3);
-			this.CreateNewButtonBoth(FOType.ModuleEfficiency1);
-			this.CreateNewButtonBoth(FOType.ModuleEfficiency2);
-			this.CreateNewButtonBoth(FOType.ModuleEfficiency3);
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("AssemblingMachine"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("AssemblingMachine2"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("AssemblingMachine3"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("OilRefinery"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ChemicalPlant"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Centrifuge"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Lab"));
 
 
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ScienceRed"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ScienceGreen"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ScienceGrey"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ScienceBlue"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ScienceViolet"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ScienceYellow"));
+
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Rail"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("TrainStop"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("RailSignal"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("RailChainSignal"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Locomotive"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("CargoWagon"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("FluidWagon"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ArtilleryWagon"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Car"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Tank"));
+
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("EngineUnit"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("EngineElectricUnit"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("FlyingRobotFrame"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("LogisticRobot"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ConstructionRobot"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("RocketPart"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("RocketControlUnit"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("LowDensityStructure"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("RocketFuel"));
+
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Grenade"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("MagazineFirearm"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("MagazinePiercing"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ShotgunShells"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ShotgunPiercingShells"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Pistol"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SubmachineGun"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Shotgun"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("CombatShotgun"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("LandMine"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Concrete"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Wall"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("GunTurret"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("LaserTurret"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("FlamethrowerTurret"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ArtilleryTurret"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Radar"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("RocketSilo"));
+
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Sulfur"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SolidFuel"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Battery"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Explosives"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("CliffExplosives"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("EmptyBarrel"));
+
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("OilCrude"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("OilLight"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("OilHeavy"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Lubricant"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PetroleumGas"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SulfuricAcid"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Water"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Steam"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BasicOilProcessing"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("AdvancedOilProcessing"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("HeavyOilCracking"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("LightOilCracking"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("CoalLiquefaction"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SolidFuelFromOilHeavy"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SolidFuelFromOilLight"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("SolidFuelFromPetroleumGas"));
+
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PortableSolarPanel"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PortableFusionReactor"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("EnergyShield"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("EnergyShieldMK2"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PersonalBattery"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PersonalBatteryMK2"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PersonalLaserDefense"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("DischargeDefense"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("BeltImmunity"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Exoskeleton"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PersonalRoboport"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("PersonalRoboportMK2"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("NightVision"));
+
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("Beacon"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleSpeed1"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleSpeed2"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleSpeed3"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleProductivity1"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleProductivity2"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleProductivity3"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleEfficiency1"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleEfficiency2"));
+			this.CreateNewButtonBoth(Crafts.GetItemFromName("ModuleEfficiency3"));
+
+			
 		}
 		private void CreateNewButtonBelt(Bitmap img, sItem i)
 		{
@@ -280,13 +281,6 @@ namespace FactorioOrganizer
 			newb.MouseDown += new MouseEventHandler(this.AnyButton_MosueDown);
 			newb.Tag = new object[] { MOType.Machine, i };
 		}
-		private void CreateNewButtonBoth(FOType ft)
-		{
-			//Bitmap img = Utilz.GetAssociatedIcon(ft);
-			//this.CreateNewButtonBelt(img, ft);
-			//this.CreateNewButtonMachine(img, ft);
-			this.CreateNewButtonBoth(Crafts.ConvertFotTosItem(ft));
-		}
 		private void CreateNewButtonBoth(sItem i)
 		{
 			Bitmap img = Crafts.GetAssociatedIcon(i);
@@ -304,11 +298,6 @@ namespace FactorioOrganizer
 			{
 				if (mt == MOType.Belt)
 				{
-					//if (Utilz.IsBeltable(ft)) //we set addmode only if the item can be a belt
-					//{
-					//	MapObject newmo = new MapObject(mt, ft);
-					//	this.Editer.StartAddMode(newmo);
-					//}
 					if (i.IsBelt) //we set addmode only if the item can be a belt
 					{
 						MapObject newmo = new MapObject(MOType.Belt, i);
@@ -317,11 +306,6 @@ namespace FactorioOrganizer
 				}
 				if (mt == MOType.Machine)
 				{
-					//if (Utilz.IsRecipe(ft)) //we set addmode only if the item can be a machine
-					//{
-					//	MapObject newmo = new MapObject(mt, ft);
-					//	this.Editer.StartAddMode(newmo);
-					//}
 					if (i.IsRecipe) //we set addmode only if the item can be a machine
 					{
 						MapObject newmo = new MapObject(MOType.Machine, i);
@@ -352,7 +336,7 @@ namespace FactorioOrganizer
 						rc.AddChoice("-" + subi.Name);
 					}
 				}
-				rc.ShowDialog();
+				string rep = rc.ShowDialog();
 			}
 
 		}

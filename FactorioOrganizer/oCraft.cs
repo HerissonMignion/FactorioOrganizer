@@ -10,7 +10,7 @@ namespace FactorioOrganizer
 	public class oCraft
 	{
 
-		public sItem Recipe; //object used as a recipe
+		public sItem Recipe; //object used as a recipe. EVERY oCraft should be uniquely identified by their .Recipe. there shouldn't be multiple craft with the exact same .Recipe, at least for now.
 		public sItem[] Inputs = new sItem[] { }; //inputs of the recipe
 		public sItem[] Outputs = new sItem[] { }; //output of the recipe
 

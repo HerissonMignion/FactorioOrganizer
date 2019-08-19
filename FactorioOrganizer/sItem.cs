@@ -3,7 +3,7 @@
 namespace FactorioOrganizer
 {
 
-	//this class represents an item of the game. it contains its name and what can it be. equivalent of FOType
+	//this class represents an item of the game. it contains its name and what can it be. equivalent of a member of FOType
 	public struct sItem
 	{
 		//these properties are not meant to be edited by anybody after the creation of the item

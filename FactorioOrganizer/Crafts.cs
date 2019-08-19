@@ -39,6 +39,11 @@ namespace FactorioOrganizer
 		}
 
 
+		/*
+		 * yes, the new system can be a little bit annoying because we often have to use GetItemFromName to get anything, but expendability is necessary for mods
+		 * 
+		 */
+
 
 		//.Name property. its internal name.
 		//if Strict==false, it ToLower the names
@@ -63,47 +68,73 @@ namespace FactorioOrganizer
 			//the none item is the first element of the list
 			return Crafts.listItems[0];
 		}
-		public static sItem ConvertFotTosItem(FOType ft)
+
+
+		//for both items and crafts (especialy crafts), if it already exist, we override the aleady existing one. this would allow us to make a backup object list inside the program if the user don't have any files. the next version of FO, the one with mod support, will have a file with it, a .fomod file who contains vanilla items/crafts. if the user don't have it, he will have the defaults items/crafts.
+		//overriding already existing items/crafts, combined with mod load order, will allow mods to override other mod's items.
+
+
+		public static void AddItem(sItem newitem, Bitmap ItemIcon)
 		{
-			string sft = ft.ToString();
+			bool AlreadyExist = false;
+			//search if that item already exist. if so, it overrides it
 			int index = 0;
 			while (index < Crafts.listItems.Count)
 			{
-				if (Crafts.listItems[index].ItemName == sft)
+				//check if it's the same item
+				if (Crafts.listItems[index].Name == newitem.Name)
 				{
-					return Crafts.listItems[index];
+					AlreadyExist = true;
+
+					int iconindex = Crafts.listItems[index].IconIndex; //save the index
+					newitem.IconIndex = iconindex; //define its icon index
+					Crafts.listItems[index] = newitem; //we place it at its location. sItems are structure, we can't edit structures properties if they are inside a list.
+
+					//override the icon, if it had one
+					if (iconindex >= 0 && iconindex < Crafts.listIcons.Count) //check it's in bound
+					{
+						Crafts.listIcons[iconindex] = ItemIcon;
+					}
+
+					break; //we don't have to check for other items if we already found it
 				}
 				//next iteration
 				index++;
 			}
-			return new sItem("none", false, false, "");
-		}
-		public static sItem[] ConvertArrayFotTosItem(FOType[] fts)
-		{
-			List<sItem> rep = new List<sItem>();
-			foreach (FOType ft in fts)
+			//if the item didn't already exist, we add it
+			if (!AlreadyExist)
 			{
-				rep.Add(Crafts.ConvertFotTosItem(ft));
+				//we must not forget that sItem is a structure, not a class
+				newitem.IconIndex = Crafts.listIcons.Count; //must be done before adding it to the list
+				Crafts.listItems.Add(newitem);
+				Crafts.listIcons.Add(ItemIcon);
 			}
-			return rep.ToArray();
-		}
-
-
-
-		//for both items and crafts (especialy crafts), if it already exist, we should override the aleady existing one. this would allow us to make a backup object list inside the program if the user don't have any files.
-
-		public static void AddItem(sItem newitem, Bitmap ItemIcon)
-		{
-			//we must not forget that sItem is a structure, not a class
-			newitem.IconIndex = Crafts.listIcons.Count; //must be done before adding it to the list
-			Crafts.listItems.Add(newitem);
-			Crafts.listIcons.Add(ItemIcon);
-			//newitem.IconIndex = Crafts.listIcons.Count - 1;
 		}
 
 		public static void AddCraft(oCraft newcraft)
 		{
-			Crafts.listCrafts.Add(newcraft);
+			bool AlreadyExist = false;
+			//search if that craft already exist. if so, it overrides it
+			int index = 0;
+			while (index < Crafts.listCrafts.Count)
+			{
+				//check if it's the same craft. each craft are supposed to be uniquely identified by their recipe. so if the recipes names are identical, it's the same craft and we override it
+				if (Crafts.listCrafts[index].Recipe.Name == newcraft.Recipe.Name)
+				{
+					AlreadyExist = true;
+
+					Crafts.listCrafts[index] = newcraft;
+
+					break; //we don't have to check for other crafts if we already found it
+				}
+				//next iteration
+				index++;
+			}
+			//if the craft don't already exist, we add it
+			if (!AlreadyExist)
+			{
+				Crafts.listCrafts.Add(newcraft);
+			}
 		}
 
 
@@ -111,7 +142,7 @@ namespace FactorioOrganizer
 
 
 
-		//in future, Form1 will have a TabControl. there will be one uiToolBox per TabPage per mod.
+		//in future, Form1 will have a TabControl. there will be one uiToolBox per TabPage per mod, and by default a tabpage for the vanilla items
 		//when a mod will be added, Form1 will make a new tab and a new uiToolBox for the items of the mod.
 		//Form1 will be listening to this event. yes, it's possible to achive this without events, but i'll do it with events. change my mind :)
 
@@ -239,6 +270,7 @@ namespace FactorioOrganizer
 			Crafts.AddItem(new sItem("FlyingRobotFrame", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.flying_robot_frame);
 			Crafts.AddItem(new sItem("LogisticRobot", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.logistic_robot);
 			Crafts.AddItem(new sItem("ConstructionRobot", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.construction_robot);
+			Crafts.AddItem(new sItem("RocketPart", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.rocket_part);
 			Crafts.AddItem(new sItem("RocketControlUnit", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.rocket_control_unit);
 			Crafts.AddItem(new sItem("LowDensityStructure", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.rocket_structure);
 			Crafts.AddItem(new sItem("RocketFuel", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.rocket_fuel);
@@ -319,7 +351,8 @@ namespace FactorioOrganizer
 
 
 			////create crafts
-
+			///
+			//https://wiki.factorio.com/Items
 
 			//Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("TEST"), new sItem[] { Crafts.GetItemFromName("Inserter"), Crafts.GetItemFromName("InserterLong"), Crafts.GetItemFromName("InserterFast"), Crafts.GetItemFromName("InserterFilter") }, , , new sItem[] { Crafts.GetItemFromName("ScienceRed")Crafts.GetItemFromName("ScienceGreen")Crafts.GetItemFromName("ScienceGrey") }, false));
 			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("IronPlate"), new sItem[] { Crafts.GetItemFromName("OreIron") }, new sItem[] { Crafts.GetItemFromName("IronPlate") }, true));
@@ -401,6 +434,7 @@ namespace FactorioOrganizer
 			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("FlyingRobotFrame"), new sItem[] { Crafts.GetItemFromName("Battery"), Crafts.GetItemFromName("EngineElectricUnit"), Crafts.GetItemFromName("GreenCircuit"), Crafts.GetItemFromName("SteelPlate") }, new sItem[] { Crafts.GetItemFromName("FlyingRobotFrame") }, false));
 			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("LogisticRobot"), new sItem[] { Crafts.GetItemFromName("RedCircuit"), Crafts.GetItemFromName("FlyingRobotFrame") }, new sItem[] { Crafts.GetItemFromName("LogisticRobot") }, false));
 			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("ConstructionRobot"), new sItem[] { Crafts.GetItemFromName("GreenCircuit"), Crafts.GetItemFromName("FlyingRobotFrame") }, new sItem[] { Crafts.GetItemFromName("ConstructionRobot") }, false));
+			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("RocketPart"), new sItem[] { Crafts.GetItemFromName("LowDensityStructure"), Crafts.GetItemFromName("RocketControlUnit"), Crafts.GetItemFromName("RocketFuel") }, new sItem[] { Crafts.GetItemFromName("RocketPart") }, false));
 			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("RocketControlUnit"), new sItem[] { Crafts.GetItemFromName("ProcessingUnit"), Crafts.GetItemFromName("ModuleSpeed1") }, new sItem[] { Crafts.GetItemFromName("RocketControlUnit") }, false));
 			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("LowDensityStructure"), new sItem[] { Crafts.GetItemFromName("CopperPlate"), Crafts.GetItemFromName("Plastic"), Crafts.GetItemFromName("SteelPlate") }, new sItem[] { Crafts.GetItemFromName("LowDensityStructure") }, false));
 			Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("RocketFuel"), new sItem[] { Crafts.GetItemFromName("OilLight"), Crafts.GetItemFromName("SolidFuel") }, new sItem[] { Crafts.GetItemFromName("RocketFuel") }, false));
