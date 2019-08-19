@@ -74,9 +74,9 @@ namespace FactorioOrganizer
 			this.TextAssembler.Text = "Assembler :";
 			this.TextAssembler.ForeColor = Color.White;
 			
+			
 
-
-			this.CreateControls();
+			this.CreateVanillaControls();
 			this.RefreshSize();
 		}
 
@@ -86,179 +86,28 @@ namespace FactorioOrganizer
 		private List<Button> listButtonMachine = new List<Button>();
 		
 
-		private void CreateControls()
+		//creates all the default items
+		private void CreateVanillaControls()
 		{
 			
-			this.CreateNewButtonBoth(FOType.OreIron);
-			this.CreateNewButtonBoth(FOType.OreCopper);
-			this.CreateNewButtonBoth(FOType.IronPlate);
-			this.CreateNewButtonBoth(FOType.CopperPlate);
-			this.CreateNewButtonBoth(FOType.Coal);
-			this.CreateNewButtonBoth(FOType.Stone);
-			this.CreateNewButtonBoth(FOType.Wood);
-			this.CreateNewButtonBoth(FOType.SteelPlate);
-			this.CreateNewButtonBoth(FOType.Plastic);
-			this.CreateNewButtonBoth(FOType.StoneBrick);
-
-			this.CreateNewButtonBoth(FOType.IronGear);
-			this.CreateNewButtonBoth(FOType.IronStick);
-			this.CreateNewButtonBoth(FOType.CopperCable);
-
-			this.CreateNewButtonBoth(FOType.ChestWood);
-			this.CreateNewButtonBoth(FOType.ChestIron);
-			this.CreateNewButtonBoth(FOType.ChestSteel);
-			this.CreateNewButtonBoth(FOType.ChestLogistic);
-			this.CreateNewButtonBoth(FOType.StorageTank);
-
-			this.CreateNewButtonBoth(FOType.Belt);
-			this.CreateNewButtonBoth(FOType.BeltUnderground);
-			this.CreateNewButtonBoth(FOType.BeltSplitter);
-			this.CreateNewButtonBoth(FOType.BeltFast);
-			this.CreateNewButtonBoth(FOType.BeltFastUnderground);
-			this.CreateNewButtonBoth(FOType.BeltFastSplitter);
-			this.CreateNewButtonBoth(FOType.BeltExpress);
-			this.CreateNewButtonBoth(FOType.BeltExpressUnderground);
-			this.CreateNewButtonBoth(FOType.BeltExpressSplitter);
-
-			this.CreateNewButtonBoth(FOType.Boiler);
-			this.CreateNewButtonBoth(FOType.SteamEngine);
-			this.CreateNewButtonBoth(FOType.SteamTurbine);
-			this.CreateNewButtonBoth(FOType.SolarPanel);
-			this.CreateNewButtonBoth(FOType.Accumulator);
-			this.CreateNewButtonBoth(FOType.NuclearReactor);
-			this.CreateNewButtonBoth(FOType.HeatExchanger);
-			this.CreateNewButtonBoth(FOType.HeatPipe);
-			this.CreateNewButtonBoth(FOType.ElectricMiningDrill);
-			this.CreateNewButtonBoth(FOType.OffshorePump);
-			this.CreateNewButtonBoth(FOType.Pumpjack);
-			this.CreateNewButtonBoth(FOType.FurnaceStone);
-			this.CreateNewButtonBoth(FOType.FurnaceSteel);
-			this.CreateNewButtonBoth(FOType.FurnaceElectric);
-			this.CreateNewButtonBoth(FOType.GreenCircuit);
-			this.CreateNewButtonBoth(FOType.RedCircuit);
-			this.CreateNewButtonBoth(FOType.ProcessingUnit);
-
-			this.CreateNewButtonBoth(FOType.ElectricPole);
-			this.CreateNewButtonBoth(FOType.MediumElectricPole);
-			this.CreateNewButtonBoth(FOType.BigElectricPole);
-			this.CreateNewButtonBoth(FOType.Pipe);
-			this.CreateNewButtonBoth(FOType.PipeUnderground);
-			this.CreateNewButtonBoth(FOType.Pump);
-
-			this.CreateNewButtonBoth(FOType.Inserter);
-			this.CreateNewButtonBoth(FOType.InserterLong);
-			this.CreateNewButtonBoth(FOType.InserterFast);
-			this.CreateNewButtonBoth(FOType.InserterFilter);
-			this.CreateNewButtonBoth(FOType.InserterStack);
-			this.CreateNewButtonBoth(FOType.InserterStackFilter);
-
-			this.CreateNewButtonBoth(FOType.AssemblingMachine);
-			this.CreateNewButtonBoth(FOType.AssemblingMachine2);
-			this.CreateNewButtonBoth(FOType.AssemblingMachine3);
-			this.CreateNewButtonBoth(FOType.OilRefinery);
-			this.CreateNewButtonBoth(FOType.ChemicalPlant);
-			this.CreateNewButtonBoth(FOType.Centrifuge);
-			this.CreateNewButtonBoth(FOType.Lab);
-
-
-			this.CreateNewButtonBoth(FOType.ScienceRed);
-			this.CreateNewButtonBoth(FOType.ScienceGreen);
-			this.CreateNewButtonBoth(FOType.ScienceGrey);
-			this.CreateNewButtonBoth(FOType.ScienceBlue);
-			this.CreateNewButtonBoth(FOType.ScienceViolet);
-			this.CreateNewButtonBoth(FOType.ScienceYellow);
-
-			this.CreateNewButtonBoth(FOType.Rail);
-			this.CreateNewButtonBoth(FOType.TrainStop);
-			this.CreateNewButtonBoth(FOType.RailSignal);
-			this.CreateNewButtonBoth(FOType.RailChainSignal);
-			this.CreateNewButtonBoth(FOType.Locomotive);
-			this.CreateNewButtonBoth(FOType.CargoWagon);
-			this.CreateNewButtonBoth(FOType.FluidWagon);
-			this.CreateNewButtonBoth(FOType.ArtilleryWagon);
-			this.CreateNewButtonBoth(FOType.Car);
-			this.CreateNewButtonBoth(FOType.Tank);
-
-			this.CreateNewButtonBoth(FOType.EngineUnit);
-			this.CreateNewButtonBoth(FOType.EngineElectricUnit);
-			this.CreateNewButtonBoth(FOType.FlyingRobotFrame);
-			this.CreateNewButtonBoth(FOType.LogisticRobot);
-			this.CreateNewButtonBoth(FOType.ConstructionRobot);
-			this.CreateNewButtonBoth(FOType.RocketControlUnit);
-			this.CreateNewButtonBoth(FOType.LowDensityStructure);
-			this.CreateNewButtonBoth(FOType.RocketFuel);
-
-			this.CreateNewButtonBoth(FOType.Grenade);
-			this.CreateNewButtonBoth(FOType.MagazineFirearm);
-			this.CreateNewButtonBoth(FOType.MagazinePiercing);
-			this.CreateNewButtonBoth(FOType.ShotgunShells);
-			this.CreateNewButtonBoth(FOType.ShotgunPiercingShells);
-			this.CreateNewButtonBoth(FOType.Pistol);
-			this.CreateNewButtonBoth(FOType.SubmachineGun);
-			this.CreateNewButtonBoth(FOType.Shotgun);
-			this.CreateNewButtonBoth(FOType.CombatShotgun);
-			this.CreateNewButtonBoth(FOType.LandMine);
-			this.CreateNewButtonBoth(FOType.Concrete);
-			this.CreateNewButtonBoth(FOType.Wall);
-			this.CreateNewButtonBoth(FOType.GunTurret);
-			this.CreateNewButtonBoth(FOType.LaserTurret);
-			this.CreateNewButtonBoth(FOType.FlamethrowerTurret);
-			this.CreateNewButtonBoth(FOType.ArtilleryTurret);
-			this.CreateNewButtonBoth(FOType.Radar);
-			this.CreateNewButtonBoth(FOType.RocketSilo);
-
-			this.CreateNewButtonBoth(FOType.Sulfur);
-			this.CreateNewButtonBoth(FOType.SolidFuel);
-			this.CreateNewButtonBoth(FOType.Battery);
-			this.CreateNewButtonBoth(FOType.Explosives);
-			this.CreateNewButtonBoth(FOType.CliffExplosives);
-			this.CreateNewButtonBoth(FOType.EmptyBarrel);
-
-			this.CreateNewButtonBoth(FOType.OilCrude);
-			this.CreateNewButtonBoth(FOType.OilLight);
-			this.CreateNewButtonBoth(FOType.OilHeavy);
-			this.CreateNewButtonBoth(FOType.Lubricant);
-			this.CreateNewButtonBoth(FOType.PetroleumGas);
-			this.CreateNewButtonBoth(FOType.SulfuricAcid);
-			this.CreateNewButtonBoth(FOType.Water);
-			this.CreateNewButtonBoth(FOType.Steam);
-			this.CreateNewButtonBoth(FOType.BasicOilProcessing);
-			this.CreateNewButtonBoth(FOType.AdvancedOilProcessing);
-			this.CreateNewButtonBoth(FOType.HeavyOilCracking);
-			this.CreateNewButtonBoth(FOType.LightOilCracking);
-			this.CreateNewButtonBoth(FOType.CoalLiquefaction);
-			this.CreateNewButtonBoth(FOType.SolidFuelFromOilHeavy);
-			this.CreateNewButtonBoth(FOType.SolidFuelFromOilLight);
-			this.CreateNewButtonBoth(FOType.SolidFuelFromPetroleumGas);
-
-			this.CreateNewButtonBoth(FOType.PortableSolarPanel);
-			this.CreateNewButtonBoth(FOType.PortableFusionReactor);
-			this.CreateNewButtonBoth(FOType.EnergyShield);
-			this.CreateNewButtonBoth(FOType.EnergyShieldMK2);
-			this.CreateNewButtonBoth(FOType.PersonalBattery);
-			this.CreateNewButtonBoth(FOType.PersonalBatteryMK2);
-			this.CreateNewButtonBoth(FOType.PersonalLaserDefense);
-			this.CreateNewButtonBoth(FOType.DischargeDefense);
-			this.CreateNewButtonBoth(FOType.BeltImmunity);
-			this.CreateNewButtonBoth(FOType.Exoskeleton);
-			this.CreateNewButtonBoth(FOType.PersonalRoboport);
-			this.CreateNewButtonBoth(FOType.PersonalRoboportMK2);
-			this.CreateNewButtonBoth(FOType.NightVision);
-
-			this.CreateNewButtonBoth(FOType.Beacon);
-			this.CreateNewButtonBoth(FOType.ModuleSpeed1);
-			this.CreateNewButtonBoth(FOType.ModuleSpeed2);
-			this.CreateNewButtonBoth(FOType.ModuleSpeed3);
-			this.CreateNewButtonBoth(FOType.ModuleProductivity1);
-			this.CreateNewButtonBoth(FOType.ModuleProductivity2);
-			this.CreateNewButtonBoth(FOType.ModuleProductivity3);
-			this.CreateNewButtonBoth(FOType.ModuleEfficiency1);
-			this.CreateNewButtonBoth(FOType.ModuleEfficiency2);
-			this.CreateNewButtonBoth(FOType.ModuleEfficiency3);
-
-
+			//loads every vanilla items
+			int index = 0;
+			while (index < Crafts.listItems.Count)
+			{
+				sItem i = Crafts.listItems[index];
+				//check if it's a vanilla item
+				if (i.ModName == "vanilla" && i.ItemName != "none")
+				{
+					this.CreateNewButtonBoth(i);
+				}
+				//next iteration
+				index++;
+			}
+			
 		}
-		private void CreateNewButtonBelt(Bitmap img, FOType ft)
+
+
+		private void CreateNewButtonBelt(Bitmap img, sItem i)
 		{
 			Button newb = new Button();
 			newb.Parent = this.panele;
@@ -267,9 +116,9 @@ namespace FactorioOrganizer
 			this.listButtonBelt.Add(newb);
 			//newb.Click += new EventHandler(this.AnyButton_Click);
 			newb.MouseDown += new MouseEventHandler(this.AnyButton_MosueDown);
-			newb.Tag = new object[] { MOType.Belt, ft };
+			newb.Tag = new object[] { MOType.Belt, i };
 		}
-		private void CreateNewButtonMachine(Bitmap img, FOType ft)
+		private void CreateNewButtonMachine(Bitmap img, sItem i)
 		{
 			Button newb = new Button();
 			newb.Parent = this.panele;
@@ -278,63 +127,64 @@ namespace FactorioOrganizer
 			this.listButtonMachine.Add(newb);
 			//newb.Click += new EventHandler(this.AnyButton_Click);
 			newb.MouseDown += new MouseEventHandler(this.AnyButton_MosueDown);
-			newb.Tag = new object[] { MOType.Machine, ft };
+			newb.Tag = new object[] { MOType.Machine, i };
 		}
-		private void CreateNewButtonBoth(FOType ft)
+		private void CreateNewButtonBoth(sItem i)
 		{
-			Bitmap img = Utilz.GetAssociatedIcon(ft);
-			this.CreateNewButtonBelt(img, ft);
-			this.CreateNewButtonMachine(img, ft);
+			Bitmap img = Crafts.GetAssociatedIcon(i);
+			this.CreateNewButtonBelt(img, i);
+			this.CreateNewButtonMachine(img, i);
 		}
 		private void AnyButton_MosueDown(object sender, MouseEventArgs e)
 		{
 			Button btn = (Button)sender;
 			btn.Focus();
 			MOType mt = (MOType)(((object[])(btn.Tag))[0]);
-			FOType ft = (FOType)(((object[])(btn.Tag))[1]);
+			sItem i = (sItem)(((object[])(btn.Tag))[1]);
 
 			if (e.Button == MouseButtons.Left)
 			{
 				if (mt == MOType.Belt)
 				{
-					if (Utilz.IsBeltable(ft)) //we set addmode only if the item can be a belt
+					if (i.IsBelt) //we set addmode only if the item can be a belt
 					{
-						MapObject newmo = new MapObject(mt, ft);
+						MapObject newmo = new MapObject(MOType.Belt, i);
 						this.Editer.StartAddMode(newmo);
 					}
 				}
-				if (mt == MOType.Machine) //we set addmode only if the item can be a machine
+				if (mt == MOType.Machine)
 				{
-					if (Utilz.IsRecipe(ft))
+					if (i.IsRecipe) //we set addmode only if the item can be a machine
 					{
-						MapObject newmo = new MapObject(mt, ft);
+						MapObject newmo = new MapObject(MOType.Machine, i);
 						this.Editer.StartAddMode(newmo);
 					}
 				}
 			}
 			if (e.Button == MouseButtons.Right)
 			{
-				FOType[] arrayOutputs = Utilz.GetRecipeOutputs(ft);
-				FOType[] arrayInputs = Utilz.GetRecipeInputs(ft);
-
+				//if this button is as machine, i represents the recipe
+				oCraft c = Crafts.GetCraftFromRecipe(i);
 				oRightClick3 rc = new oRightClick3();
-				//rc.Width = 200;
-				rc.AddChoice(ft.ToString());
-				rc.AddSeparator();
-				rc.AddSeparator();
-				//add every outputs and inputs for the user
-				rc.AddChoice("Outputs :");
-				foreach (FOType subft in arrayOutputs)
+				rc.AddChoice(i.Name);
+				if (c != null)
 				{
-					rc.AddChoice("-" + subft.ToString());
+					rc.AddSeparator();
+					rc.AddSeparator();
+					//add every outputs and inputs for the user
+					rc.AddChoice("Outputs :");
+					foreach (sItem subi in c.Outputs)
+					{
+						rc.AddChoice("-" + subi.Name);
+					}
+					rc.AddChoice("");
+					rc.AddChoice("Inputs :");
+					foreach (sItem subi in c.Inputs)
+					{
+						rc.AddChoice("-" + subi.Name);
+					}
 				}
-				rc.AddChoice("");
-				rc.AddChoice("Inputs :");
-				foreach (FOType subft in arrayInputs)
-				{
-					rc.AddChoice("-" + subft.ToString());
-				}
-				rc.ShowDialog();
+				string rep = rc.ShowDialog();
 			}
 
 		}
@@ -360,14 +210,14 @@ namespace FactorioOrganizer
 			foreach (Button b in this.listButtonBelt)
 			{
 				MOType mt = (MOType)(((object[])(b.Tag))[0]);
-				FOType ft = (FOType)(((object[])(b.Tag))[1]);
+				sItem i = (sItem)(((object[])(b.Tag))[1]);
 				b.Left = actualleft;
 				b.Top = 1;
 				b.Size = buttonsize;
 
 				//back color ////    couleur d'arrière plan
 				b.BackColor = Color.Gainsboro;
-				bool isbelt = Utilz.IsBeltable(ft);
+				bool isbelt = i.IsBelt;
 				if (!isbelt) { b.BackColor = Color.Crimson; }
 
 
@@ -379,14 +229,14 @@ namespace FactorioOrganizer
 			foreach (Button b in this.listButtonMachine)
 			{
 				MOType mt = (MOType)(((object[])(b.Tag))[0]);
-				FOType ft = (FOType)(((object[])(b.Tag))[1]);
+				sItem i = (sItem)(((object[])(b.Tag))[1]);
 				b.Left = actualleft;
 				b.Top = 1 + buttonsize.Height + 2;
 				b.Size = buttonsize;
 
 				//back color ////    couleur d'arrière plan
 				b.BackColor = Color.Gainsboro;
-				bool ismachine = Utilz.IsRecipe(ft);
+				bool ismachine = i.IsRecipe;
 				if (!ismachine) { b.BackColor = Color.Crimson; }
 
 				//next iteration

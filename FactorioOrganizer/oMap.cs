@@ -34,7 +34,7 @@ namespace FactorioOrganizer
 				if (newitem == "belt")
 				{
 					string strBeltOutput = sr.ReadLine();
-					MapObject mo = new MapObject(MOType.Belt, Utilz.GetFOTypeAssociatedToString(strBeltOutput));
+					MapObject mo = new MapObject(MOType.Belt, Crafts.GetItemFromName(strBeltOutput));
 					mo.vpos.X = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
 					mo.vpos.Y = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
 					this.listMO.Add(mo);
@@ -42,7 +42,7 @@ namespace FactorioOrganizer
 				if (newitem == "machine")
 				{
 					string strRecipe = sr.ReadLine();
-					MapObject mo = new MapObject(MOType.Machine, Utilz.GetFOTypeAssociatedToString(strRecipe));
+					MapObject mo = new MapObject(MOType.Machine, Crafts.GetItemFromName(strRecipe));
 					mo.NeedCoal = sr.ReadLine() == "true";
 					mo.vpos.X = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
 					mo.vpos.Y = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
@@ -66,137 +66,12 @@ namespace FactorioOrganizer
 			return null;
 		}
 		
-		//return the closest object with specified output and maptype.
-		//for machine, it's assumed it must search in every outputs.
-		//return null if nothing found
-		public MapObject FindClosestMoWithOutput(MapObject mo, MOType MapType, FOType ft)
-		{
-			MapObject mo1 = null;
-			List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MapType); //we first extract MapObject of the desired type
-			lco.Remove(mo); //remove the object in the middle of the map 
-			if (lco.Count > 0)
-			{
-				//we sort items from their distance to mo
-				lco = lco.OrderBy(x => x.DistTo(mo.vpos.X, mo.vpos.Y)).ToList();
-				if (MapType == MOType.Belt)
-				{
-					//research the closest belt of the desired output. lco is sorted by distance. going through the list from the beginning is going through the closest to the farthest
-					foreach (MapObject submo in lco)
-					{
-						if (submo.MapType == MOType.Belt) //always true because of the second line of this function
-						{
-							if (submo.BeltOutput == ft) //check it has the desired output
-							{
-								mo1 = submo;
-								break;
-							}
-						}
-					}
-				}
-				if (MapType == MOType.Machine)
-				{
-					bool canexit = false;
-					//research the closest machine with a desired output. lco is sorted by distance
-					foreach (MapObject submo in lco)
-					{
-						if (submo.MapType == MOType.Machine) //always true because of the second line of this function
-						{
-							//search for an output of the desired type
-							foreach (FOType subout in submo.Outputs)
-							{
-								//check if this output is ok
-								if (subout == ft) 
-								{
-									mo1 = submo;
-									canexit = true;
-									break;
-								}
-							}
-						}
-						if (canexit) { break; }
-					}
-				}
-			}
-			
-			return mo1;
-		}
-
-		//not used anywhere
-		public MapObject FindClosestMoWithInput(MapObject mo, FOType ft)
-		{
-			MapObject mo1 = null;
-			List<MapObject> lco = new List<MapObject>();
-			lco.AddRange(this.listMO);
-			lco.Remove(mo); //retire l'object qui est au centre
-			if (lco.Count > 0)
-			{
-				lco = lco.OrderBy(x => x.DistTo(mo.vpos.X, mo.vpos.Y)).ToList();
-				bool canexit = false;
-				foreach (MapObject submo in lco)
-				{
-					//after the if, it check it has the desired input ////    après les if, vérifie s'il y a le input désiré
-					if (submo.MapType == MOType.Belt)
-					{
-						if (submo.BeltOutput == ft)
-						{
-							mo1 = submo;
-							break;
-						}
-					}
-					if (submo.MapType == MOType.Machine)
-					{
-						//look through the inputs ////    recherche dans les input de la machine
-						foreach (FOType subft in submo.Inputs)
-						{
-							//check if they re the same type ////    check s'il sont de même type
-							if (subft == ft)
-							{
-								mo1 = submo;
-								canexit = true;
-								break;
-							}
-						}
-					}
-					if (canexit) { break; }
-				}
-			}
-			return mo1;
-		}
-
-		//return the closest belt with desired output
-		public MapObject FindClosestBeltWithInput(MapObject mo, FOType ft)
-		{
-			MapObject mo1 = null;
-			List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MOType.Belt); //sort for belts
-			lco.Remove(mo); //remove the object at the middle of the map
-			if (lco.Count > 0)
-			{
-				//we sort by distance
-				lco = lco.OrderBy(x => x.DistTo(mo.vpos.X, mo.vpos.Y)).ToList();
-				//find the closest belt
-				foreach (MapObject submo in lco)
-				{
-					//after the if, it check it has the desired input
-					if (submo.MapType == MOType.Belt) //always true because of the second line of this function
-					{
-						if (submo.BeltOutput == ft) //check the type
-						{
-							mo1 = submo;
-							break;
-						}
-					}
-				}
-			}
-			return mo1;
-		}
-
-		
 		//return the closest belt with a compatible output
 		//the only purpose of giving mo to the function is to know the coordinate. don't be confused
-		public MapObject GetCompatibleBeltCloseTo(MapObject mo, FOType OutType)
+		public MapObject GetCompatibleBeltCloseTo(MapObject mo, sItem OutType)
 		{
 			MapObject mo1 = null;
-			List<MapObject> lco = this.listMO.FindAll(x => (x.MapType == MOType.Belt) && (x.BeltOutput == OutType)); //get belts of compatible output
+			List<MapObject> lco = this.listMO.FindAll(x => (x.MapType == MOType.Belt) && (x.BeltOutput.Name == OutType.Name)); //get belts of compatible output
 			try
 			{
 				lco.Remove(mo);
@@ -213,6 +88,7 @@ namespace FactorioOrganizer
 			return mo1;
 		}
 
+		
 		//return the 2 closest belts with a compatible output ////    retourne les 2 object le plus proche de lui, et avec un output compatible
 		//mo must be a belt
 		public MapObject[] GetCompatible2BeltsCloseTo(MapObject mo)
@@ -221,7 +97,7 @@ namespace FactorioOrganizer
 			MapObject mo2 = null;
 
 			//get belts of compatible output
-			List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MOType.Belt && x.BeltOutput == mo.BeltOutput);
+			List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MOType.Belt && x.BeltOutput.Name == mo.BeltOutput.Name);
 			try
 			{
 				lco.Remove(mo);
@@ -296,6 +172,7 @@ namespace FactorioOrganizer
 			return rep;
 		}
 
+
 		public void Save(string filepath)
 		{
 			List<string> alll = new List<string>(); //all line
@@ -306,7 +183,7 @@ namespace FactorioOrganizer
 				if (mo.MapType == MOType.Belt)
 				{
 					alll.Add("belt");
-					alll.Add(mo.BeltOutput.ToString());
+					alll.Add(mo.BeltOutput.Name); //the name property give the save result than anyFOType.ToString() for any vanilla item
 					alll.Add(this.ConvertFloatToString(mo.vpos.X));
 					alll.Add(this.ConvertFloatToString(mo.vpos.Y));
 					
@@ -314,7 +191,7 @@ namespace FactorioOrganizer
 				if (mo.MapType == MOType.Machine)
 				{
 					alll.Add("machine");
-					alll.Add(mo.TheRecipe.ToString());
+					alll.Add(mo.TheRecipe.Name);
 					alll.Add(mo.NeedCoal.ToString().ToLower()); //tolower just to be sure
 					alll.Add(this.ConvertFloatToString(mo.vpos.X));
 					alll.Add(this.ConvertFloatToString(mo.vpos.Y));

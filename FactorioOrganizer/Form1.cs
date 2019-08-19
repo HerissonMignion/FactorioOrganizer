@@ -19,12 +19,25 @@ namespace FactorioOrganizer
 
 
 
+		private void SetTitle(string text)
+		{
+			if (text.Length > 0)
+			{
+				this.Text = "Factorio Organizer - " + text;
+			}
+			else
+			{
+				this.Text = "Factorio Organizer";
+			}
+		}
+
+
 		public Form1()
 		{
 			InitializeComponent();
 			this.KeyDown += new KeyEventHandler(this.Form1_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form1_KeyUp);
-
+			
 			this.Map = new oMap();
 
 			this.Editer = new uiMapEditer(this.Map);
@@ -40,6 +53,7 @@ namespace FactorioOrganizer
 		private void Form1_Load(object sender, EventArgs e)
 		{
 
+			this.SetTitle("");
 			this.ButtonTopMost.Text = "Top Most : " + this.TopMost.ToString();
 			this.RefreshSize();
 		}
@@ -60,8 +74,10 @@ namespace FactorioOrganizer
 			{
 				string filepath = sfd.FileName;
 				if (System.IO.Path.GetExtension(filepath) != ".factory") { filepath += ".factory"; }
-
+				
 				this.Editer.Map.Save(filepath);
+				string filename = System.IO.Path.GetFileName(filepath);
+				this.SetTitle(filename);
 			}
 		}
 		private void ButtonOpen_MouseClick(object sender, MouseEventArgs e)
@@ -89,6 +105,10 @@ namespace FactorioOrganizer
 				this.Editer.vpos.Y = my / (float)count;
 				this.Editer.RefreshImage();
 
+
+				string filename = System.IO.Path.GetFileName(filepath);
+				this.SetTitle(filename);
+
 			}
 		}
 		private void ButtonHelp_MouseClick(object sender, MouseEventArgs e)
@@ -102,6 +122,15 @@ namespace FactorioOrganizer
 		{
 			this.TopMost = !this.TopMost;
 			this.ButtonTopMost.Text = "Top Most : " + this.TopMost.ToString();
+
+			//test options. must click the button two times
+			if (this.TopMost == false)
+			{
+
+
+
+			}
+
 		}
 
 
@@ -124,6 +153,14 @@ namespace FactorioOrganizer
 
 		}
 		
+
+
+
+
+
+		
+
+
 
 	}
 }

@@ -13,28 +13,41 @@ namespace FactorioOrganizer
 	{
 
 		public MOType MapType;
+
+
+
+		public sItem BeltOutput = Crafts.listItems[0]; //content of the belt, if this is a belt
+
+		public sItem[] Outputs = new sItem[] { };
+		public sItem[] Inputs = new sItem[] { };
+		public sItem TheRecipe = Crafts.listItems[0]; //actuel recipe. used only if this is a machine
+
+
+
+		//public FOType oldBeltOutput = FOType.none; //content of the belt, if this is a belt ////    contenue de la belt
+		//public FOType[] oldOutputs = new FOType[] { };
+		//public FOType[] oldInputs = new FOType[] { };
+		
+
+		////for a machine, the recipe define both the inputs and outputs
+		//public FOType oldTheRecipe = FOType.none; //actuel recipe. used only if this is a machine ////    recette actuel. utilisé seulement si this est une machine
+
 		
 		
-
-
-		public FOType BeltOutput = FOType.none; //content of the belt, if this is a belt ////    contenue de la belt
-
-		public FOType[] Outputs = new FOType[] { };
-		
-
-		public FOType[] Inputs = new FOType[] { };
-
-
-		//for a machine, the recipe define both the inputs and outputs
-		public FOType TheRecipe = FOType.none; //actuel recipe. used only if this is a machine ////    recette actuel. utilisé seulement si this est une machine
-
-
-
 
 
 		public bool IsFurnace = false;
 		public bool NeedCoal = true; //if this is a furnace, indicate if this need coal ////    si this est une furnace, indique si this a besoin de coal
-		
+
+		//i guess that some mods require other things than coal to make things so, in the future, we might have to replace NeedCoal by NeededCombustibles which will be an array of sItem and a static list of arrays in Crafts who describe every combustibles options to toggle.
+		//we can also make the change of NeedCoal to NeededCombustibles only if any mods were loaded. if no mod loaded, we stay with NeedCoal.
+
+		//or a lazy and less user friendly option is to remove NeedCoal and possibly IsFurnace and make one recipe for every combination of for what would be every combinaison of NeededCombustibles.
+
+		//another preferable solution we be leave it like that. current vanilla items won't be affected. modded items will have one recipe for every combinaisons of what represented NeededCombustibles in the other solution.
+
+
+
 
 
 
@@ -42,11 +55,11 @@ namespace FactorioOrganizer
 		{
 			if (this.MapType == MOType.Belt)
 			{
-				return Utilz.GetAssociatedIcon(this.BeltOutput);
+				return Crafts.GetAssociatedIcon(this.BeltOutput);
 			}
 			if (this.MapType == MOType.Machine)
 			{
-				return Utilz.GetAssociatedIcon(this.TheRecipe);
+				return Crafts.GetAssociatedIcon(this.TheRecipe);
 			}
 			return FactorioOrganizer.Properties.Resources.fish;
 		}
@@ -67,16 +80,13 @@ namespace FactorioOrganizer
 
 
 
-
 		
-		//for a belt, StartOut is its content. for a machine, StartOut is the recipe
-		public MapObject(MOType StartMapType = MOType.Belt, FOType StartOut = FOType.none)
+		public MapObject(MOType StartMapType, sItem StartOut)
 		{
 			this.MapType = StartMapType;
-
 			if (this.MapType == MOType.Belt)
 			{
-				this.BeltOutput = StartOut; //define the output ////    set la sortie/contenue de la belt sur l'élément spécifié
+				this.BeltOutput = StartOut;
 			}
 			if (this.MapType == MOType.Machine)
 			{
@@ -86,24 +96,25 @@ namespace FactorioOrganizer
 
 
 
-
-		//define inputs and outputs according to the recipe ////    défini les input et output qui vont avec la recette spécifié
-		public void SetRecipe(FOType Recipe)
+		
+		public void SetRecipe(sItem Recipe)
 		{
-			if (this.MapType == MOType.Belt) //SetRecipe is usually not called for belts
+			if (this.MapType == MOType.Belt)
 			{
 				this.BeltOutput = Recipe;
 			}
 			if (this.MapType == MOType.Machine)
 			{
-				//set the recipe and set everything
 				this.TheRecipe = Recipe;
-				this.Outputs = Utilz.GetRecipeOutputs(Recipe);
-				this.Inputs = Utilz.GetRecipeInputs(Recipe);
-				this.IsFurnace = Utilz.IsRecipeMadeInFurnace(Recipe);
+				oCraft c = Crafts.GetCraftFromRecipe(Recipe); //gets the craft
+				if (c != null)
+				{
+					this.Outputs = c.Outputs;
+					this.Inputs = c.Inputs;
+					this.IsFurnace = c.IsMadeInFurnace;
+				}
 			}
 		}
-
 
 
 		//return if this map object touch to a specific virtual coordinate ////    retourne si this touche à une coordonné
@@ -141,7 +152,7 @@ namespace FactorioOrganizer
 		public MapObject GetCopy()
 		{
 			//prepare the content to send to the constructor ////    obtient les contenue à envoyer au constructeur
-			FOType copyrecipe = this.BeltOutput;
+			sItem copyrecipe = this.BeltOutput;
 			if (this.MapType == MOType.Machine)
 			{
 				copyrecipe = this.TheRecipe;
