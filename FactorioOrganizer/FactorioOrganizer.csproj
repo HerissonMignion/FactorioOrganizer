@@ -72,7 +72,6 @@
     <Compile Include="sItem.cs" />
     <Compile Include="uiMapEditer.cs" />
     <Compile Include="uiToolBox.cs" />
-    <Compile Include="Utilz.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -74,7 +74,7 @@ namespace FactorioOrganizer
 			this.TextAssembler.Text = "Assembler :";
 			this.TextAssembler.ForeColor = Color.White;
 			
-
+			
 
 			this.CreateControls();
 			this.RefreshSize();
@@ -258,7 +258,7 @@ namespace FactorioOrganizer
 
 
 		}
-		private void CreateNewButtonBelt(Bitmap img, FOType ft)
+		private void CreateNewButtonBelt(Bitmap img, sItem i)
 		{
 			Button newb = new Button();
 			newb.Parent = this.panele;
@@ -267,9 +267,9 @@ namespace FactorioOrganizer
 			this.listButtonBelt.Add(newb);
 			//newb.Click += new EventHandler(this.AnyButton_Click);
 			newb.MouseDown += new MouseEventHandler(this.AnyButton_MosueDown);
-			newb.Tag = new object[] { MOType.Belt, ft };
+			newb.Tag = new object[] { MOType.Belt, i };
 		}
-		private void CreateNewButtonMachine(Bitmap img, FOType ft)
+		private void CreateNewButtonMachine(Bitmap img, sItem i)
 		{
 			Button newb = new Button();
 			newb.Parent = this.panele;
@@ -278,61 +278,79 @@ namespace FactorioOrganizer
 			this.listButtonMachine.Add(newb);
 			//newb.Click += new EventHandler(this.AnyButton_Click);
 			newb.MouseDown += new MouseEventHandler(this.AnyButton_MosueDown);
-			newb.Tag = new object[] { MOType.Machine, ft };
+			newb.Tag = new object[] { MOType.Machine, i };
 		}
 		private void CreateNewButtonBoth(FOType ft)
 		{
-			Bitmap img = Utilz.GetAssociatedIcon(ft);
-			this.CreateNewButtonBelt(img, ft);
-			this.CreateNewButtonMachine(img, ft);
+			//Bitmap img = Utilz.GetAssociatedIcon(ft);
+			//this.CreateNewButtonBelt(img, ft);
+			//this.CreateNewButtonMachine(img, ft);
+			this.CreateNewButtonBoth(Crafts.ConvertFotTosItem(ft));
+		}
+		private void CreateNewButtonBoth(sItem i)
+		{
+			Bitmap img = Crafts.GetAssociatedIcon(i);
+			this.CreateNewButtonBelt(img, i);
+			this.CreateNewButtonMachine(img, i);
 		}
 		private void AnyButton_MosueDown(object sender, MouseEventArgs e)
 		{
 			Button btn = (Button)sender;
 			btn.Focus();
 			MOType mt = (MOType)(((object[])(btn.Tag))[0]);
-			FOType ft = (FOType)(((object[])(btn.Tag))[1]);
+			sItem i = (sItem)(((object[])(btn.Tag))[1]);
 
 			if (e.Button == MouseButtons.Left)
 			{
 				if (mt == MOType.Belt)
 				{
-					if (Utilz.IsBeltable(ft)) //we set addmode only if the item can be a belt
+					//if (Utilz.IsBeltable(ft)) //we set addmode only if the item can be a belt
+					//{
+					//	MapObject newmo = new MapObject(mt, ft);
+					//	this.Editer.StartAddMode(newmo);
+					//}
+					if (i.IsBelt) //we set addmode only if the item can be a belt
 					{
-						MapObject newmo = new MapObject(mt, ft);
+						MapObject newmo = new MapObject(MOType.Belt, i);
 						this.Editer.StartAddMode(newmo);
 					}
 				}
-				if (mt == MOType.Machine) //we set addmode only if the item can be a machine
+				if (mt == MOType.Machine)
 				{
-					if (Utilz.IsRecipe(ft))
+					//if (Utilz.IsRecipe(ft)) //we set addmode only if the item can be a machine
+					//{
+					//	MapObject newmo = new MapObject(mt, ft);
+					//	this.Editer.StartAddMode(newmo);
+					//}
+					if (i.IsRecipe) //we set addmode only if the item can be a machine
 					{
-						MapObject newmo = new MapObject(mt, ft);
+						MapObject newmo = new MapObject(MOType.Machine, i);
 						this.Editer.StartAddMode(newmo);
 					}
 				}
 			}
 			if (e.Button == MouseButtons.Right)
 			{
-				FOType[] arrayOutputs = Utilz.GetRecipeOutputs(ft);
-				FOType[] arrayInputs = Utilz.GetRecipeInputs(ft);
-
+				//if this button is as machine, i represents the recipe
+				oCraft c = Crafts.GetCraftFromRecipe(i);
 				oRightClick3 rc = new oRightClick3();
-				//rc.Width = 200;
-				rc.AddChoice(ft.ToString());
-				rc.AddSeparator();
-				rc.AddSeparator();
-				//add every outputs and inputs for the user
-				rc.AddChoice("Outputs :");
-				foreach (FOType subft in arrayOutputs)
+				rc.AddChoice(i.Name);
+				if (c != null)
 				{
-					rc.AddChoice("-" + subft.ToString());
-				}
-				rc.AddChoice("");
-				rc.AddChoice("Inputs :");
-				foreach (FOType subft in arrayInputs)
-				{
-					rc.AddChoice("-" + subft.ToString());
+					rc.AddSeparator();
+					rc.AddSeparator();
+					//add every outputs and inputs for the user
+					rc.AddChoice("Outputs :");
+					foreach (sItem subi in c.Outputs)
+					{
+						rc.AddChoice("-" + subi.Name);
+					}
+					rc.AddChoice("");
+					rc.AddChoice("Inputs :");
+					foreach (sItem subi in c.Inputs)
+					{
+						rc.AddChoice("-" + subi.Name);
+					}
 				}
 				rc.ShowDialog();
 			}
@@ -360,14 +378,14 @@ namespace FactorioOrganizer
 			foreach (Button b in this.listButtonBelt)
 			{
 				MOType mt = (MOType)(((object[])(b.Tag))[0]);
-				FOType ft = (FOType)(((object[])(b.Tag))[1]);
+				sItem i = (sItem)(((object[])(b.Tag))[1]);
 				b.Left = actualleft;
 				b.Top = 1;
 				b.Size = buttonsize;
 
 				//back color ////    couleur d'arrière plan
 				b.BackColor = Color.Gainsboro;
-				bool isbelt = Utilz.IsBeltable(ft);
+				bool isbelt = i.IsBelt;
 				if (!isbelt) { b.BackColor = Color.Crimson; }
 
 
@@ -379,14 +397,14 @@ namespace FactorioOrganizer
 			foreach (Button b in this.listButtonMachine)
 			{
 				MOType mt = (MOType)(((object[])(b.Tag))[0]);
-				FOType ft = (FOType)(((object[])(b.Tag))[1]);
+				sItem i = (sItem)(((object[])(b.Tag))[1]);
 				b.Left = actualleft;
 				b.Top = 1 + buttonsize.Height + 2;
 				b.Size = buttonsize;
 
 				//back color ////    couleur d'arrière plan
 				b.BackColor = Color.Gainsboro;
-				bool ismachine = Utilz.IsRecipe(ft);
+				bool ismachine = i.IsRecipe;
 				if (!ismachine) { b.BackColor = Color.Crimson; }
 
 				//next iteration

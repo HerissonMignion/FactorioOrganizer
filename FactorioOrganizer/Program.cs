@@ -17,6 +17,8 @@ namespace FactorioOrganizer
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
+			Crafts.CreateDefualtVanillaItems();
+			//Utilz.GensItems();
 			Application.Run(new Form1());
 		}
 	}

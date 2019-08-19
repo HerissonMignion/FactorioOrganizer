@@ -24,7 +24,7 @@ namespace FactorioOrganizer
 			InitializeComponent();
 			this.KeyDown += new KeyEventHandler(this.Form1_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form1_KeyUp);
-
+			
 			this.Map = new oMap();
 
 			this.Editer = new uiMapEditer(this.Map);
@@ -39,7 +39,6 @@ namespace FactorioOrganizer
 		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			this.GenDefaultItems();
 
 			this.ButtonTopMost.Text = "Top Most : " + this.TopMost.ToString();
 			this.RefreshSize();
@@ -107,16 +106,93 @@ namespace FactorioOrganizer
 			//test options. must click the button two times
 			if (this.TopMost == false)
 			{
-
 				//foreach (sItem i in Crafts.listItems)
 				//{
 				//	Program.wdebug(i.Name);
 				//}
+				//foreach (oCraft c in Crafts.listCrafts)
+				//{
+				//	Program.wdebug(c.ToString());
+				//}
 
-				foreach (oCraft c in Crafts.listCrafts)
-				{
-					Program.wdebug(c.ToString());
-				}
+				string modname = "vanilla";
+
+
+				//List<FOType> allft = Utilz.GetListOfAllFOType();
+				//foreach (FOType ft in allft)
+				//{
+				//	string strname = ft.ToString();
+				//	bool isbelt = Utilz.IsBeltable(ft);
+				//	bool isrecipe = Utilz.IsRecipe(ft);
+				//	string newl = "Crafts.AddItem(new sItem(\"" + strname + "\", " + isbelt.ToString().ToLower() + ", " + isrecipe.ToString().ToLower() + ", \"" + modname + "\"), imghere);";
+
+				//	Program.wdebug(newl);
+
+				//}
+
+
+
+				////create crafts
+				//foreach (FOType ft in allft)
+				//{
+				//	string itemname = ft.ToString();
+				//	if (itemname != "none")
+				//	{
+				//		bool isbelt = Utilz.IsBeltable(ft);
+				//		bool isrecipe = Utilz.IsRecipe(ft);
+				//		//create crafts
+				//		if (isrecipe)
+				//		{
+				//			string strinputs = "new sItem[] { ";
+				//			FOType[] inputs = Utilz.GetRecipeInputs(ft);
+				//			bool isfirst = true;
+				//			foreach (FOType ft2 in inputs)
+				//			{
+				//				//Crafts.GetItemFromName
+				//				if (!isfirst) { strinputs += ", "; }
+
+				//				strinputs += "Crafts.GetItemFromName(\"" + ft2.ToString() + "\")";
+
+				//				isfirst = false;
+				//			}
+				//			strinputs += " }";
+
+				//			string stroutputs = "new sItem[] { ";
+				//			FOType[] outputs = Utilz.GetRecipeOutputs(ft);
+				//			isfirst = true;
+				//			foreach (FOType ft2 in outputs)
+				//			{
+				//				//Crafts.GetItemFromName
+				//				if (!isfirst) { strinputs += ", "; }
+
+				//				stroutputs += "Crafts.GetItemFromName(\"" + ft2.ToString() + "\")";
+
+				//				isfirst = false;
+				//			}
+				//			stroutputs += " }";
+
+				//			//Program.wdebug(stroutputs);
+
+
+				//			bool isfurnace = Utilz.IsRecipeMadeInFurnace(ft);
+
+				//			//oCraft newc = new oCraft(Crafts.ConvertFotTosItem(ft), Crafts.ConvertArrayFotTosItem(inputs), Crafts.ConvertArrayFotTosItem(outputs), isfurnace);
+				//			//Crafts.AddCraft(newc);
+
+				//			//Crafts.AddCraft(new oCraft())
+
+				//			string repcode = "Crafts.AddCraft(new oCraft(Crafts.GetItemFromName(\"" + ft.ToString() + "\"), " + strinputs + ", " + stroutputs + ", " + isfurnace.ToString().ToLower() + "));";
+				//			Program.wdebug(repcode);
+
+
+
+
+				//		}
+				//	}
+				//}
+
+
+
 
 
 			}
@@ -148,41 +224,7 @@ namespace FactorioOrganizer
 
 
 
-
-
-		//this void generates default item. in the futur, this void could become a backup in case the user don't have a specified file
-		public void GenDefaultItems()
-		{
-
-			List<FOType> allfot = Utilz.GetListOfAllFOType();
-
-			//create items
-			foreach (FOType ft in allfot)
-			{
-				string itemname = ft.ToString();
-				string modname = "";
-				bool isbelt = Utilz.IsBeltable(ft);
-				bool isrecipe = Utilz.IsRecipe(ft);
-				sItem newitem = new sItem(itemname, isbelt, isrecipe, modname);
-				Crafts.AddItem(newitem, Utilz.GetAssociatedIcon(ft));
-
-				//create crafts
-				if (isrecipe)
-				{
-					FOType[] inputs = Utilz.GetRecipeInputs(ft);
-					FOType[] outputs = Utilz.GetRecipeOutputs(ft);
-					bool isfurnace = Utilz.IsRecipeMadeInFurnace(ft);
-
-					oCraft newc = new oCraft(Crafts.ConvertFotTosItem(ft), Crafts.ConvertArrayFotTosItem(inputs), Crafts.ConvertArrayFotTosItem(outputs), isfurnace);
-					Crafts.AddCraft(newc);
-				}
-			}
-			
-
-
-		}
-
-
+		
 
 
 

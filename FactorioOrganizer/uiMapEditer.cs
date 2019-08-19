@@ -179,15 +179,15 @@ namespace FactorioOrganizer
 							rc.AddSeparator();
 							rc.AddSeparator();
 							rc.AddChoice("Outputs :");
-							foreach (FOType ft in mo.Outputs)
+							foreach (sItem i in mo.Outputs)
 							{
-								rc.AddChoice("-" + ft.ToString());
+								rc.AddChoice("-" + i.Name);
 							}
 							rc.AddChoice("");
 							rc.AddChoice("Inputs :");
-							foreach (FOType ft in mo.Inputs)
+							foreach (sItem i in mo.Inputs)
 							{
-								rc.AddChoice("-" + ft.ToString());
+								rc.AddChoice("-" + i.Name);
 							}
 
 						}
@@ -209,12 +209,22 @@ namespace FactorioOrganizer
 						//check the one who correspond to the click FOType, if there is one ////    check si ca correspond à un FOType
 						if (mo.MapType == MOType.Machine)
 						{
-							List<FOType> allft = Utilz.GetListOfAllFOType();
-							foreach (FOType ft in allft)
+							//List<FOType> allft = Utilz.GetListOfAllFOType();
+							//foreach (FOType ft in allft)
+							//{
+							//	if (ft.ToString() == rep.Replace("-", string.Empty).Trim())
+							//	{
+							//		MapObject newmo = new MapObject(MOType.Belt, ft);
+							//		this.StartAddMode(newmo);
+							//		break;
+							//	}
+							//}
+							string okname = rep.Replace("-", string.Empty).Trim();
+							foreach (sItem i in Crafts.listItems)
 							{
-								if (ft.ToString() == rep.Replace("-", string.Empty).Trim())
+								if (i.Name == okname)
 								{
-									MapObject newmo = new MapObject(MOType.Belt, ft);
+									MapObject newmo = new MapObject(MOType.Belt, i);
 									this.StartAddMode(newmo);
 									break;
 								}
@@ -377,26 +387,26 @@ namespace FactorioOrganizer
 					{
 
 						//draw links of every output
-						foreach (FOType ft in mo.Outputs)
+						foreach (sItem i in mo.Outputs)
 						{
-							MapObject closest = this.Map.FindClosestBeltWithInput(mo, ft);
+							MapObject closest = this.Map.GetCompatibleBeltCloseTo(mo, i); //this.Map.FindClosestBeltWithInput(mo, i);
 							if (closest != null)
 							{
 								Point mouipos2 = this.ConvertVirtualToUi(closest.vpos.X, closest.vpos.Y);
-								g.DrawLine(Pens.Orchid, mouipos, mouipos2); // Crimson
+								g.DrawLine(Pens.Orchid, mouipos, mouipos2); // Orchid
 							}
 						}
-						
+
 
 						//draw links of every inputs
 						mo.IsAllInputPresent = true;
-						foreach (FOType ft in mo.Inputs)
+						foreach (sItem i in mo.Inputs)
 						{
-							MapObject closest = this.Map.GetCompatibleBeltCloseTo(mo, ft); //get the closest one ////    obtien selui qui est le plus proche
+							MapObject closest = this.Map.GetCompatibleBeltCloseTo(mo, i); //get the closest one ////    obtien selui qui est le plus proche
 							if (closest != null)
 							{
 								Point mouipos2 = this.ConvertVirtualToUi(closest.vpos.X, closest.vpos.Y);
-								g.DrawLine(Pens.SkyBlue, mouipos, mouipos2);
+								g.DrawLine(Pens.SkyBlue, mouipos, mouipos2); // SkyBlue
 							}
 							else
 							{
@@ -404,12 +414,13 @@ namespace FactorioOrganizer
 							}
 						}
 
+
 						//check if it's a furnace and if so, it draw coal if needed ////    check le charbon des four
 						if (mo.IsFurnace)
 						{
 							if (mo.NeedCoal)
 							{
-								MapObject close2 = this.Map.GetCompatibleBeltCloseTo(mo, FOType.Coal); //get the closest coal belt ////    récupère la belt de charbon la plus près
+								MapObject close2 = this.Map.GetCompatibleBeltCloseTo(mo, Crafts.GetItemFromName("Coal")); //get the closest coal belt ////    récupère la belt de charbon la plus près
 								if (close2 != null)
 								{
 									Point mouipos2 = this.ConvertVirtualToUi(close2.vpos.X, close2.vpos.Y);
@@ -652,17 +663,13 @@ namespace FactorioOrganizer
 						{
 							if (mo.MapType == MOType.Machine)
 							{
-								FOType ft = mo.TheRecipe;
-								//if (mo.MapType == MOType.Machine)
-								//{
-								//	ft = mo.TheRecipe;
-								//}
+								sItem ft = mo.TheRecipe;
 								MapObject copy = new MapObject(MOType.Belt, ft);
 								this.StartAddMode(copy);
 							}
 							if (mo.MapType == MOType.Belt)
 							{
-								FOType ft = mo.oldBeltOutput;
+								sItem ft = mo.BeltOutput;
 								MapObject copy = new MapObject(MOType.Machine, ft);
 								this.StartAddMode(copy);
 							}

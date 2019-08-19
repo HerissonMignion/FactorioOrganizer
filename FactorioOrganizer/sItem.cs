@@ -12,14 +12,14 @@ namespace FactorioOrganizer
 
 		//we should create a private variable, "computed" in the constructor, that contains the answer to return every time because this property will be called a lot of times
 		//this property represents the name of the item used internaly. the mod name is combined with the variable name so we should avoid name conflicts.
-		//for vanilla items, there's no mod name
+		//for vanilla items, their modname is "vanilla" and is not included in the Name property.
 		public string Name
 		{
 			get
 			{
-				if (this.ModName.Length > 0) //this item comes from a mod
+				if (this.ModName != "vanilla") //this item comes from a mod
 				{
-					return this.ModName + "_" + this.ItemName;
+					return this.ModName + "$_" + this.ItemName; // the $ is because some people might want to use _ in their objects name so i added $ and then _ for readability
 				}
 				else //this item is not from a mod
 				{
