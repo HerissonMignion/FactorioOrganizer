@@ -106,7 +106,7 @@ namespace FactorioOrganizer
 			if (this.MapType == MOType.Machine)
 			{
 				this.TheRecipe = Recipe;
-				oCraft c = Crafts.GetCraftFromRecipe(Recipe);
+				oCraft c = Crafts.GetCraftFromRecipe(Recipe); //gets the craft
 				if (c != null)
 				{
 					this.Outputs = c.Outputs;

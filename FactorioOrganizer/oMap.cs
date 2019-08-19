@@ -66,135 +66,6 @@ namespace FactorioOrganizer
 			return null;
 		}
 		
-		////return the closest object with specified output and maptype.
-		////for machine, it's assumed it must search in every outputs.
-		////return null if nothing found
-		//public MapObject FindClosestMoWithOutput(MapObject mo, MOType MapType, FOType ft)
-		//{
-		//	MapObject mo1 = null;
-		//	List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MapType); //we first extract MapObject of the desired type
-		//	lco.Remove(mo); //remove the object in the middle of the map 
-		//	if (lco.Count > 0)
-		//	{
-		//		//we sort items from their distance to mo
-		//		lco = lco.OrderBy(x => x.DistTo(mo.vpos.X, mo.vpos.Y)).ToList();
-		//		if (MapType == MOType.Belt)
-		//		{
-		//			//research the closest belt of the desired output. lco is sorted by distance. going through the list from the beginning is going through the closest to the farthest
-		//			foreach (MapObject submo in lco)
-		//			{
-		//				if (submo.MapType == MOType.Belt) //always true because of the second line of this function
-		//				{
-		//					if (submo.oldBeltOutput == ft) //check it has the desired output
-		//					{
-		//						mo1 = submo;
-		//						break;
-		//					}
-		//				}
-		//			}
-		//		}
-		//		if (MapType == MOType.Machine)
-		//		{
-		//			bool canexit = false;
-		//			//research the closest machine with a desired output. lco is sorted by distance
-		//			foreach (MapObject submo in lco)
-		//			{
-		//				if (submo.MapType == MOType.Machine) //always true because of the second line of this function
-		//				{
-		//					//search for an output of the desired type
-		//					foreach (FOType subout in submo.oldOutputs)
-		//					{
-		//						//check if this output is ok
-		//						if (subout == ft) 
-		//						{
-		//							mo1 = submo;
-		//							canexit = true;
-		//							break;
-		//						}
-		//					}
-		//				}
-		//				if (canexit) { break; }
-		//			}
-		//		}
-		//	}
-			
-		//	return mo1;
-		//}
-
-		////not used anywhere
-		//public MapObject FindClosestMoWithInput(MapObject mo, FOType ft)
-		//{
-		//	MapObject mo1 = null;
-		//	List<MapObject> lco = new List<MapObject>();
-		//	lco.AddRange(this.listMO);
-		//	lco.Remove(mo); //retire l'object qui est au centre
-		//	if (lco.Count > 0)
-		//	{
-		//		lco = lco.OrderBy(x => x.DistTo(mo.vpos.X, mo.vpos.Y)).ToList();
-		//		bool canexit = false;
-		//		foreach (MapObject submo in lco)
-		//		{
-		//			//after the if, it check it has the desired input ////    après les if, vérifie s'il y a le input désiré
-		//			if (submo.MapType == MOType.Belt)
-		//			{
-		//				if (submo.oldBeltOutput == ft)
-		//				{
-		//					mo1 = submo;
-		//					break;
-		//				}
-		//			}
-		//			if (submo.MapType == MOType.Machine)
-		//			{
-		//				//look through the inputs ////    recherche dans les input de la machine
-		//				foreach (FOType subft in submo.oldInputs)
-		//				{
-		//					//check if they re the same type ////    check s'il sont de même type
-		//					if (subft == ft)
-		//					{
-		//						mo1 = submo;
-		//						canexit = true;
-		//						break;
-		//					}
-		//				}
-		//			}
-		//			if (canexit) { break; }
-		//		}
-		//	}
-		//	return mo1;
-		//}
-
-
-		////DONE
-		////return the closest belt with desired output
-		//public MapObject FindClosestBeltWithInput(MapObject mo, sItem i)
-		//{
-		//	MapObject mo1 = null;
-		//	List<MapObject> lco = this.listMO.FindAll(x => x.MapType == MOType.Belt); //sort for belts
-		//	lco.Remove(mo); //remove the object at the middle of the map
-		//	if (lco.Count > 0)
-		//	{
-		//		//we sort by distance
-		//		lco = lco.OrderBy(x => x.DistTo(mo.vpos.X, mo.vpos.Y)).ToList();
-		//		//find the closest belt
-		//		foreach (MapObject submo in lco)
-		//		{
-		//			//after the if, it check it has the desired input
-		//			if (submo.MapType == MOType.Belt) //always true because of the second line of this function
-		//			{
-		//				if (submo.BeltOutput.Name == i.Name) //check the type
-		//				{
-		//					mo1 = submo;
-		//					break;
-		//				}
-		//			}
-		//		}
-		//	}
-		//	return mo1;
-		//}
-
-
-
-		//DONE
 		//return the closest belt with a compatible output
 		//the only purpose of giving mo to the function is to know the coordinate. don't be confused
 		public MapObject GetCompatibleBeltCloseTo(MapObject mo, sItem OutType)
@@ -217,10 +88,7 @@ namespace FactorioOrganizer
 			return mo1;
 		}
 
-
-
-
-		//DONE
+		
 		//return the 2 closest belts with a compatible output ////    retourne les 2 object le plus proche de lui, et avec un output compatible
 		//mo must be a belt
 		public MapObject[] GetCompatible2BeltsCloseTo(MapObject mo)
@@ -303,6 +171,7 @@ namespace FactorioOrganizer
 			if (IsNegate) { rep = "-" + rep; }
 			return rep;
 		}
+
 
 		public void Save(string filepath)
 		{

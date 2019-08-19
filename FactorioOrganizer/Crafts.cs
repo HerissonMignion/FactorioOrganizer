@@ -17,6 +17,7 @@ namespace FactorioOrganizer
 		public static List<Bitmap> listIcons = new List<Bitmap>(); //this list constains every existing icons of items.
 		public static Bitmap GetAssociatedIcon(sItem i)
 		{
+			//sItems contain a number who indicate the index of their icon. we don't have to use a foreach or a while.
 			if (i.IconIndex >= 0 && i.IconIndex < Crafts.listIcons.Count)
 			{
 				return Crafts.listIcons[i.IconIndex];
@@ -148,6 +149,7 @@ namespace FactorioOrganizer
 
 		public static event EventHandler<ModEventArgs> ModAdded;
 
+		//import the content of a mod
 		public static void AddMod(oMod newmod)
 		{
 
@@ -190,13 +192,6 @@ namespace FactorioOrganizer
 			Crafts.AddItem(new sItem("IronStick", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.iron_stick);
 			Crafts.AddItem(new sItem("CopperCable", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.copper_cable);
 
-			Crafts.AddItem(new sItem("ElectricPole", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.small_electric_pole);
-			Crafts.AddItem(new sItem("MediumElectricPole", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.medium_electric_pole);
-			Crafts.AddItem(new sItem("BigElectricPole", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.big_electric_pole);
-			Crafts.AddItem(new sItem("Pipe", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.pipe);
-			Crafts.AddItem(new sItem("PipeUnderground", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.pipe_to_ground);
-			Crafts.AddItem(new sItem("Pump", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.pump);
-
 			Crafts.AddItem(new sItem("ChestWood", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.wooden_chest);
 			Crafts.AddItem(new sItem("ChestIron", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.iron_chest);
 			Crafts.AddItem(new sItem("ChestSteel", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.steel_chest);
@@ -204,13 +199,13 @@ namespace FactorioOrganizer
 			Crafts.AddItem(new sItem("StorageTank", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.storage_tank);
 
 			Crafts.AddItem(new sItem("Belt", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.transport_belt);
-			Crafts.AddItem(new sItem("BeltFast", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.fast_transport_belt);
-			Crafts.AddItem(new sItem("BeltExpress", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.express_transport_belt);
 			Crafts.AddItem(new sItem("BeltUnderground", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.underground_belt);
-			Crafts.AddItem(new sItem("BeltFastUnderground", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.fast_underground_belt);
-			Crafts.AddItem(new sItem("BeltExpressUnderground", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.express_underground_belt);
 			Crafts.AddItem(new sItem("BeltSplitter", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.splitter);
+			Crafts.AddItem(new sItem("BeltFast", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.fast_transport_belt);
+			Crafts.AddItem(new sItem("BeltFastUnderground", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.fast_underground_belt);
 			Crafts.AddItem(new sItem("BeltFastSplitter", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.fast_splitter);
+			Crafts.AddItem(new sItem("BeltExpress", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.express_transport_belt);
+			Crafts.AddItem(new sItem("BeltExpressUnderground", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.express_underground_belt);
 			Crafts.AddItem(new sItem("BeltExpressSplitter", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.express_splitter);
 
 			Crafts.AddItem(new sItem("Boiler", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.boiler);
@@ -227,10 +222,16 @@ namespace FactorioOrganizer
 			Crafts.AddItem(new sItem("FurnaceStone", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.stone_furnace);
 			Crafts.AddItem(new sItem("FurnaceSteel", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.steel_furnace);
 			Crafts.AddItem(new sItem("FurnaceElectric", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.electric_furnace);
-
 			Crafts.AddItem(new sItem("GreenCircuit", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.electronic_circuit);
 			Crafts.AddItem(new sItem("RedCircuit", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.advanced_circuit);
 			Crafts.AddItem(new sItem("ProcessingUnit", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.processing_unit);
+
+			Crafts.AddItem(new sItem("ElectricPole", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.small_electric_pole);
+			Crafts.AddItem(new sItem("MediumElectricPole", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.medium_electric_pole);
+			Crafts.AddItem(new sItem("BigElectricPole", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.big_electric_pole);
+			Crafts.AddItem(new sItem("Pipe", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.pipe);
+			Crafts.AddItem(new sItem("PipeUnderground", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.pipe_to_ground);
+			Crafts.AddItem(new sItem("Pump", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.pump);
 
 			Crafts.AddItem(new sItem("Inserter", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.inserter);
 			Crafts.AddItem(new sItem("InserterLong", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.long_handed_inserter);
@@ -246,6 +247,7 @@ namespace FactorioOrganizer
 			Crafts.AddItem(new sItem("ChemicalPlant", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.chemical_plant);
 			Crafts.AddItem(new sItem("Centrifuge", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.centrifuge);
 			Crafts.AddItem(new sItem("Lab", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.lab);
+
 			
 			Crafts.AddItem(new sItem("ScienceRed", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.automation_science_pack);
 			Crafts.AddItem(new sItem("ScienceGreen", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.logistic_science_pack);
@@ -318,7 +320,7 @@ namespace FactorioOrganizer
 			Crafts.AddItem(new sItem("CoalLiquefaction", false, true, "vanilla"), FactorioOrganizer.Properties.Resources.coal_liquefaction);
 			Crafts.AddItem(new sItem("SolidFuelFromOilHeavy", false, true, "vanilla"), FactorioOrganizer.Properties.Resources.solid_fuel_from_heavy_oil);
 			Crafts.AddItem(new sItem("SolidFuelFromOilLight", false, true, "vanilla"), FactorioOrganizer.Properties.Resources.solid_fuel_from_light_oil);
-			Crafts.AddItem(new sItem("SolidFuelFromPetroleumGas", false, true, "vanilla"), FactorioOrganizer.Properties.Resources.petroleum_gas);
+			Crafts.AddItem(new sItem("SolidFuelFromPetroleumGas", false, true, "vanilla"), FactorioOrganizer.Properties.Resources.solid_fuel_from_petroleum_gas);
 
 			Crafts.AddItem(new sItem("PortableSolarPanel", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.solar_panel_equipment);
 			Crafts.AddItem(new sItem("PortableFusionReactor", true, true, "vanilla"), FactorioOrganizer.Properties.Resources.fusion_reactor_equipment);
@@ -351,7 +353,7 @@ namespace FactorioOrganizer
 
 
 			////create crafts
-			///
+			
 			//https://wiki.factorio.com/Items
 
 			//Crafts.AddCraft(new oCraft(Crafts.GetItemFromName("TEST"), new sItem[] { Crafts.GetItemFromName("Inserter"), Crafts.GetItemFromName("InserterLong"), Crafts.GetItemFromName("InserterFast"), Crafts.GetItemFromName("InserterFilter") }, , , new sItem[] { Crafts.GetItemFromName("ScienceRed")Crafts.GetItemFromName("ScienceGreen")Crafts.GetItemFromName("ScienceGrey") }, false));
