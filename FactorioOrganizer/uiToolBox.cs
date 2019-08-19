@@ -54,11 +54,8 @@ namespace FactorioOrganizer
 		}
 
 		
-
-		public uiToolBox(uiMapEditer StartEditer)
+		private void voidnew()
 		{
-			this.Editer = StartEditer;
-
 			this.panele = new Panel();
 			this.panele.BorderStyle = BorderStyle.FixedSingle;
 			this.panele.AutoScroll = true;
@@ -73,10 +70,25 @@ namespace FactorioOrganizer
 			this.TextAssembler.Parent = this.panele;
 			this.TextAssembler.Text = "Assembler :";
 			this.TextAssembler.ForeColor = Color.White;
-			
-			
+
+
+		}
+		//vanilla
+		public uiToolBox(uiMapEditer StartEditer)
+		{
+			this.Editer = StartEditer;
+			this.voidnew();
 
 			this.CreateVanillaControls();
+			this.RefreshSize();
+		}
+		//mods
+		public uiToolBox(uiMapEditer StartEditer, string sModName)
+		{
+			this.Editer = StartEditer;
+			this.voidnew();
+
+			this.CreateModControls(sModName);
 			this.RefreshSize();
 		}
 
@@ -89,7 +101,6 @@ namespace FactorioOrganizer
 		//creates all the default items
 		private void CreateVanillaControls()
 		{
-			
 			//loads every vanilla items
 			int index = 0;
 			while (index < Crafts.listItems.Count)
@@ -103,7 +114,22 @@ namespace FactorioOrganizer
 				//next iteration
 				index++;
 			}
-			
+		}
+		private void CreateModControls(string modname)
+		{
+			//loads every vanilla items
+			int index = 0;
+			while (index < Crafts.listItems.Count)
+			{
+				sItem i = Crafts.listItems[index];
+				//check if it's a vanilla item
+				if (i.ModName == modname && i.ItemName != "none")
+				{
+					this.CreateNewButtonBoth(i);
+				}
+				//next iteration
+				index++;
+			}
 		}
 
 

@@ -37,6 +37,9 @@ namespace FactorioOrganizer
 			InitializeComponent();
 			this.KeyDown += new KeyEventHandler(this.Form1_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form1_KeyUp);
+			this.TabContainer.DrawItem += new DrawItemEventHandler(this.TabContainer_DrawItem);
+
+
 			
 			this.Map = new oMap();
 
@@ -45,7 +48,7 @@ namespace FactorioOrganizer
 			this.Editer.VirtualWidth = 20f; // 10f
 
 			this.TB = new uiToolBox(this.Editer);
-			this.TB.Parent = this;
+			this.AddTabPage(this.TB, "Factorio");
 
 			
 
@@ -133,34 +136,69 @@ namespace FactorioOrganizer
 
 		}
 
+		private void ButtonModMore_Click(object sender, EventArgs e)
+		{
+			Program.ActualNextForm = Program.NextFormToShow.FormModEditerEmpty;
+			this.Close();
+		}
+		private void ButtonAutoLoadMod_Click(object sender, EventArgs e)
+		{
+
+		}
+		private void ButtonLoadSingleMod_Click(object sender, EventArgs e)
+		{
+
+		}
+
+
+		private void TabContainer_DrawItem(object sender, DrawItemEventArgs e)
+		{
+			Graphics g = e.Graphics;
+			g.Clear(Color.FromArgb(64, 64, 64));
+
+			for (int i = 0; i < this.TabContainer.TabPages.Count; i++)
+			{
+				Rectangle rec = this.TabContainer.GetTabRect(i);
+				g.FillRectangle(new SolidBrush(Color.FromArgb(32, 32, 32)), rec);
+				TabPage ActualPage = this.TabContainer.TabPages[i];
+
+				PointF TextPos = new PointF((float)(rec.X), (float)(rec.Y + 2));
+				g.DrawString(ActualPage.Text, ActualPage.Font, Brushes.White, TextPos);
+			}
+		}
+
+
+
+		private void AddTabPage(uiToolBox tb, string TabTitle)
+		{
+			TabPage newpage = new TabPage();
+			tb.Parent = newpage;
+			tb.Dock = DockStyle.Fill;
+			newpage.Text = TabTitle;
+			//newpage.BackColor = Color.Black;
+			newpage.Parent = this.TabContainer;
+
+		}
+
 
 
 
 		public void RefreshSize()
 		{
-			this.Editer.Top = 110; // 110
+			this.Editer.Top = this.TabContainer.Top + this.TabContainer.Height + 5; // 110
 			this.Editer.Left = 5;
 			this.Editer.Width = this.Width - 16 - (this.Editer.Left * 2);
 			this.Editer.Height = this.Height - 39 - (this.Editer.Top + this.Editer.Left);
 			this.Editer.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom;
 
-			this.TB.Top = 5;
-			this.TB.Left = 5;
-			this.TB.Width = this.Width - 15 - (2 * this.TB.Left) - 155; // -150
-			this.TB.Height = 103; // 103
-			this.TB.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left;
+			//this.TB.Top = 5;
+			//this.TB.Left = 5;
+			//this.TB.Width = this.Width - 15 - (2 * this.TB.Left) - 155; // -150
+			//this.TB.Height = 103; // 103
+			//this.TB.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left;
 
 
 		}
-		
-
-
-
-
-
-		
-
-
 
 	}
 }

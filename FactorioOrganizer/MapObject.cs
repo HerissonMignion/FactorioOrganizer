@@ -23,15 +23,6 @@ namespace FactorioOrganizer
 		public sItem TheRecipe = Crafts.listItems[0]; //actuel recipe. used only if this is a machine
 
 
-
-		//public FOType oldBeltOutput = FOType.none; //content of the belt, if this is a belt ////    contenue de la belt
-		//public FOType[] oldOutputs = new FOType[] { };
-		//public FOType[] oldInputs = new FOType[] { };
-		
-
-		////for a machine, the recipe define both the inputs and outputs
-		//public FOType oldTheRecipe = FOType.none; //actuel recipe. used only if this is a machine ////    recette actuel. utilisé seulement si this est une machine
-
 		
 		
 
