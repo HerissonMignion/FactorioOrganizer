@@ -22,6 +22,14 @@ namespace FactorioOrganizer.RandomImports
 		public Bitmap imgScreen; //image originale de l'écran
 		private Bitmap imgUser; //image affiché à l'utilisateur
 
+		private Font fontBig = new Font("consolas", 20f);
+		private Font fontBigBold = new Font("consolas", 20f, FontStyle.Bold);
+
+		private string[] LittleText = new string[] { "1) Press and hold the mouse left button at one corner of the rectangle.", "2) Drag the mouse to the opposite corner of the rectangle.", "3) Release the mouse left button." };
+		private Font fontLittle = new Font("consolas", 12f);
+		private Font fontLittleBold = new Font("consolas", 12f, FontStyle.Bold);
+
+
 
 
 		public void ShowToUser()
@@ -42,8 +50,20 @@ namespace FactorioOrganizer.RandomImports
 			float mulfact = 0.7f;
 			this.AdjustBrightnessMatrix(this.imgUser, mulfact, mulfact, mulfact);
 			g = Graphics.FromImage(this.imgUser);
-			g.DrawString("Draw a rectangle on the screen", new Font("consolas", 20f, FontStyle.Bold), Brushes.Black, 5f, 5f);
-			g.DrawString("Draw a rectangle on the screen", new Font("consolas", 20f), Brushes.White, 5f, 5f);
+			g.DrawString("Draw a rectangle on the screen", this.fontBigBold, Brushes.Black, 5f, 5f);
+			g.DrawString("Draw a rectangle on the screen", this.fontBig, Brushes.White, 5f, 5f);
+			//draw the "little text"
+			float ActualY = 30f;
+			foreach (string line in this.LittleText)
+			{
+				//draw the text
+				g.DrawString(line, this.fontLittleBold, Brushes.Black, 5f, ActualY);
+				g.DrawString(line, this.fontLittle, Brushes.White, 5f, ActualY);
+
+				//next iteration
+				ActualY += 15f;
+			}
+
 			g.Dispose();
 
 

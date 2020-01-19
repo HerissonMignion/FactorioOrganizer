@@ -202,7 +202,7 @@
 			this.label6.Dock = System.Windows.Forms.DockStyle.Top;
 			this.label6.Location = new System.Drawing.Point(3, 25);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(667, 1202);
+			this.label6.Size = new System.Drawing.Size(667, 1231);
 			this.label6.TabIndex = 0;
 			this.label6.Text = resources.GetString("label6.Text");
 			// 

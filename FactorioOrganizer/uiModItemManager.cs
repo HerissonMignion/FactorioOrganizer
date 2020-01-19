@@ -169,6 +169,9 @@ namespace FactorioOrganizer
 		private void ImageBox_MouseUp(object sender, MouseEventArgs e)
 		{
 			Rectangle mrec = this.MouseRec;
+
+			this.UnselectIndex();
+
 			if (e.Button == MouseButtons.Left)
 			{
 				this.IsMouseLeftDown = false;
@@ -506,9 +509,14 @@ namespace FactorioOrganizer
 
 									if (rep == optRemove)
 									{
-										//remove the item
-										this.listItems.RemoveAt(mouseindex);
-										this.Raise_UserDidSomeChange();
+										//we pop to the user a confirmation dialog
+										DialogResult UserSure = MessageBox.Show("Are you sure?", "Factorio Organizer", MessageBoxButtons.YesNo);
+										if (UserSure == DialogResult.Yes)
+										{
+											//remove the item
+											this.listItems.RemoveAt(mouseindex);
+											this.Raise_UserDidSomeChange();
+										}
 									}
 
 
@@ -632,6 +640,20 @@ namespace FactorioOrganizer
 				}
 			}
 		}
+
+		//to define the scrolling from outside. actually used by the find craft option
+		public void SetTopIndex(int newtopindex, bool CallRefreshImage = true)
+		{
+			this.IndexOfTopItem = newtopindex;
+			//check the bounds
+			if (this.IndexOfTopItem < this.MinIndex) { this.IndexOfTopItem = this.MinIndex; }
+			if (this.IndexOfTopItem > this.MaxIndex) { this.IndexOfTopItem = this.MaxIndex; }
+
+			this.ReadjustScrollZone();
+
+			if (CallRefreshImage) { this.RefreshImage(); }
+		}
+
 
 		//if mouse is not inside the item area or if the index doesn't exist, it will return -1.
 		//return the index of the item under the mouse
@@ -932,6 +954,15 @@ namespace FactorioOrganizer
 
 
 
+		//a "selected index". this craft just has a blue back ground
+		public int SelectedIndex = -1; //-1 if nothing is "selected"
+		public void UnselectIndex() { this.SelectedIndex = -1; }
+		public void SelectIndex(int index)
+		{
+			this.SelectedIndex = index;
+		}
+
+
 
 		private int uiMenuHeight = 50; //px height of the space reserved at the top for a "menu" and some controls inside
 		private Pen uiSeparationPen = new Pen(Color.Silver, 3f);
@@ -980,6 +1011,10 @@ namespace FactorioOrganizer
 
 					////draw the background
 					Brush BackBrush = new SolidBrush(Color.FromArgb(32, 32, 32));
+					if (index == this.SelectedIndex)
+					{
+						BackBrush = Brushes.DarkSlateGray; // DarkBlue DarkSlateGray
+					}
 					if (index == mouseindex && this.IsMouseLeftDownOnItemArea)
 					{
 						BackBrush = Brushes.Black;

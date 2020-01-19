@@ -139,6 +139,7 @@ namespace FactorioOrganizer
 			this.ManagerCraft.UserDidSomeChange += new EventHandler(this.ManagerCraft_UserDidSomeChange);
 
 			this.ManagerItem.SetCraftManager(this.ManagerCraft);
+			this.ManagerCraft.SetItemManager(this.ManagerItem);
 
 			//this.ManagerImage = new uiModImageManager();
 			//this.ManagerImage.Parent = this.gbImages;
@@ -328,6 +329,115 @@ namespace FactorioOrganizer
 			//lunch the process with the args for the mod help form
 			System.Diagnostics.Process.Start(Program.ProgramPath, "-helpmods");
 		}
+
+
+		#region research
+
+		private void tbResearch_TextChanged(object sender, EventArgs e)
+		{
+			//if there are currently an item or craft selected, if we don't unselect them, the reserch will start from where the selection is. we want the research to start from the beginning.
+			this.ManagerItem.UnselectIndex();
+			this.ManagerCraft.UnselectIndex();
+		}
+
+		private void ButtonResearchItem_Click(object sender, EventArgs e)
+		{
+			//we get the string to search
+			string str = this.tbResearch.Text;
+
+			//we start the search where we left it. "where we left it" is because the user can click multiple times on the search button to go to the next item that match the research string. when a math is found, we select that item. so, to continue to the next item when the user click again on the search button, we start where this item is.
+			//when no item is selected, the default value of the variable SelectedIndex is -1. this line of code under this comment start the search at SelectedIndex + 1, so we don't have to manage differently when the user start the search and when the search is already going on.
+			int ActualIndex = this.ManagerItem.SelectedIndex + 1; // + 1 because we continue to the next item. the actual item would match again.
+
+			//we go through every item until we find an item that match or until we get to the end.
+			bool found = false; //becomes true when we find a match
+			while (ActualIndex < this.Mod.listItems.Count)
+			{
+				//we get the item
+				oMod.ModItem mi = this.Mod.listItems[ActualIndex];
+				//we get the name of the item
+				string ItemName = mi.ItemName;
+
+				//we use regex to check if the name contain the researched string
+				bool IsMatchItemName = System.Text.RegularExpressions.Regex.IsMatch(ItemName, str, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+				//bool result1 = System.Text.RegularExpressions.Regex.IsMatch(ActualFileName.Replace("@", ""), Pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+				//if the item name match, we select that item to the user and we stop the research here, for now.
+				if (IsMatchItemName)
+				{
+					found = true;
+
+					//select the item
+					this.ManagerItem.SelectIndex(ActualIndex);
+					this.ManagerItem.SetTopIndex(ActualIndex - 3);
+
+					//we end the search here
+					break;
+
+				}
+
+				//next iteration
+				ActualIndex++;
+			}
+
+			//if no more match were found, we restart the research
+			if (!found)
+			{
+				this.ManagerItem.UnselectIndex();
+
+				//we refresh so the user realize that the item was unselected.
+				this.ManagerItem.RefreshImage();
+			}
+
+		}
+		private void ButtonResearchCraft_Click(object sender, EventArgs e)
+		{
+			//we get the string to search
+			string str = this.tbResearch.Text;
+
+			int ActualIndex = this.ManagerCraft.SelectedIndex + 1; // + 1 because we continue to the next item. the actual item would match again.
+
+			bool found = false; //will become true when we will find the craft
+			while (ActualIndex < this.Mod.listCrafts.Count)
+			{
+				//we get the craft
+				oMod.ModCraft mc = this.Mod.listCrafts[ActualIndex];
+				//we get the name of the recipe
+				string RecipeName = mc.Recipe.ItemName;
+
+				//we use regex to check if the name contain the researched string
+				bool IsMatchRecipeName = System.Text.RegularExpressions.Regex.IsMatch(RecipeName, str, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+				//if the recipe name match, we select that craft to the user and we stop the research here, for now.
+				if (IsMatchRecipeName)
+				{
+					found = true;
+
+					//select the craft
+					this.ManagerCraft.SelectIndex(ActualIndex);
+					this.ManagerCraft.SetTopIndex(ActualIndex - 1);
+
+					//we end the search here
+					break;
+				}
+				
+				//next iteration
+				ActualIndex++;
+			}
+
+			//if no more match were found, we restart the research
+			if (!found)
+			{
+				this.ManagerCraft.UnselectIndex();
+
+				//we refresh so the user realize that the craft was unselected.
+				this.ManagerCraft.RefreshImage();
+			}
+
+		}
+
+
+		#endregion
 
 
 

@@ -233,8 +233,9 @@ namespace FactorioOrganizer.Dialogs
 			{
 				if (rec.Width > 10)
 				{
-					//we tell the user that the "screen shots" are automatically resized to 32x32
-					MsgOnce.Show("screen shot auto resized to 32", "\"Screen shots\" are automatically resized to 32x32");
+					//we tell the user that the "screen shots" are automatically resized to 32x32.
+					//this message is anoying and useless.
+					//MsgOnce.Show("screen shot auto resized to 32", "\"Screen shots\" are automatically resized to 32x32");
 
 					try
 					{

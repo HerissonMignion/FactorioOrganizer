@@ -70,6 +70,11 @@ namespace FactorioOrganizer.Dialogs
 		private void rbExternalModItem_CheckedChanged(object sender, EventArgs e)
 		{
 			this.RefreshEnabled();
+			//if the user clicked in this radio button, we auto focus for the user the textbox of the item's name
+			if (this.rbExternalModItem.Checked)
+			{
+				this.tbItemName.Focus();
+			}
 		}
 		private void rbInternalModItem_CheckedChanged(object sender, EventArgs e)
 		{

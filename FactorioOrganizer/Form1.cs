@@ -319,6 +319,7 @@ namespace FactorioOrganizer
 		}
 		private void ButtonAutoLoadMod_MouseClick(object sender, MouseEventArgs e)
 		{
+			this.LoadModsInFolder(Program.ProgramFolder);
 
 		}
 		private void ButtonLoadModsInsideFolder_MouseClick(object sender, MouseEventArgs e)

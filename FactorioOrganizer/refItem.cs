@@ -40,5 +40,10 @@ namespace FactorioOrganizer
 			this.ModName = sModName;
 		}
 
+
+		public refItem GetCopy()
+		{
+			return new refItem(this.ItemName, this.ModName);
+		}
 	}
 }

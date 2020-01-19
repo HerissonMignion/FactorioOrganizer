@@ -68,6 +68,12 @@ namespace FactorioOrganizer
 
 		}
 
+		private uiModItemManager ItemManager = null;
+		public bool IsItemManagerDefined { get { return this.ItemManager != null; } }
+		public void SetItemManager(uiModItemManager themanager)
+		{
+			this.ItemManager = themanager;
+		}
 
 
 		public event EventHandler UserDidSomeChange; //raised when the user edit anything
@@ -203,15 +209,42 @@ namespace FactorioOrganizer
 									oMod.ModCraft mc = this.listCraft[mouseindex];
 
 									string optEdit = "Edit ...";
+									string optDuplicate = "Duplicate craft";
 
 									string optRemove = "Remove";
 
 									oRightClick3 rc = new oRightClick3();
 									rc.AddChoice(optEdit);
+									rc.AddChoice(optDuplicate);
 									rc.AddSeparator();
 									rc.AddChoice(optRemove);
+									rc.AddSeparator();
+									rc.AddSeparator();
+
+									//show to the user what are the inputs and the outputs. the user can click on them
+									rc.AddChoice("Recipe :");
+									string str = "-" + mc.Recipe.ItemName; //this variable is recycled after
+									if (mc.Recipe.ModName != "-") { str += "(" + mc.Recipe.ModName + ")"; }
+									rc.AddChoice(str);
+									rc.AddChoice("");
+									rc.AddChoice("Inputs :");
+									foreach (refItem ri in mc.Inputs)
+									{
+										str = "-" + ri.ItemName;
+										if (ri.ModName != "-") { str += "(" + ri.ModName + ")"; }
+										rc.AddChoice(str);
+									}
+									rc.AddChoice("");
+									rc.AddChoice("Outputs :");
+									foreach (refItem ri in mc.Outputs)
+									{
+										str = "-" + ri.ItemName;
+										if (ri.ModName != "-") { str += "(" + ri.ModName + ")"; }
+										rc.AddChoice(str);
+									}
 
 
+									//get the choice of the user
 									string rep = rc.GetChoice();
 									if (rep == optEdit)
 									{
@@ -237,12 +270,75 @@ namespace FactorioOrganizer
 										}
 
 									}
+									if(rep == optDuplicate)
+									{
+										oMod.ModCraft newmc = mc.GetCopy();
+										this.Mod.listCrafts.Insert(mouseindex + 1, newmc);
+										this.SelectIndex(mouseindex + 1);
+
+									}
 									if (rep == optRemove)
 									{
-										this.listCraft.Remove(mc);
+										//we pop to the user a confirmation dialog
+										DialogResult UserSure = MessageBox.Show("Are you sure?", "Factorio Organizer", MessageBoxButtons.YesNo);
+										if (UserSure == DialogResult.Yes)
+										{
+											//remove it
+											this.listCraft.Remove(mc);
 
-										this.Raise_UserDidSomeChange();
+											this.Raise_UserDidSomeChange();
+										}
 									}
+
+									//if the user clicked on an input or an output or the recipe, we "select" this item in the item manager
+									if (rep.Length > 1)
+									{
+										//if the rep beggings by -, the user clicked on an item
+										if (rep.Substring(0, 1) == "-")
+										{
+											//because the user clicked on an item, we search where this item is in the list and we select it for the user.
+											//how we find which item the user clicked : we go through every existing item and generate for each item how it would have been write in the right click menu. we stop when we found the one that generate the exact same string.
+
+											bool found = false; //becomes true when we find the item
+											int ActualIndex = 0;
+											foreach (oMod.ModItem mi in this.Mod.listItems)
+											{
+												//generate how it would have been inside the right click.
+												str = "-" + mi.ItemName; //str is a recycled variable
+												if (mi.ItemModName != "-") { str += "(" + mi.ItemModName + ")"; }
+
+												//check if this item match what the user clicked
+												if (str == rep)
+												{
+													//if the item is found, we set this variable to true and we tell the user where it is.
+													found = true;
+
+													//we tell the user where the item is.
+													if (!this.IsItemManagerDefined)
+													{
+														MessageBox.Show("The item is located at the index : " + ActualIndex.ToString());
+													}
+													else
+													{
+														this.ItemManager.SelectIndex(ActualIndex);
+														this.ItemManager.SetTopIndex(ActualIndex - 3);
+													}
+
+													break; //we quit
+												}
+												//next iteration
+												ActualIndex++;
+											}
+
+											//if the item was not found, we tell the user that it's an external mod item
+											if (!found)
+											{
+												MessageBox.Show("This item is not part of this mod.");
+											}
+
+										}
+									}
+
 
 
 								}
@@ -669,7 +765,7 @@ namespace FactorioOrganizer
 
 
 		//a "selected index". this craft just has a blue back ground
-		private int SelectedIndex = -1; //-1 if nothing is "selected"
+		public int SelectedIndex = -1; //-1 if nothing is "selected"
 		public void UnselectIndex() { this.SelectedIndex = -1; }
 		public void SelectIndex(int index)
 		{

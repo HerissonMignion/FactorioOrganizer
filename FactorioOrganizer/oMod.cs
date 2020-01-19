@@ -68,6 +68,8 @@ namespace FactorioOrganizer
 
 
 			public bool IsBelt = true;
+
+			//IsRecipe is now "computed" when needed : the static class Crafts search if any crafts use it as a recipe.
 			//public bool IsRecipe = true;
 
 			public ModItem(string sItemName, string sItemModName = "-", Bitmap sImg = null)
@@ -80,10 +82,8 @@ namespace FactorioOrganizer
 		public class ModCraft
 		{
 
-
+			// /!\ /!\ /!\ decrepitated comment :
 			//because each crafts are identified by an other item, what define a craft as external is their recipe.
-
-
 
 			public refItem Recipe; //name of the item used as a recipe
 
@@ -104,6 +104,25 @@ namespace FactorioOrganizer
 				this.Inputs = sInputs;
 				this.Outputs = sOutputs;
 				this.IsMadeInFurnace = sIsMadeInFurnace;
+			}
+
+			public ModCraft GetCopy()
+			{
+				List<refItem> CopyInputs = new List<refItem>();
+				List<refItem> CopyOutputs = new List<refItem>();
+
+				//copy the inputs and output
+				foreach (refItem ri in this.Inputs)
+				{
+					CopyInputs.Add(ri.GetCopy());
+				}
+				foreach (refItem ri in this.Outputs)
+				{
+					CopyOutputs.Add(ri.GetCopy());
+				}
+
+				ModCraft copy = new ModCraft(this.Recipe.GetCopy(), CopyInputs.ToArray(), CopyOutputs.ToArray(), this.IsMadeInFurnace);
+				return copy;
 			}
 		}
 
