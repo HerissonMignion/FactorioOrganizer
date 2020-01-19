@@ -161,6 +161,7 @@ namespace FactorioOrganizer
 			this.forme.FormBorderStyle = FormBorderStyle.None;
 			this.forme.StartPosition = FormStartPosition.Manual;
 			this.forme.Size = new Size(350, 350);
+			this.forme.TopMost = true;
 
 			this.ImageBox = new PictureBox();
 			this.ImageBox.Parent = this.forme;

@@ -72,6 +72,7 @@ namespace FactorioOrganizer
 			this.TextAssembler.ForeColor = Color.White;
 
 
+			this.CreateCraftsEvents();
 		}
 		//vanilla
 		public uiToolBox(uiMapEditer StartEditer)
@@ -96,34 +97,43 @@ namespace FactorioOrganizer
 
 		private List<Button> listButtonBelt = new List<Button>();
 		private List<Button> listButtonMachine = new List<Button>();
+
+
+		//the mod name of the currently loaded items. the mod name of the items to load and show. for vanilla it's "vanilla"
+		public string ModName = "";
+
 		
 
 		//creates all the default items
 		private void CreateVanillaControls()
 		{
 			//loads every vanilla items
-			int index = 0;
-			while (index < Crafts.listItems.Count)
-			{
-				sItem i = Crafts.listItems[index];
-				//check if it's a vanilla item
-				if (i.ModName == "vanilla" && i.ItemName != "none")
-				{
-					this.CreateNewButtonBoth(i);
-				}
-				//next iteration
-				index++;
-			}
+			this.CreateModControls("vanilla");
+
+			//int index = 0;
+			//while (index < Crafts.listItems.Count)
+			//{
+			//	oItem i = Crafts.listItems[index];
+			//	//check if it's a vanilla item
+			//	if (i.ModName == "vanilla" && i.ItemName != "none")
+			//	{
+			//		this.CreateNewButtonBoth(i);
+			//	}
+			//	//next iteration
+			//	index++;
+			//}
 		}
-		private void CreateModControls(string modname)
+		private void CreateModControls(string smodname)
 		{
-			//loads every vanilla items
+			this.ModName = smodname;
+			
+			//loads every items of that mod.
 			int index = 0;
 			while (index < Crafts.listItems.Count)
 			{
-				sItem i = Crafts.listItems[index];
-				//check if it's a vanilla item
-				if (i.ModName == modname && i.ItemName != "none")
+				oItem i = Crafts.listItems[index];
+				//check if it's an item of the mod
+				if (i.ModName == smodname && i.ItemName != "none")
 				{
 					this.CreateNewButtonBoth(i);
 				}
@@ -133,7 +143,7 @@ namespace FactorioOrganizer
 		}
 
 
-		private void CreateNewButtonBelt(Bitmap img, sItem i)
+		private void CreateNewButtonBelt(Bitmap img, oItem i)
 		{
 			Button newb = new Button();
 			newb.Parent = this.panele;
@@ -144,7 +154,7 @@ namespace FactorioOrganizer
 			newb.MouseDown += new MouseEventHandler(this.AnyButton_MosueDown);
 			newb.Tag = new object[] { MOType.Belt, i };
 		}
-		private void CreateNewButtonMachine(Bitmap img, sItem i)
+		private void CreateNewButtonMachine(Bitmap img, oItem i)
 		{
 			Button newb = new Button();
 			newb.Parent = this.panele;
@@ -155,7 +165,7 @@ namespace FactorioOrganizer
 			newb.MouseDown += new MouseEventHandler(this.AnyButton_MosueDown);
 			newb.Tag = new object[] { MOType.Machine, i };
 		}
-		private void CreateNewButtonBoth(sItem i)
+		private void CreateNewButtonBoth(oItem i)
 		{
 			Bitmap img = Crafts.GetAssociatedIcon(i);
 			this.CreateNewButtonBelt(img, i);
@@ -166,7 +176,7 @@ namespace FactorioOrganizer
 			Button btn = (Button)sender;
 			btn.Focus();
 			MOType mt = (MOType)(((object[])(btn.Tag))[0]);
-			sItem i = (sItem)(((object[])(btn.Tag))[1]);
+			oItem i = (oItem)(((object[])(btn.Tag))[1]);
 
 			if (e.Button == MouseButtons.Left)
 			{
@@ -189,31 +199,114 @@ namespace FactorioOrganizer
 			}
 			if (e.Button == MouseButtons.Right)
 			{
-				//if this button is as machine, i represents the recipe
-				oCraft c = Crafts.GetCraftFromRecipe(i);
-				oRightClick3 rc = new oRightClick3();
-				rc.AddChoice(i.Name);
-				if (c != null)
+				//if this button is as machine, we show the user the inputs and outputs of the recipe
+				if (mt == MOType.Machine)
 				{
-					rc.AddSeparator();
-					rc.AddSeparator();
-					//add every outputs and inputs for the user
-					rc.AddChoice("Outputs :");
-					foreach (sItem subi in c.Outputs)
+					//if this button is as machine, i represents the recipe
+					oCraft c = Crafts.GetCraftFromRecipe(i);
+					oRightClick3 rc = new oRightClick3();
+					rc.AddChoice(i.Name);
+					if (c != null)
 					{
-						rc.AddChoice("-" + subi.Name);
+						rc.AddSeparator();
+						rc.AddSeparator();
+						//add every outputs and inputs for the user
+						rc.AddChoice("Outputs :");
+						foreach (oItem subi in c.Outputs)
+						{
+							rc.AddChoice("-" + subi.Name);
+						}
+						rc.AddChoice("");
+						rc.AddChoice("Inputs :");
+						foreach (oItem subi in c.Inputs)
+						{
+							rc.AddChoice("-" + subi.Name);
+						}
 					}
-					rc.AddChoice("");
-					rc.AddChoice("Inputs :");
-					foreach (sItem subi in c.Inputs)
-					{
-						rc.AddChoice("-" + subi.Name);
-					}
+					string rep = rc.ShowDialog(); //it simply show to the user what the inputs and outputs are
 				}
-				string rep = rc.ShowDialog();
+
+				//if this button is a belt, we show the user every crafts that require this item as input
+				if (mt == MOType.Belt)
+				{
+					oRightClick3 rc = new oRightClick3();
+					rc.AddChoice(i.Name);
+					rc.AddSeparator();
+					rc.AddChoice("Used In Recipe :");
+					//run through every crafts and check their inputs to see if the actual item is used in that craft
+					foreach (oCraft c in Crafts.listCrafts)
+					{
+						//check the inputs and see if the item i is there
+						foreach (oItem i2 in c.Inputs)
+						{
+							//check if this is the item we are searching
+							if (i2.Name == i.Name)
+							{
+								//now that we have found the item in this craft, we add the craft recipe to the list and continue to the next item
+								rc.AddChoice("-" + c.Recipe.Name);
+
+								//now that we have found the item, we don't have to continue search in this craft
+								break;
+							}
+						}
+
+					}
+					
+					string rep = rc.ShowDialog();
+					//if the user clicked on a recipe, we set the editer to add mode and with a machine of that recipe.
+					//we get the item from name
+					oItem therecipe = Crafts.GetItemFromName(rep.Replace("-", string.Empty)); //the .Replace can be a little problem if - is truly part of the item name.
+					//if rep is not an item, GetItemFromName will not return null, it will return the none item.
+					if (therecipe.Name.ToLower() != "none")
+					{
+						MapObject newmo = new MapObject(MOType.Machine, therecipe);
+						this.Editer.StartAddMode(newmo);
+					}
+
+
+				}
+
+
+
 			}
 
 		}
+
+		//remove every controls
+		private void RemoveEveryButton()
+		{
+			//belt
+			while (this.listButtonBelt.Count > 0)
+			{
+				Button btn = this.listButtonBelt[0];
+				//remove the event
+				btn.MouseDown -= new MouseEventHandler(this.AnyButton_MosueDown);
+
+				btn.Parent = null;
+
+				//dispose the button
+				btn.Dispose();
+
+				//remove the button from the list
+				this.listButtonBelt.RemoveAt(0);
+			}
+			//machine
+			while (this.listButtonMachine.Count > 0)
+			{
+				Button btn = this.listButtonMachine[0];
+				//remove the event
+				btn.MouseDown -= new MouseEventHandler(this.AnyButton_MosueDown);
+
+				btn.Parent = null;
+
+				//dispose the button
+				btn.Dispose();
+
+				//remove the button from the list
+				this.listButtonMachine.RemoveAt(0);
+			}
+		}
+
 
 
 
@@ -236,7 +329,7 @@ namespace FactorioOrganizer
 			foreach (Button b in this.listButtonBelt)
 			{
 				MOType mt = (MOType)(((object[])(b.Tag))[0]);
-				sItem i = (sItem)(((object[])(b.Tag))[1]);
+				oItem i = (oItem)(((object[])(b.Tag))[1]);
 				b.Left = actualleft;
 				b.Top = 1;
 				b.Size = buttonsize;
@@ -255,7 +348,7 @@ namespace FactorioOrganizer
 			foreach (Button b in this.listButtonMachine)
 			{
 				MOType mt = (MOType)(((object[])(b.Tag))[0]);
-				sItem i = (sItem)(((object[])(b.Tag))[1]);
+				oItem i = (oItem)(((object[])(b.Tag))[1]);
 				b.Left = actualleft;
 				b.Top = 1 + buttonsize.Height + 2;
 				b.Size = buttonsize;
@@ -272,6 +365,50 @@ namespace FactorioOrganizer
 
 		}
 
+
+
+
+
+
+
+		private void CreateCraftsEvents()
+		{
+			Crafts.ModImportFinished += new EventHandler(this.Crafts_ModImportFinished);
+		}
+		private void DestroyCraftsEvents()
+		{
+			Crafts.ModImportFinished -= new EventHandler(this.Crafts_ModImportFinished);
+		}
+		
+		//when the import of mods is finished.
+		private void Crafts_ModImportFinished(object sender, EventArgs e)
+		{
+			if (this.Parent != null)
+			{
+				////we must remove every button and recreate them all.
+
+				//remove all control
+				this.RemoveEveryButton();
+
+				//recreate all control
+				this.CreateModControls(this.ModName);
+
+				this.RefreshSize();
+			}
+			else
+			{
+				this.DestroyCraftsEvents();
+			}
+		}
+
+
+
+
+
+
+
+
+		
 
 	}
 }

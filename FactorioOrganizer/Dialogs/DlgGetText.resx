@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Open your file explorer. At the top of the window, click on "Organize", then select "Folder and search options". In the window that popped up, click on the "View" tab then uncheck the case "Hide extensions for known file types".</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>The button "Mod Editer ..." opens the window used to create and edit mods.
-Multiple options exists to provide the user ergonomic ways of managing which mods are currently loaded. To begin, there is "Load a single mod". This button will let you browse one mod file and will load its content so you can use it. When you want to unload mods, the option "Unload every mods" will remove every mod currently loaded. Then, if you want to fastly open multiple mods in a specific order, you have the options "Auto load every mods in the program directory" and "Load every mods of a folder". The first will scan for mod files the folder in which Factorio Organizer is located and will load every mods according to the mod load order. The second will let you browse a folder of your computer and will load every mods it founds in it according to the mod load order.
-
-"Mod load order" is the order in which Factorio Organizer load multiple mods, because there could be mods that needs to be imported before other mods. The mod load order does not apply to the mods that was already loaded. The extension of the mod's file name indicate Factorio Organizer before or after which other mod file the current file must be loaded (for details on "file extension", see below or search on the internet). The default extension given to mod files is ".fomod". The files with this specific extension ".fomod" are always the first mods to be loaded. To give the mods an order, add a number after : ".fomod15". You can put a number between 1 and 99, 0 is excluded and everything above 99 is also excluded. Factorio Organizer will consider ".fomod7" and ".fomod07" as the same, and this apply for every number under 10. Factorio Organizer will load every file from 1 and will finish at 99. Multiple mod files can share the same number. Here is an exemple. We have in the same directory / folder the following files :
-AAA.fomod
-BBB.fomod4
-CCC.fomod20
-DDD.fomod4
-These files will be loaded in this order from left to right :
-AAA DDD(4) BBB(4) CCC(20).
-When you add a number, you force Factorio Organizer to load lower numbers before bigger numbers. When you give multiple files the same number, Factorio Organizer will load all the same numbers in a random order.
-
-The "file extension" is something at the end of a file's name. It tells Windows what this file is. Almost every file of a Windows operating system has an extension, and by default, Windows hides most of them to the user. For exemple, a very simple ascii text file would be named "My text file.txt" and a school PowerPoint project would be "Dinosaur school project.pptx". Factorio Organizer utilize ".factory" and ".fomod".
-To set a mod's order, you must rename its file's extension ".fomod" and add a number at the end. To rename a file's extension, just rename the file as you would normally do then change the text after the last dot of the file name. If Windows doesn't show you the file's extension, you won't be able to rename the extension and for this reason, you would need to tell Windows to show them.</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>-Recipes of items made in furnace don't require coal. The need of coal is a property of the machine.
--TopMost is a property of windows that allow them to stay in front of every other windows even if the user click on other windows. Unfortunately, Factorio also seems to be in TopMost. This means that normal priority apply to both Factorio and FactorioOrganizer.</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>-While you are adding an item to the map, press right click instead to place on the map a copy of your item and you can place your original item somewhere else. This can be repeated to make belt lines.
--Press Q to copy the item under the mouse or to cancel "add mode".
--Press W to copy the item under the mouse but if it's a belt, it'll be a machine and if it's a machine, it'll be a belt.
--Press and hold Space to remove items under the mouse.
--Press F to toggle the "Need Coal" property of the furnace under the mouse.</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>You can drag the map with a left click to move. You can zoom in and out with the mouse wheel (it's possible that the wheel don't work on Windows 7 and 8. If that's the case, you can use key shortcut 1 2 to zoom out and in respectively). In the Tool Box (at the top) you have everything you can add to the map. Click on an item then click where you want it in the Map Editer to add it to the map. In the map, you can drag items to move them. Right click on any machine to see its inputs and outputs.</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>There are two main components : Machines and Belts.
-Belts can contain any items on them and machines needs specific items to build other items. Machines takes belts as inputs and they output on belts. The program draw links between belts of the same type and also between belts and corresponding machine input/output. Machines are supposed to represent an entire area of fabrication of that specific item. The links allow you to see if areas of your factory are too far away from each other.</value>
-  </data>
 </root>

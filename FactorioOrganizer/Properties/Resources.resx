@@ -118,892 +118,928 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="accumulator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\accumulator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="advanced_circuit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\advanced-circuit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arithmetic_combinator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arithmetic-combinator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="artillery_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artillery-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="artillery_targeting_remote" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artillery-targeting-remote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="artillery_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artillery-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="artillery_wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artillery-wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rocket_structure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket-structure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="assembling_machine_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assembling-machine-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="assembling_machine_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assembling-machine-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="assembling_machine_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assembling-machine-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="assembling_machine_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assembling-machine-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="atomic_bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atomic-bomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="automation_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\automation-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="battery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="battery_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battery-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="battery_mk2_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battery-mk2-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="beacon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beacon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="behemoth_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\behemoth-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="behemoth_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\behemoth-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="behemoth_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\behemoth-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="behemoth_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\behemoth-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="belt_immunity_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\belt-immunity-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_biter_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-biter-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_electric_pole" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-electric-pole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="biter_spawner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biter-spawner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="biter_spawner_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biter-spawner-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blueprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blueprint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blueprint_book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blueprint-book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boiler" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boiler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="burner_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\burner-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="burner_mining_drill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\burner-mining-drill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="car" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cargo_wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cargo-wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="centrifuge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\centrifuge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="character" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="checked_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checked-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chemical_plant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chemical-plant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chemical_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chemical-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cliff_explosives" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cliff-explosives.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cliff_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cliff-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cluster_grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cluster-grenade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coal_dark_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coal-dark-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="combat_shotgun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\combat-shotgun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="compilatron" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\compilatron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="compilatron_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\compilatron-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="constant_combinator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\constant-combinator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="construction_robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\construction-robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="copper_cable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copper-cable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="copper_ore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copper-ore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="copper_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copper-plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="copy_paste_tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copy-paste-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="crude_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crude-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="curved_rail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\curved-rail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="curved_rail_remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\curved-rail-remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cut_paste_tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cut-paste-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dead_dry_hairy_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dead-dry-hairy-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dead_grey_trunk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dead-grey-trunk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dead_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dead-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="decider_combinator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\decider-combinator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="deconstruction_planner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deconstruction-planner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="defender" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\defender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="destroyer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\destroyer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diesel_locomotive" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diesel-locomotive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="discharge_defense_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\discharge-defense-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="distractor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\distractor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dry_hairy_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dry-hairy-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dry_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dry-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="effectivity_module" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\effectivity-module.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="effectivity_module_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\effectivity-module-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="effectivity_module_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\effectivity-module-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="electric_engine_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\electric-engine-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="electric_furnace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\electric-furnace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="electric_mining_drill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\electric-mining-drill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="electronic_circuit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\electronic-circuit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="energy_shield_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\energy-shield-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="energy_shield_mk2_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\energy-shield-mk2-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="engine_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engine-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exoskeleton_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exoskeleton-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="explosives" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\explosives.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="explosive_cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\explosive-cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="explosive_rocket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\explosive-rocket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="explosive_uranium_cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\explosive-uranium-cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="express_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\express-loader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="express_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\express-splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="express_transport_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\express-transport-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="express_underground_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\express-underground-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fast_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fast-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fast_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fast-loader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fast_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fast-splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fast_transport_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fast-transport-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fast_underground_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fast-underground-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filter_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filter-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="firearm_magazine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\firearm-magazine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fish" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flamethrower" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flamethrower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flamethrower_ammo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flamethrower-ammo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flamethrower_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flamethrower-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fluid_wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fluid-wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flying_robot_frame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flying-robot-frame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fusion_reactor_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fusion-reactor-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="green_wire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\green-wire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grenade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gun_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gun-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hazard_concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hazard-concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hazard_gate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hazard-gate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heat_boiler" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heat-boiler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heat_pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heat-pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heavy_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heavy-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="infinity_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\infinity-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iron_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iron-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iron_gear_wheel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iron-gear-wheel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iron_ore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iron-ore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iron_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iron-plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iron_stick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iron-stick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kovarex_enrichment_process" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kovarex-enrichment-process.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="landfill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\landfill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="land_mine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\land-mine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="laser_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\laser-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="light_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\light-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="list_dot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\list-dot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logistic_chest_active_provider" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logistic-chest-active-provider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logistic_chest_buffer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logistic-chest-buffer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logistic_chest_passive_provider" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logistic-chest-passive-provider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logistic_chest_requester" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logistic-chest-requester.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logistic_chest_storage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logistic-chest-storage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logistic_robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logistic-robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logistic_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logistic-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="long_handed_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\long-handed-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="market" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\market.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medium_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medium-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medium_biter_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medium-biter-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medium_electric_pole" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medium-electric-pole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medium_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medium-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medium_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medium-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="medium_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\medium-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="military_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\military-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="modular_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modular-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="night_vision_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\night-vision-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nuclear_fuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuclear-fuel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nuclear_fuel_reprocessing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuclear-fuel-reprocessing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nuclear_reactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuclear-reactor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="offshore_pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\offshore-pump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="oil_refinery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oil-refinery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="personal_laser_defense_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\personal-laser-defense-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="personal_roboport_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\personal-roboport-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="personal_roboport_mk2_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\personal-roboport-mk2-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="piercing_rounds_magazine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\piercing-rounds-magazine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="piercing_shotgun_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\piercing-shotgun-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pipe_to_ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pipe-to-ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pistol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pistol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plastic_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plastic-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="player_port" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\player-port.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="poison_capsule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\poison-capsule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="power_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\power-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="power_armor_mk2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\power-armor-mk2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="power_switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\power-switch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="processing_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\processing-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="production_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\production-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="productivity_module" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\productivity-module.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="productivity_module_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\productivity-module-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="productivity_module_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\productivity-module-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="programmable_speaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\programmable-speaker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pumpjack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pumpjack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="radar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\radar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="railgun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\railgun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="railgun_ammo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\railgun-ammo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rail_chain_signal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rail-chain-signal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rail_signal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rail-signal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="red_wire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red-wire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refined_concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refined-concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refined_hazard_concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refined-hazard-concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="repair_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\repair-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="roboport" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\roboport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rocket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rocket_control_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket-control-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rocket_fuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket-fuel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rocket_launcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket-launcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rocket_part" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket-part.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rocket_silo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket-silo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rocket_structure" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket-structure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rock_big_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rock-big-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rock_huge_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rock-huge-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="root_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\root-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="satellite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\satellite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shotgun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shotgun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shotgun_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shotgun-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="slowdown_capsule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slowdown-capsule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_biter_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-biter-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_electric_pole" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-electric-pole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_lamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-lamp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_plane" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-plane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_scorchmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-scorchmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="small_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\small-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solar_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solar-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solar_panel_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solar-panel-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solid_fuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solid-fuel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solid_fuel_from_heavy_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solid-fuel-from-heavy-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solid_fuel_from_light_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solid-fuel-from-light-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solid_fuel_from_petroleum_gas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solid-fuel-from-petroleum-gas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="space_module_wreck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\space-module-wreck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="space_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\space-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="speed_module" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\speed-module.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="speed_module_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\speed-module-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="speed_module_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\speed-module-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stack_filter_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stack-filter-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stack_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stack-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="steam_engine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steam-engine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="steam_turbine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steam-turbine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="steel_axe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steel-axe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="steel_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steel-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="steel_furnace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steel-furnace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="steel_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steel-plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stone_brick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stone-brick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stone_furnace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stone-furnace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="storage_tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\storage-tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="straight_rail_remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\straight-rail-remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="submachine_gun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\submachine-gun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="substation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\substation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sulfur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sulfur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tank_cannon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tank-cannon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="train_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\train-stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="transport_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transport-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_01_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-01-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_02_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-02-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_03_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-03-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_04_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-04-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_05_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-05-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_06_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-06-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_07_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-07-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_08_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-08-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tree_09_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-09-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="underground_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\underground-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="upgrade_planner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\upgrade-planner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="uranium_235" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uranium-235.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uranium_238" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uranium-238.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="productivity_module_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\productivity-module-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uranium_cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uranium-cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="defender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\defender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uranium_fuel_cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uranium-fuel-cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="beacon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beacon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uranium_ore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uranium-ore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uranium_processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uranium-processing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rocket_control_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket-control-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uranium_rounds_magazine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uranium-rounds-magazine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dead_dry_hairy_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dead-dry-hairy-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="used_up_uranium_fuel_cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\used-up-uranium-fuel-cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rocket_fuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket-fuel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="utility_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\utility-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="transport_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transport-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flamethrower_ammo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flamethrower-ammo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wall_remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wall-remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="solid_fuel_from_heavy_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solid-fuel-from-heavy-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="water" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wood" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="explosive_cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\explosive-cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wooden_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wooden-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="battery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wreckage_reactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wreckage-reactor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="satellite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\satellite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateLiquid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateLiquid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heat_pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heat-pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accumulator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accumulator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="combat_shotgun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\combat-shotgun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rocket_launcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket-launcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="compilatron_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compilatron-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="roboport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\roboport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hazard_concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hazard-concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="infinity_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\infinity-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_electric_pole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-electric-pole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logistic_chest_storage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logistic-chest-storage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="land_mine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\land-mine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="speed_module_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\speed-module-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deconstruction_planner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deconstruction-planner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fusion_reactor_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fusion-reactor-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flamethrower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flamethrower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dead_grey_trunk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dead-grey-trunk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_06_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-06-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="substation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\substation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piercing_shotgun_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piercing-shotgun-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dead_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dead-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medium_electric_pole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medium-electric-pole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fast_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fast-loader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="advanced_oil_processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\advanced-oil-processing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="basic_oil_processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basic-oil-processing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cut_paste_tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cut-paste-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coal_liquefaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coal-liquefaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="submachine_gun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\submachine-gun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="heavy_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heavy-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="battery_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fast_underground_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fast-underground-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rocket_silo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket-silo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="modular_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modular-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iron_gear_wheel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iron-gear-wheel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exoskeleton_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exoskeleton-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="long_handed_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\long-handed-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="belt_immunity_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\belt-immunity-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="speed_module" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\speed-module.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wreckage_reactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wreckage-reactor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="electric_engine_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electric-engine-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iron_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iron-plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="military_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\military-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_08_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-08-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="burner_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\burner-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\radar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fast_transport_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fast-transport-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logistic_chest_passive_provider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logistic-chest-passive-provider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="construction_robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\construction-robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cliff_explosives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cliff-explosives.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="underground_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\underground-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uranium_ore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uranium-ore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fluid_wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fluid-wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pistol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pistol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="heavy_oil_cracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heavy-oil-cracking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="light_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\light-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="light_oil_cracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\light-oil-cracking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lubricant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lubricant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="petroleum_gas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\petroleum-gas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pollution" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pollution.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shotgun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shotgun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sulfuric_acid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sulfuric-acid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="small_electric_pole" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-electric-pole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solar_panel_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solar-panel-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pumpjack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pumpjack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curved_rail_remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curved-rail-remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boiler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boiler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dry_hairy_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dry-hairy-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hazard_gate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hazard-gate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rail_chain_signal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rail-chain-signal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="electric_mining_drill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electric-mining-drill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stone_brick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stone-brick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="railgun_ammo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\railgun-ammo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy_paste_tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy-paste-tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="firearm_magazine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\firearm-magazine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="energy_shield_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\energy-shield-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="assembling_machine_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assembling-machine-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="effectivity_module_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\effectivity-module-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="electric_furnace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electric-furnace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="behemoth_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\behemoth-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="night_vision_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\night-vision-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fast_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fast-splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuclear_fuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuclear-fuel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateScience" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateScience.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="empty_barrel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empty-barrel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stone_furnace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stone-furnace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="steam_engine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steam-engine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solid_fuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solid-fuel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kovarex_enrichment_process" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kovarex-enrichment-process.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pollution" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pollution.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="energy_shield_mk2_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\energy-shield-mk2-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_05_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-05-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_01_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-01-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="power_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\power-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_03_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-03-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cargo_wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cargo-wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="space_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\space-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="steel_furnace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steel-furnace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copper_ore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copper-ore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="artillery_targeting_remote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artillery-targeting-remote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="behemoth_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\behemoth-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_biter_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-biter-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personal_laser_defense_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal-laser-defense-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="poison_capsule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\poison-capsule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lubricant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lubricant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light_oil_cracking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-oil-cracking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="programmable_speaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\programmable-speaker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wooden_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wooden-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diesel_locomotive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diesel-locomotive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_07_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-07-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flying_robot_frame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flying-robot-frame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="burner_mining_drill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\burner-mining-drill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="assembling_machine_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assembling-machine-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_wire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red-wire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="behemoth_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\behemoth-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="discharge_defense_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\discharge-defense-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="train_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\train-stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basic_oil_processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basic-oil-processing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="used_up_uranium_fuel_cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\used-up-uranium-fuel-cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iron_stick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iron-stick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solid_fuel_from_light_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solid-fuel-from-light-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="root_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\root-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uranium_cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uranium-cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pipe_to_ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pipe-to-ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuclear_reactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuclear-reactor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_plane" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-plane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="compilatron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compilatron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sulfur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sulfur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="express_splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\express-splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atomic_bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atomic-bomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stack_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stack-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="assembling_machine_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assembling-machine-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="effectivity_module_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\effectivity-module-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heavy_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heavy-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="power_switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\power-switch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateSteelPlate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateSteelPlate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="express_underground_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\express-underground-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oil_refinery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oil-refinery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_wire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green-wire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logistic_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logistic-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="express_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\express-loader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="explosive_uranium_cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\explosive-uranium-cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueprint_book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blueprint-book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gun_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gun-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uranium_processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uranium-processing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rocket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="explosive_rocket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\explosive-rocket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tank_cannon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tank-cannon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateCircuit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateCircuit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="offshore_pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\offshore-pump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flamethrower_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flamethrower-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplatePlate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplatePlate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fast_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fast-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="express_transport_belt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\express-transport-belt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copper_cable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copper-cable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="distractor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\distractor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="electronic_circuit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electronic-circuit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medium_biter_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medium-biter-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="constant_combinator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\constant-combinator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="power_armor_mk2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\power-armor-mk2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateGearWheel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateGearWheel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solar_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solar-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uranium_238" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uranium-238.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="destroyer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\destroyer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="behemoth_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\behemoth-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="explosives" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\explosives.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateSolidFuel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateSolidFuel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filter_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filter-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_09_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-09-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repair_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\repair-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wood" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wall_remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wall-remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="engine_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engine-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="decider_combinator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\decider-combinator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laser_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laser-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="splitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medium_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medium-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_biter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-biter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="storage_tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\storage-tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checked-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uranium_fuel_cell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uranium-fuel-cell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateOre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateOre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="steel_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steel-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rock_huge_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rock-huge-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coal_dark_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coal-dark-background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biter_spawner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biter-spawner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="productivity_module_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\productivity-module-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="effectivity_module" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\effectivity-module.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="utility_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\utility-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battery_mk2_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery-mk2-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heat_boiler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heat-boiler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="artillery_wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artillery-wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="player_port" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\player-port.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refined_concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refined-concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blueprint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shotgun_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shotgun-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coal_liquefaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coal-liquefaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="processing_unit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\processing-unit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuclear_fuel_reprocessing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuclear-fuel-reprocessing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arithmetic_combinator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arithmetic-combinator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_lamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-lamp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dry_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dry-tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_04_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-04-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="speed_module_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\speed-module-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medium_worm_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medium-worm-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chemical_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chemical-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stack_filter_inserter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stack-filter-inserter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iron_ore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iron-ore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logistic_chest_buffer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logistic-chest-buffer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_scorchmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-scorchmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piercing_rounds_magazine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piercing-rounds-magazine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logistic_robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logistic-robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plastic_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plastic-bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="market" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\market.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="artillery_turret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artillery-turret.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="production_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\production-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upgrade_planner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upgrade-planner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slowdown_capsule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slowdown-capsule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refined_hazard_concrete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refined-hazard-concrete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgTemplateBrick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgTemplateBrick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rail_signal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rail-signal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="space_module_wreck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\space-module-wreck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="steam_turbine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steam-turbine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="artillery_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\artillery-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_biter_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-biter-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="landfill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\landfill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="automation_science_pack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\automation-science-pack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iron_chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iron-chest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copper_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copper-plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grenade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logistic_chest_requester" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logistic-chest-requester.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="steel_plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steel-plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree_02_stump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-02-stump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rocket_part" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket-part.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personal_roboport_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal-roboport-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="petroleum_gas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\petroleum-gas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heavy_armor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heavy-armor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personal_roboport_mk2_equipment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal-roboport-mk2-equipment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medium_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medium-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cannon_shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cannon-shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light_oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uranium_rounds_magazine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uranium-rounds-magazine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="centrifuge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centrifuge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sulfuric_acid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sulfuric-acid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small_worm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-worm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chemical_plant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chemical-plant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="advanced_circuit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\advanced-circuit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curved_rail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curved-rail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rock_big_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rock-big-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logistic_chest_active_provider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logistic-chest-active-provider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="railgun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\railgun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biter_spawner_corpse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biter-spawner-corpse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="straight_rail_remnants" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\straight-rail-remnants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="steel_axe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steel-axe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cliff_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cliff-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="medium_spitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medium-spitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="productivity_module" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\productivity-module.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cluster_grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cluster-grenade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="list_dot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list-dot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solid_fuel_from_petroleum_gas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\solid-fuel-from-petroleum-gas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgWin810FileExtension2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgWin810FileExtension2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgWin7FileExtension1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgWin7FileExtension1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgWin7FileExtension2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgWin7FileExtension2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

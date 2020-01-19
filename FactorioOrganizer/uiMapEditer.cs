@@ -20,6 +20,54 @@ namespace FactorioOrganizer
 			}
 		}
 
+		//if the grid is activated, it will automatically return the grid mouse pos. if the grid is not activated, it will return the real mouse pos
+		private PointF GetAdjustedMousePos()
+		{
+			PointF mvpos = this.MouseVirtualPos;
+			if (!this.ShowGrid) { return mvpos; }
+			//adjust the coordinates if the grid is activated
+			mvpos.X = this.GridRoundAxisValue(mvpos.X);
+			mvpos.Y = this.GridRoundAxisValue(mvpos.Y);
+			return mvpos;
+		}
+
+		//"round" the specified value, of any axis. it's used for grid. it return the grid coordinate closest to the specified coordinate
+		private float GridRoundAxisValue(float coord)
+		{
+			float val = coord;
+			if (coord < 0f) { val = -coord; }
+
+			//see the comment above the global variable GridStep.
+
+			//now we have to round it to the closest grid coordinate
+			float rounded = (float)((int)((val * this.GridStep) + 0.5f)) / this.GridStep; //rounding by convertion to integer to mimic the floor function works only if we give him a positive value. that why it's converted into positive at the beginning and it's converted to it's correct sign at the end
+			
+			if (coord >= 0f)
+			{
+				//if positive, we can return it
+				return rounded;
+			}
+			else
+			{
+				//if negative, we must change its sign into a negative value
+				return -rounded;
+			}
+		}
+
+
+
+		public event EventHandler UserDidSomeChange; //raised when the user edit anything
+		private void Raise_UserDidSomeChange()
+		{
+			if (this.UserDidSomeChange != null)
+			{
+				this.UserDidSomeChange(this, new EventArgs());
+			}
+		}
+
+
+
+
 		private PictureBox ImageBox;
 
 		public oMap Map;
@@ -68,6 +116,34 @@ namespace FactorioOrganizer
 			set { this.ImageBox.Anchor = value; }
 		}
 
+
+		private bool zzzShowGrid = false; // false by default
+		public bool ShowGrid
+		{
+			get { return this.zzzShowGrid; }
+			set
+			{
+				this.zzzShowGrid = value;
+
+				this.RefreshImage();
+
+			}
+		}
+
+		/* 
+		 * the function used to describe the grid is floor(ax + 0.5) / a.
+		 * GridStep is the variable a in this function.
+		 * 
+		 * you can see how the variable a affects the function with the graphical only calculator desmos. https://www.desmos.com/calculator
+		 * enter this string into desmos:
+		 * \frac{\operatorname{floor}\left(ax+0.5\right)}{a}
+		 * then click to create the a cursor. you can play with it.
+		 * 
+		 * it basically just allow us to adjust the size of the grid, that's it.
+		 * 
+		 */
+		private float GridStep = 1f; //the variable that allow us to control the size of the grid. it can be between integers, but i'd prefer to keep this as an integer.
+		private float GridCellSize { get { return 1f / this.GridStep; } } //the size of a "step" of the grid
 
 
 
@@ -136,7 +212,7 @@ namespace FactorioOrganizer
 				if (this.IsAddMode)
 				{
 					MapObject copy = this.addmodeMO.GetCopy();
-					PointF mvpos = this.MouseVirtualPos;
+					PointF mvpos = this.GetAdjustedMousePos(); //this.MouseVirtualPos;
 					copy.vpos.X = mvpos.X;
 					copy.vpos.Y = mvpos.Y;
 					this.Map.listMO.Add(copy);
@@ -169,23 +245,32 @@ namespace FactorioOrganizer
 
 						oRightClick3 rc = new oRightClick3();
 						//rc.Width = 300;
-						rc.AddChoice(optToggleNeedCoal);
-						rc.AddSeparator();
+						if (mo.MapType == MOType.Machine)
+						{
+							rc.AddChoice(mo.TheRecipe.Name);
+							rc.AddSeparator();
+							rc.AddChoice(optToggleNeedCoal);
+						}
+						else
+						{
+							rc.AddChoice(mo.BeltOutput.Name);
+							rc.AddSeparator();
+						}
 						rc.AddChoice(optRemove);
 
-						//ajoute les inputs et output
+						//add the inputs and outputs
 						if (mo.MapType == MOType.Machine)
 						{
 							rc.AddSeparator();
 							rc.AddSeparator();
 							rc.AddChoice("Outputs :");
-							foreach (sItem i in mo.Outputs)
+							foreach (oItem i in mo.Outputs)
 							{
 								rc.AddChoice("-" + i.Name);
 							}
 							rc.AddChoice("");
 							rc.AddChoice("Inputs :");
-							foreach (sItem i in mo.Inputs)
+							foreach (oItem i in mo.Inputs)
 							{
 								rc.AddChoice("-" + i.Name);
 							}
@@ -206,21 +291,11 @@ namespace FactorioOrganizer
 							catch { }
 						}
 
-						//check the one who correspond to the click FOType, if there is one ////    check si ca correspond à un FOType
+						//check the one who correspond to the clicked item name, if there is one.
 						if (mo.MapType == MOType.Machine)
 						{
-							//List<FOType> allft = Utilz.GetListOfAllFOType();
-							//foreach (FOType ft in allft)
-							//{
-							//	if (ft.ToString() == rep.Replace("-", string.Empty).Trim())
-							//	{
-							//		MapObject newmo = new MapObject(MOType.Belt, ft);
-							//		this.StartAddMode(newmo);
-							//		break;
-							//	}
-							//}
 							string okname = rep.Replace("-", string.Empty).Trim();
-							foreach (sItem i in Crafts.listItems)
+							foreach (oItem i in Crafts.listItems)
 							{
 								if (i.Name == okname)
 								{
@@ -257,7 +332,7 @@ namespace FactorioOrganizer
 		{
 			if (this.IsDragAndDropMO)
 			{
-				this.dadmoMO.vpos = this.MouseVirtualPos;
+				this.dadmoMO.vpos = this.GetAdjustedMousePos(); //this.MouseVirtualPos;
 				
 				this.ImageBox.Refresh();
 				Graphics g = this.ImageBox.CreateGraphics();
@@ -275,7 +350,7 @@ namespace FactorioOrganizer
 			}
 			if (this.IsAddMode)
 			{
-				this.addmodeMO.vpos = this.MouseVirtualPos;
+				this.addmodeMO.vpos = this.GetAdjustedMousePos(); //this.MouseVirtualPos;
 
 				this.ImageBox.Refresh();
 				Graphics g = this.ImageBox.CreateGraphics();
@@ -350,9 +425,119 @@ namespace FactorioOrganizer
 			g.Clear(Color.FromArgb(32, 32, 32));
 
 
+			//if the grid is activated, we draw the grid
+			if (this.ShowGrid)
+			{
+				//compute the graphical size of the cell. we make sure it's not too small. if it's too small, we don't draw them.
+				float fUiGridCellSize = this.GridCellSize / this.VirtualWidth * (float)imgWidth;
+				if (fUiGridCellSize >= 6f)
+				{
+					Pen GridPen = Pens.Black;
+
+					//begins by converting the central pos into its closest grid coordinate
+					float RoundedCX = this.GridRoundAxisValue(this.vpos.X);
+					float RoundedCY = this.GridRoundAxisValue(this.vpos.Y);
+
+					int index = 0; //just for "safety" purpose. to be really sure that there never will be infinite loop
+
+					////vertical line
+					//draw the first vertical line
+					int uiCX = this.ConvertVirtualToUi(RoundedCX, RoundedCY).X;
+					g.DrawLine(GridPen, uiCX, 0, uiCX, imgHeight - 1);
+					//vertical line to the right
+					float ActualVX = RoundedCX; //actual virtual horizontal position
+					while (true)
+					{
+						//move to the right
+						ActualVX += this.GridCellSize;
+						int uiLX = this.ConvertVirtualToUi(ActualVX, RoundedCY).X;
+
+						//if we've finished to the right
+						if (uiLX > imgWidth) { break; }
+
+						//draw the line
+						g.DrawLine(GridPen, uiLX, 0, uiLX, imgHeight - 1);
+
+						//infinity loop check
+						index++;
+						if (index > 1000) { break; }
+						
+					}
+					//vertical line to the left
+					index = 0;
+					ActualVX = RoundedCX; //we start again from the middle
+					while (true)
+					{
+						//move to the left
+						ActualVX -= this.GridCellSize;
+						int uiLX = this.ConvertVirtualToUi(ActualVX, RoundedCY).X;
+
+						//if we've finished the the left
+						if (uiLX < 0) { break; }
+
+						//draw the line
+						g.DrawLine(GridPen, uiLX, 0, uiLX, imgHeight - 1);
+
+						//infinity loop check
+						index++;
+						if (index > 1000) { break; }
+
+					}
+
+
+					////horizontal line
+					//draw the first horizontal line
+					int uiCY = this.ConvertVirtualToUi(RoundedCX, RoundedCY).Y;
+					g.DrawLine(GridPen, 0, uiCY, imgWidth - 1, uiCY);
+					//horizontal line to the top
+					index = 0;
+					float ActualVY = RoundedCY;
+					while (true)
+					{
+						//move to the top
+						ActualVY += this.GridCellSize;
+						int uiLY = this.ConvertVirtualToUi(RoundedCX, ActualVY).Y;
+
+						//if we've finished to the top
+						if (uiLY < 0) { break; }
+
+						//draw the line
+						g.DrawLine(GridPen, 0, uiLY, imgWidth - 1, uiLY);
+
+						//infinity loop check
+						index++;
+						if (index > 1000) { break; }
+
+					}
+					//horizontal line to the bottom
+					index = 0;
+					ActualVY = RoundedCY; //we start again from the middle
+					while (true)
+					{
+						//move down
+						ActualVY -= this.GridCellSize;
+						int uiLY = this.ConvertVirtualToUi(RoundedCX, ActualVY).Y;
+
+						//if we've finished moving down
+						if (uiLY > imgHeight) { break; }
+
+						//draw the line
+						g.DrawLine(GridPen, 0, uiLY, imgWidth - 1, uiLY);
+
+						//infinity loop check
+						index++;
+						if (index > 1000) { break; }
+
+					}
+
+
+
+				}
+			}
+
+
 			//machine has the property IsAllInputPresent (belts too but it's only useful for machines). in the part of drawing the links, we "compute" is this property true or false. in the second part of refreshimage, this property defines the back color.
-
-
+			
 			//draw links between objects ////    dessine les lien entre les object
 			foreach (MapObject mo in this.Map.listMO)
 			{
@@ -387,7 +572,7 @@ namespace FactorioOrganizer
 					{
 
 						//draw links of every output
-						foreach (sItem i in mo.Outputs)
+						foreach (oItem i in mo.Outputs)
 						{
 							MapObject closest = this.Map.GetCompatibleBeltCloseTo(mo, i); //this.Map.FindClosestBeltWithInput(mo, i);
 							if (closest != null)
@@ -400,7 +585,7 @@ namespace FactorioOrganizer
 
 						//draw links of every inputs
 						mo.IsAllInputPresent = true;
-						foreach (sItem i in mo.Inputs)
+						foreach (oItem i in mo.Inputs)
 						{
 							MapObject closest = this.Map.GetCompatibleBeltCloseTo(mo, i); //get the closest one ////    obtien selui qui est le plus proche
 							if (closest != null)
@@ -453,13 +638,16 @@ namespace FactorioOrganizer
 				int uiradius = (int)(mo.VirtualWidth * (float)(this.Width) / this.VirtualWidth / 2f + 0.5f); //graphical radius ////    rayon graphique de l'objet
 				if (mo.MapType == MOType.Belt)
 				{
-					g.FillEllipse(Brushes.DimGray, uipos.X - uiradius, uipos.Y - uiradius, 2 * uiradius, 2 * uiradius);
+					Brush BackBrush = Brushes.DimGray;
+					if (!mo.BeltOutput.IsBelt) { BackBrush = Brushes.Red; }
+					g.FillEllipse(BackBrush, uipos.X - uiradius, uipos.Y - uiradius, 2 * uiradius, 2 * uiradius);
 				}
 				if (mo.MapType == MOType.Machine)
 				{
 					Brush moBackColor = brushMachineBackBrush; //Brushes.DimGray;
 					Brush FurnaceLabelColor = Brushes.White;
 					if (!mo.IsAllInputPresent) { moBackColor = Brushes.Crimson; FurnaceLabelColor = Brushes.White; }
+					if (mo.TheCraft == null) { moBackColor = Brushes.Red; } //if it cannot be a recipe, we simlpy fill the background in pure and agressive red. when an item is not used as a recipe, no craft is found (obviously) so this property of the MapObject stay null and that's how we know that it's not a valid recipe.
 					g.FillRectangle(moBackColor, uipos.X - uiradius, uipos.Y - uiradius, 2 * uiradius, 2 * uiradius);
 					g.DrawRectangle(Pens.Silver, uipos.X - uiradius, uipos.Y - uiradius, 2 * uiradius, 2 * uiradius);
 					if (mo.IsFurnace && uiradius >= 25)
@@ -575,8 +763,9 @@ namespace FactorioOrganizer
 		private void StopDragAndDropMO()
 		{
 			this.IsDragAndDropMO = false;
-			this.dadmoMO.vpos = this.MouseVirtualPos;
+			this.dadmoMO.vpos = this.GetAdjustedMousePos(); //this.MouseVirtualPos;
 			this.RefreshImage();
+			this.Raise_UserDidSomeChange();
 		}
 
 		#endregion
@@ -592,10 +781,11 @@ namespace FactorioOrganizer
 		public void StopAddMode()
 		{
 			this.IsAddMode = false;
-			PointF mvpos = this.MouseVirtualPos;
+			PointF mvpos = this.GetAdjustedMousePos(); //this.MouseVirtualPos;
 			this.addmodeMO.vpos = mvpos; //define position ////    défini la position
 			this.Map.listMO.Add(this.addmodeMO); //add it to the map ////    l'ajoute à la map
 			this.RefreshImage();
+			this.Raise_UserDidSomeChange();
 		}
 		public void CancelAddMode()
 		{
@@ -663,13 +853,13 @@ namespace FactorioOrganizer
 						{
 							if (mo.MapType == MOType.Machine)
 							{
-								sItem ft = mo.TheRecipe;
+								oItem ft = mo.TheRecipe;
 								MapObject copy = new MapObject(MOType.Belt, ft);
 								this.StartAddMode(copy);
 							}
 							if (mo.MapType == MOType.Belt)
 							{
-								sItem ft = mo.BeltOutput;
+								oItem ft = mo.BeltOutput;
 								MapObject copy = new MapObject(MOType.Machine, ft);
 								this.StartAddMode(copy);
 							}
