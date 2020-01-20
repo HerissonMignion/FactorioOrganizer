@@ -16,27 +16,59 @@ namespace FactorioOrganizer
 
 
 
-		public sItem BeltOutput = Crafts.listItems[0]; //content of the belt, if this is a belt
+		public oItem BeltOutput = Crafts.listItems[0]; //content of the belt, if this is a belt
 
-		public sItem[] Outputs = new sItem[] { };
-		public sItem[] Inputs = new sItem[] { };
-		public sItem TheRecipe = Crafts.listItems[0]; //actuel recipe. used only if this is a machine
+		public oItem[] Outputs
+		{
+			get
+			{
+				if (this.TheCraft != null)
+				{
+					return this.TheCraft.Outputs;
+				}
+				else
+				{
+					return new oItem[] { };
+				}
+			}
+		}
+		public oItem[] Inputs
+		{
+			get
+			{
+				if (this.TheCraft != null)
+				{
+					return this.TheCraft.Inputs;
+				}
+				else
+				{
+					return new oItem[] { };
+				}
+			}
+		}
+		public oItem TheRecipe = Crafts.listItems[0]; //actuel recipe. used only if this is a machine
+		public oCraft TheCraft = null;
 
 
-
-		//public FOType oldBeltOutput = FOType.none; //content of the belt, if this is a belt ////    contenue de la belt
-		//public FOType[] oldOutputs = new FOType[] { };
-		//public FOType[] oldInputs = new FOType[] { };
 		
+		public bool IsFurnace
+		{
+			get
+			{
+				if (this.TheCraft != null)
+				{
+					return this.TheCraft.IsMadeInFurnace;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		} // = false;
 
-		////for a machine, the recipe define both the inputs and outputs
-		//public FOType oldTheRecipe = FOType.none; //actuel recipe. used only if this is a machine ////    recette actuel. utilisé seulement si this est une machine
-
-		
-		
 
 
-		public bool IsFurnace = false;
+
 		public bool NeedCoal = true; //if this is a furnace, indicate if this need coal ////    si this est une furnace, indique si this a besoin de coal
 
 		//i guess that some mods require other things than coal to make things so, in the future, we might have to replace NeedCoal by NeededCombustibles which will be an array of sItem and a static list of arrays in Crafts who describe every combustibles options to toggle.
@@ -81,9 +113,9 @@ namespace FactorioOrganizer
 
 
 		
-		public MapObject(MOType StartMapType, sItem StartOut)
+		public MapObject(MOType StartMapType, oItem StartOut)
 		{
-			this.MapType = StartMapType;
+			this.MapType = StartMapType; //must be define before calling SetRecipe
 			if (this.MapType == MOType.Belt)
 			{
 				this.BeltOutput = StartOut;
@@ -97,7 +129,7 @@ namespace FactorioOrganizer
 
 
 		
-		public void SetRecipe(sItem Recipe)
+		public void SetRecipe(oItem Recipe)
 		{
 			if (this.MapType == MOType.Belt)
 			{
@@ -107,12 +139,13 @@ namespace FactorioOrganizer
 			{
 				this.TheRecipe = Recipe;
 				oCraft c = Crafts.GetCraftFromRecipe(Recipe); //gets the craft
-				if (c != null)
-				{
-					this.Outputs = c.Outputs;
-					this.Inputs = c.Inputs;
-					this.IsFurnace = c.IsMadeInFurnace;
-				}
+				this.TheCraft = c;
+				//if (c != null)
+				//{
+				//	this.Outputs = c.Outputs;
+				//	this.Inputs = c.Inputs;
+				//	this.IsFurnace = c.IsMadeInFurnace;
+				//}
 			}
 		}
 
@@ -152,7 +185,7 @@ namespace FactorioOrganizer
 		public MapObject GetCopy()
 		{
 			//prepare the content to send to the constructor ////    obtient les contenue à envoyer au constructeur
-			sItem copyrecipe = this.BeltOutput;
+			oItem copyrecipe = this.BeltOutput;
 			if (this.MapType == MOType.Machine)
 			{
 				copyrecipe = this.TheRecipe;

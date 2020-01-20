@@ -68,7 +68,7 @@ namespace FactorioOrganizer
 		
 		//return the closest belt with a compatible output
 		//the only purpose of giving mo to the function is to know the coordinate. don't be confused
-		public MapObject GetCompatibleBeltCloseTo(MapObject mo, sItem OutType)
+		public MapObject GetCompatibleBeltCloseTo(MapObject mo, oItem OutType)
 		{
 			MapObject mo1 = null;
 			List<MapObject> lco = this.listMO.FindAll(x => (x.MapType == MOType.Belt) && (x.BeltOutput.Name == OutType.Name)); //get belts of compatible output

@@ -47,6 +47,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Crafts.cs" />
+    <Compile Include="Dialogs\DlgBrowseRefItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgBrowseRefItem.Designer.cs">
+      <DependentUpon>DlgBrowseRefItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgGetIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgGetIndex.Designer.cs">
+      <DependentUpon>DlgGetIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgGetText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgGetText.Designer.cs">
+      <DependentUpon>DlgGetText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgModCraftEditer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgModCraftEditer.Designer.cs">
+      <DependentUpon>DlgModCraftEditer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgNewModItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgNewModItem.Designer.cs">
+      <DependentUpon>DlgNewModItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DlgRescaleImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DlgRescaleImage.Designer.cs">
+      <DependentUpon>DlgRescaleImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="enums.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -60,23 +96,68 @@
     <Compile Include="FormHelp.Designer.cs">
       <DependentUpon>FormHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHelpMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelpMod.Designer.cs">
+      <DependentUpon>FormHelpMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModEditer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModEditer.Designer.cs">
+      <DependentUpon>FormModEditer.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModEventArgs.cs" />
+    <Compile Include="ModEventHandlers.cs" />
+    <Compile Include="MsgOnce.cs" />
     <Compile Include="oCraft.cs" />
     <Compile Include="oMod.cs" />
+    <Compile Include="RandomImports\oFormImageEditer.cs" />
+    <Compile Include="RandomImports\SelectScreenForm.cs" />
+    <Compile Include="refItem.cs" />
     <Compile Include="SaveReader.cs" />
     <Compile Include="MapObject.cs" />
     <Compile Include="oMap.cs" />
     <Compile Include="oRightClick3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sItem.cs" />
+    <Compile Include="oItem.cs" />
     <Compile Include="uiMapEditer.cs" />
+    <Compile Include="uiModCraftManager.cs" />
+    <Compile Include="uiModItemManager.cs" />
     <Compile Include="uiToolBox.cs" />
+    <Compile Include="WinCtar1\octar1Archive.cs" />
+    <Compile Include="WinCtar1\octar1ArchiveSaver.cs" />
+    <EmbeddedResource Include="Dialogs\DlgBrowseRefItem.resx">
+      <DependentUpon>DlgBrowseRefItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgGetIndex.resx">
+      <DependentUpon>DlgGetIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgGetText.resx">
+      <DependentUpon>DlgGetText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgModCraftEditer.resx">
+      <DependentUpon>DlgModCraftEditer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgNewModItem.resx">
+      <DependentUpon>DlgNewModItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DlgRescaleImage.resx">
+      <DependentUpon>DlgRescaleImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHelp.resx">
       <DependentUpon>FormHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelpMod.resx">
+      <DependentUpon>FormHelpMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModEditer.resx">
+      <DependentUpon>FormModEditer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -992,6 +1073,19 @@
   <ItemGroup>
     <Content Include="infoMapEditer.txt" />
     <Content Include="infoSaveFile.txt" />
+    <None Include="Resources\imgWin7FileExtension2.png" />
+    <None Include="Resources\imgWin7FileExtension1.png" />
+    <None Include="Resources\imgWin810FileExtension2.png" />
+    <None Include="Resources\imgTemplateSteelPlate.png" />
+    <None Include="Resources\imgTemplateSolidFuel.png" />
+    <None Include="Resources\imgTemplateScience.png" />
+    <None Include="Resources\imgTemplatePlate.png" />
+    <None Include="Resources\imgTemplateOre.png" />
+    <None Include="Resources\imgTemplateLiquid.png" />
+    <None Include="Resources\imgTemplateGearWheel.png" />
+    <None Include="Resources\imgTemplateCircuit.png" />
+    <None Include="Resources\imgTemplateBrick.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
