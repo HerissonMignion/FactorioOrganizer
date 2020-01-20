@@ -127,6 +127,7 @@ namespace FactorioOrganizer
 		private void voidnew()
 		{
 			InitializeComponent();
+			this.FormClosing += new FormClosingEventHandler(this.FormModEditer_FormClosing);
 
 			this.ManagerItem = new uiModItemManager();
 			this.ManagerItem.Parent = this.gbItems;
@@ -166,6 +167,19 @@ namespace FactorioOrganizer
 			this.SetTitle("");
 
 		}
+		private void FormModEditer_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if (e.CloseReason == CloseReason.UserClosing)
+			{
+				//we auto ask the user to save its work if it's not saved
+				bool canceled = this.AutoAskUserToSaveCurrent();
+				if (canceled)
+				{
+					//if the user canceled, we cancel
+					e.Cancel = true;
+				}
+			}
+		}
 		private void ManagerItem_UserDidSomeChange(object sender, EventArgs e)
 		{
 			this.EditsWereMade = true;
@@ -201,8 +215,16 @@ namespace FactorioOrganizer
 
 		private void ButtonReturnToForm1_MouseClick(object sender, MouseEventArgs e)
 		{
-			Program.ActualNextForm = Program.NextFormToShow.Form1;
-			this.Close();
+			bool canceled = this.AutoAskUserToSaveCurrent();
+			if (!canceled)
+			{
+
+				this.EditsWereMade = false; //whatever if the user decided to save or not, the event FormClosing will be raised and we must not ask the user to save a second time.
+
+				//if the user canceled, we set the next form to show to form1 and we close this
+				Program.ActualNextForm = Program.NextFormToShow.Form1;
+				this.Close();
+			}
 		}
 		private void ButtonNew_Click(object sender, EventArgs e)
 		{

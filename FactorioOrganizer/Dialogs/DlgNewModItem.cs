@@ -147,6 +147,13 @@ namespace FactorioOrganizer.Dialogs
 		private void cbExternItem_CheckedChanged(object sender, EventArgs e)
 		{
 			this.RefreshEnabled();
+
+			//if the external mod item button becomes checked, we auto focus the textbox for the mod name
+			if (this.cbExternItem.Checked)
+			{
+				this.tbModName.Focus();
+			}
+
 		}
 
 

@@ -121,7 +121,7 @@ namespace FactorioOrganizer
 			this.KeyDown += new KeyEventHandler(this.Form1_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form1_KeyUp);
 			this.TabContainer.DrawItem += new DrawItemEventHandler(this.TabContainer_DrawItem);
-
+			this.FormClosing += new FormClosingEventHandler(this.Form1_FormClosing);
 
 			
 			this.Map = new oMap();
@@ -153,6 +153,19 @@ namespace FactorioOrganizer
 		private void Form1_KeyUp(object sender, KeyEventArgs e)
 		{
 			this.Editer.KeyUp(e.KeyCode);
+		}
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if (e.CloseReason == CloseReason.UserClosing)
+			{
+				//we auto ask the user to save its work if it's not saved
+				bool canceled = this.AutoAskUserToSaveCurrent();
+				if (canceled)
+				{
+					//if the user canceled, we cancel
+					e.Cancel = true;
+				}
+			}
 		}
 
 		private void Editer_UserDidSomeChange(object sender, EventArgs e)
@@ -312,6 +325,8 @@ namespace FactorioOrganizer
 			bool canceled = this.AutoAskUserToSaveCurrent();
 			if (!canceled)
 			{
+				this.EditsWereMade = false; //whatever if the user decided to save or not, the event FormClosing will be raised and we must not ask the user to save a second time.
+
 				Program.ActualNextForm = Program.NextFormToShow.FormModEditerEmpty;
 				this.Close();
 				this.DestroyCraftsEvents();
