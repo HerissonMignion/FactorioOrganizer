@@ -71,7 +71,6 @@
     <Compile Include="Dialogs\DlgModCraftEditer.Designer.cs">
       <DependentUpon>DlgModCraftEditer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\DlgNewModImage.cs" />
     <Compile Include="Dialogs\DlgNewModItem.cs">
       <SubType>Form</SubType>
     </Compile>
