@@ -212,6 +212,21 @@ namespace FactorioOrganizer
 					{
 						oMap newm = new oMap(filepath);
 
+						//if some items where not found when opening the map (most likely example: mods needed but not loaded), this variable will be false.
+						if (!newm.EveryItemWhereLoadedCorrectly)
+						{
+							string msg = "Some items may not have been loaded properly.\nThe following mods were loaded when saving this file :";
+
+							//generate the text to show to the user
+							foreach (string modname in newm.listModNames)
+							{
+								msg += "\n-" + modname;
+							}
+							//show the message
+							MessageBox.Show(msg);
+						}
+
+
 
 						//if an error occurred when opening the map, when creating the oMap object with the filepath, the following part will not execute and the map editer will not be affected a null map object.
 

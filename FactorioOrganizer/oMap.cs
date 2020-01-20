@@ -10,16 +10,24 @@ namespace FactorioOrganizer
 	{
 
 		public List<MapObject> listMO = new List<MapObject>();
-		
 
 
-	
+
+
+		//this list is updated ONLY WHEN the map is saved or loaded from a path. it's nt dynamically keept updated.
+		public List<string> listModNames = new List<string>(); //this list includes vanilla.
+
+		public bool EveryItemWhereLoadedCorrectly = true; //it only matters when creating this object from a file. when creating this object from a file, if any item loaded has its name property == to "none", we know that it's not okay. if it's not okay then this variable is set to false.
+
+
 		public oMap()
 		{
 
 		}
 		public oMap(string filepath)
 		{
+			this.EveryItemWhereLoadedCorrectly = true; //will becomes false if there is at least one item that wasn't found in the item list of the static class Crafts.
+
 			List<string> alll = System.IO.File.ReadAllLines(filepath).ToList();
 			SaveReader sr = new SaveReader(alll);
 			//first line is save file format version
@@ -38,6 +46,14 @@ namespace FactorioOrganizer
 					mo.vpos.X = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
 					mo.vpos.Y = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
 					this.listMO.Add(mo);
+
+					//check if the item was found when Crafts.GetItemFromName
+					if (mo.BeltOutput != null)
+					{
+						if (mo.BeltOutput.Name == "none") { this.EveryItemWhereLoadedCorrectly = false; }
+					}
+					else { this.EveryItemWhereLoadedCorrectly = false; }
+
 				}
 				if (newitem == "machine")
 				{
@@ -47,6 +63,19 @@ namespace FactorioOrganizer
 					mo.vpos.X = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
 					mo.vpos.Y = Convert.ToSingle(sr.ReadLine().Replace(".", ","));
 					this.listMO.Add(mo);
+
+					//check if the item was found when Crafts.GetItemFromName
+					if (mo.TheRecipe != null)
+					{
+						if (mo.TheRecipe.Name == "none") { this.EveryItemWhereLoadedCorrectly = false; }
+					}
+					else { this.EveryItemWhereLoadedCorrectly = false; }
+
+				}
+				if (newitem == "mod")
+				{
+					string modname = sr.ReadLine(); //get the mod name
+					this.listModNames.Add(modname);
 				}
 			}
 			
@@ -183,7 +212,7 @@ namespace FactorioOrganizer
 				if (mo.MapType == MOType.Belt)
 				{
 					alll.Add("belt");
-					alll.Add(mo.BeltOutput.Name); //the name property give the save result than anyFOType.ToString() for any vanilla item
+					alll.Add(mo.BeltOutput.Name); //the name property give the save result than anyFOType.ToString() for any vanilla item would have done in the past. that's why it's backward compatible.
 					alll.Add(this.ConvertFloatToString(mo.vpos.X));
 					alll.Add(this.ConvertFloatToString(mo.vpos.Y));
 					
@@ -198,6 +227,15 @@ namespace FactorioOrganizer
 					
 				}
 			}
+
+			//now we write every mod currently loaded, including vanilla.
+			foreach (string modname in Crafts.listLoadedModName)
+			{
+				alll.Add("mod");
+				alll.Add(modname);
+			}
+
+
 
 			alll.Add("exit"); //files finish with exit
 			try
