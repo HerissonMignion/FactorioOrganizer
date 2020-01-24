@@ -117,4 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MainTextBox.Text" xml:space="preserve">
+    <value>--------[ How does Factorio Organizer's mods work ]----------------
+Factorio Organizer's mods are just a bunch of items and crafts.
+
+An item has an image, a name, and maybe a mod name. Crafts are a collection of inputs, outputs and a "recipe". The recipe of a craft is the item that is used to represent the craft. Most of the items of the game have a craft, and they are at the same time the recipe and the only output of the craft. For exemple : an Inserter is the recipe. The Inserter is also the only output of the craft and it takes as inputs a GreenCircuit, an IronGear and an IronPlate.
+
+--------[ How to create a mod ]----------------
+Open an empty Mod Editer and give a name to your mod in the mod name field. The mod's name is independant of the file name you will give it when you will save it as a file. The mod's name is an important field. You should not change its name after your mod was used in the Map Editer because the mod name is used internally and in save files to identify where an item is from. After giving it a name, add every items and crafts of your mod. Creating items and crafts can be a tedious task and for this reason, the interface try to be simple but effective and there are multiple options given to the user to make it simpler.
+
+You have the possibility of adding items and crafts to other mods and modifying other mod's items and crafts. This is because you can specify a mod name for every items you create, and you can specify a mod name for every craft's recipe. By default, when you are creating an item or a craft, it's assumed that it is for the current mod and the mod name field will be set to a hyphen "-". Everywhere, when the mod name is a hyphen "-", it means that it's the current mod. When the mod name is not a hyphen, it consider that you have manually specified an other mod for this item. If you want to specify the vanilla factorio's items, the internal mod name for vanilla is "vanilla" in lower case letter. When you manually enter the name and the mod name of an item, it's important to respect uppercase and lowercase letters.
+
+--------[ How to create a new item ]----------------
+Click on the "New Item" button.
+1) Give a name to this item.
+1.5) If this item is external to your current mod, check the case "Is external item" and enter its mod name (Do not enter its file name nor its file path). If the case "Is external item" is not checked, the mod name is considered as "-".
+2) Give an image to your item. Your item must have an image. You have multiple ways of giving an image to your item :
+2a) Click on "Browse image ..." and you will import an image that exist on your computer. Every item's image must be of the size 32x32. If you import an image that is not of the size 32x32, Factorio Organizer will resize it for you.
+2b) Click on "Create blank image 32x32" and it will define to your item a full white image 32x32.
+2c) Click on "Select an area of the screen". It will ask you to draw a rectangle/square on your screen and the screen shot will be the image of your item, resized to 32x32. This is the laziest way of making images. (I run factorio in background in a sand box game. I open my inventory or an assembler's inventory then I press the Windows key to open the Start menu and select Factorio Organizer in the task bar. With the option "Select an area of the screen", I take a screen shot of the item in the game.)
+2d) You can click on an image template and edit this image. This area also gives you the images of all the items you have made so you can start from an other item's image.
+
+If you click the "Edit image" button, it will open a window in which you will be able to draw simple things on the image. This window is very basic but it does the job. It may provide you something that you would not be able to do by yourself with Microsoft Paint : Create transparent pixels on the image via the "Transparent pen". Factorio Organizer, like everything, uses a lot of images that doesn't look rectangular. It's because of the transparent pixels. Take for exemple the image of the IronGear. Its image has transparent pixels all around the gear and inside the hole of the gear, instead of a white background.
+
+--------[ How to create a craft ]----------------
+Click on the "New Craft" button. You can do the following steps in any order :
+1) Specify the recipe of the craft. You can click on the "Browse recipe ..." button and it will let you select an item of your current mod. The recipe is the item used to uniquely identify the craft. No crafts should share the same recipe. For example, if you want to make the craft of the belts, the belt would be the recipe, the belt would be the only output and the iron plate and the iron gear would be the inputs. You can modify the craft of an other mod's item or of a vanilla item by giving the recipe of that craft and the inputs and outputs you want.
+2) Enter every inputs and outputs of the craft. You can add as input or output items that are from other mods or vanilla factorio. To do so, manually enter the names. Enter the item name of your choice and its mod name. Respect uppercase and lowercase letters. The mod name of a vanilla item is "vanilla" in lowercase letters.
+
+To create a new craft, you can also duplicate an existing craft and edit this copy. To duplicate a craft :
+1) Left click the craft in the list of crafts. Select "Duplicate craft".
+
+--------[ How to manage items ]----------------
+Left click an item in the list.
+
+You can edit the item's name, mod name and image. For the item's image, you can edit its image (Draw on it and do other stuff on it), you can save the actual image into you computer so you can edit the image with a better software and finally you can import an image from your computer.
+
+You can modify the position of an item inside the list. The position of an item is important because Factorio Organizer will display the items in the same order as they are in the list. For this reason, you have 2 ways of moving items : the first way is move up and move down. The second way is "Teleport item at index". Every items has a number in the upper left corner. This number is the position of each items inside the list. "Teleport item at index" will ask you the index at which you want to move your item.
+
+You can choose "Find craft". It will show you which craft(s) use this item as a recipe.
+
+--------[ How to manage crafts ]----------------
+Left click a craft in the list.
+
+You can edit the craft. It will open the same window you used to create the craft and you will be able to change anything you want.
+
+You can duplicate the craft. The duplicated craft will be inserted under the original craft and will be completely independent.</value>
+  </data>
 </root>

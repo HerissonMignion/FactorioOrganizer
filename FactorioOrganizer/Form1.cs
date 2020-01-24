@@ -403,6 +403,7 @@ namespace FactorioOrganizer
 			{
 				Crafts.UnloadEveryMods();
 				Program.ActualNextForm = Program.NextFormToShow.Form1;
+				this.EditsWereMade = false;
 				this.Close();
 				this.DestroyCraftsEvents();
 			}

@@ -14,7 +14,7 @@ namespace FactorioOrganizer
 
 
 
-		//this list is updated ONLY WHEN the map is saved or loaded from a path. it's nt dynamically keept updated.
+		//this list is generated ONLY WHEN the map is loaded from a path. it's not dynamically keept updated.
 		public List<string> listModNames = new List<string>(); //this list includes vanilla.
 
 		public bool EveryItemWhereLoadedCorrectly = true; //it only matters when creating this object from a file. when creating this object from a file, if any item loaded has its name property == to "none", we know that it's not okay. if it's not okay then this variable is set to false.
