@@ -330,10 +330,33 @@ namespace FactorioOrganizer
 		}
 		private void ImageBox_MouseMove(object sender, MouseEventArgs e)
 		{
+			this.StatusRefresh();
+
+			if (this.keyBackSpaceDown)
+			{
+				this.keyBackSpaceDown = true;
+				//remove the element under the mouse ////    supprimme l'élément sous la souris
+				PointF mvpos = this.MouseVirtualPos;
+				MapObject mo = this.Map.GetObjThatTouch(mvpos.X, mvpos.Y);
+				if (mo != null)
+				{
+					try
+					{
+						this.Map.listMO.Remove(mo);
+					}
+					catch { }
+					this.RefreshImage();
+				}
+			}
+		}
+
+		//if the user is adding an object or other modes, this void handles the refresh. it's separated from the mouse move event so it can be called so the mouse doesn't have to be moved inside the area for the user to see that this changed mode.
+		private void StatusRefresh()
+		{
 			if (this.IsDragAndDropMO)
 			{
 				this.dadmoMO.vpos = this.GetAdjustedMousePos(); //this.MouseVirtualPos;
-				
+
 				this.ImageBox.Refresh();
 				Graphics g = this.ImageBox.CreateGraphics();
 				int uiradius = (int)(this.dadmoMO.VirtualWidth * (float)(this.Width) / this.VirtualWidth / 2f + 0.5f); //graphical radius ////    rayon graphique de l'objet
@@ -354,6 +377,21 @@ namespace FactorioOrganizer
 
 				this.ImageBox.Refresh();
 				Graphics g = this.ImageBox.CreateGraphics();
+				//draw the status in the upper left corner
+				if (this.addmodeMO.MapType == MOType.Belt)
+				{
+					string text = "Adding a belt : " + this.addmodeMO.BeltOutput.ItemName;
+					if (this.addmodeMO.BeltOutput.ModName != "vanilla") { text += " (" + this.addmodeMO.BeltOutput.ModName + ")"; }
+					g.DrawString(text, this.uiStatusFont, Brushes.White, 1f, 1f);
+				}
+				if (this.addmodeMO.MapType == MOType.Machine)
+				{
+					string text = "Adding a machine : " + this.addmodeMO.TheRecipe.ItemName;
+					if (this.addmodeMO.TheRecipe.ModName != "vanilla") { text += " (" + this.addmodeMO.TheRecipe.ModName + ")"; }
+					g.DrawString(text, this.uiStatusFont, Brushes.White, 1f, 1f);
+				}
+
+
 				int uiradius = (int)(this.addmodeMO.VirtualWidth * (float)(this.Width) / this.VirtualWidth / 2f + 0.5f); //graphical radius ////    rayon graphique de l'objet
 				Point uipos = this.ConvertVirtualToUi(this.addmodeMO.vpos.X, this.addmodeMO.vpos.Y);
 				if (this.addmodeMO.MapType == MOType.Belt)
@@ -366,24 +404,11 @@ namespace FactorioOrganizer
 				}
 				g.Dispose();
 			}
-			if (this.keyBackSpaceDown)
-			{
-				this.keyBackSpaceDown = true;
-				//remove the element under the mouse ////    supprimme l'élément sous la souris
-				PointF mvpos = this.MouseVirtualPos;
-				MapObject mo = this.Map.GetObjThatTouch(mvpos.X, mvpos.Y);
-				if (mo != null)
-				{
-					try
-					{
-						this.Map.listMO.Remove(mo);
-					}
-					catch { }
-					this.RefreshImage();
-				}
-			}
+
 		}
 
+		//the font used to draw the actual status in this upper left corner
+		private Font uiStatusFont = new Font("consolas", 10f);
 		
 
 
@@ -777,6 +802,8 @@ namespace FactorioOrganizer
 		{
 			this.IsAddMode = true;
 			this.addmodeMO = mo;
+
+			this.StatusRefresh();
 		}
 		public void StopAddMode()
 		{

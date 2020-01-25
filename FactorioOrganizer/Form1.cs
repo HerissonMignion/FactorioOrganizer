@@ -272,7 +272,7 @@ namespace FactorioOrganizer
 				{
 					//if the file is already defined, we just have to save
 					this.Editer.Map.Save(this.ActualFilePath);
-
+					this.EditsWereMade = false;
 				}
 				else
 				{

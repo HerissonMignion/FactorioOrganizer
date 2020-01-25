@@ -45,6 +45,7 @@
 			this.btnOk = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.cbIsMadeInFurnace = new System.Windows.Forms.CheckBox();
+			this.btnRecipeToOutput = new System.Windows.Forms.Button();
 			this.gbRecipe.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -237,12 +238,25 @@
 			this.cbIsMadeInFurnace.Text = "Is made in furnace";
 			this.cbIsMadeInFurnace.UseVisualStyleBackColor = true;
 			// 
+			// btnRecipeToOutput
+			// 
+			this.btnRecipeToOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.btnRecipeToOutput.ForeColor = System.Drawing.Color.White;
+			this.btnRecipeToOutput.Location = new System.Drawing.Point(523, 132);
+			this.btnRecipeToOutput.Name = "btnRecipeToOutput";
+			this.btnRecipeToOutput.Size = new System.Drawing.Size(110, 38);
+			this.btnRecipeToOutput.TabIndex = 14;
+			this.btnRecipeToOutput.Text = "Add current recipe to output";
+			this.btnRecipeToOutput.UseVisualStyleBackColor = false;
+			this.btnRecipeToOutput.Click += new System.EventHandler(this.btnRecipeToOutput_Click);
+			// 
 			// DlgModCraftEditer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DimGray;
 			this.ClientSize = new System.Drawing.Size(656, 519);
+			this.Controls.Add(this.btnRecipeToOutput);
 			this.Controls.Add(this.cbIsMadeInFurnace);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnOk);
@@ -289,5 +303,6 @@
 		private System.Windows.Forms.Button btnOk;
 		private System.Windows.Forms.Button btnCancel;
 		private System.Windows.Forms.CheckBox cbIsMadeInFurnace;
+		private System.Windows.Forms.Button btnRecipeToOutput;
 	}
 }

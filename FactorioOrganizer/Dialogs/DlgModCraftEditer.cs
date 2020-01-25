@@ -116,11 +116,29 @@ namespace FactorioOrganizer.Dialogs
 
 		}
 
+		private void btnRecipeToOutput_Click(object sender, EventArgs e)
+		{
+
+			//check if the names are valid
+			if (this.IsValidRecipeItemName() && this.IsValidRecipeModName())
+			{
+				//make sure it's not aleady an output
+				if (!this.IsAlreadyOutput(this.RecipeItemName, this.RecipeModName))
+				{
+					this.AddOutput(this.RecipeItemName, this.RecipeModName);
+				}
+			}
+
+
+		}
+
+
 
 		private void RefreshEnabled()
 		{
 			this.btnOk.Enabled = this.IsValidRecipeItemName() && this.IsValidRecipeModName();
 
+			this.btnRecipeToOutput.Enabled = this.IsValidRecipeItemName() && this.IsValidRecipeModName();
 
 		}
 		private bool IsValidRecipeItemName()
