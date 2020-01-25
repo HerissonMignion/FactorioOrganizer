@@ -121,7 +121,7 @@ namespace FactorioOrganizer
 			this.KeyDown += new KeyEventHandler(this.Form1_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form1_KeyUp);
 			this.TabContainer.DrawItem += new DrawItemEventHandler(this.TabContainer_DrawItem);
-
+			this.FormClosing += new FormClosingEventHandler(this.Form1_FormClosing);
 
 			
 			this.Map = new oMap();
@@ -153,6 +153,19 @@ namespace FactorioOrganizer
 		private void Form1_KeyUp(object sender, KeyEventArgs e)
 		{
 			this.Editer.KeyUp(e.KeyCode);
+		}
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if (e.CloseReason == CloseReason.UserClosing)
+			{
+				//we auto ask the user to save its work if it's not saved
+				bool canceled = this.AutoAskUserToSaveCurrent();
+				if (canceled)
+				{
+					//if the user canceled, we cancel
+					e.Cancel = true;
+				}
+			}
 		}
 
 		private void Editer_UserDidSomeChange(object sender, EventArgs e)
@@ -199,6 +212,21 @@ namespace FactorioOrganizer
 					{
 						oMap newm = new oMap(filepath);
 
+						//if some items where not found when opening the map (most likely example: mods needed but not loaded), this variable will be false.
+						if (!newm.EveryItemWhereLoadedCorrectly)
+						{
+							string msg = "Some items may not have been loaded properly.\nThe following mods were loaded when saving this file :";
+
+							//generate the text to show to the user
+							foreach (string modname in newm.listModNames)
+							{
+								msg += "\n-" + modname;
+							}
+							//show the message
+							MessageBox.Show(msg);
+						}
+
+
 
 						//if an error occurred when opening the map, when creating the oMap object with the filepath, the following part will not execute and the map editer will not be affected a null map object.
 
@@ -244,7 +272,7 @@ namespace FactorioOrganizer
 				{
 					//if the file is already defined, we just have to save
 					this.Editer.Map.Save(this.ActualFilePath);
-
+					this.EditsWereMade = false;
 				}
 				else
 				{
@@ -312,6 +340,8 @@ namespace FactorioOrganizer
 			bool canceled = this.AutoAskUserToSaveCurrent();
 			if (!canceled)
 			{
+				this.EditsWereMade = false; //whatever if the user decided to save or not, the event FormClosing will be raised and we must not ask the user to save a second time.
+
 				Program.ActualNextForm = Program.NextFormToShow.FormModEditerEmpty;
 				this.Close();
 				this.DestroyCraftsEvents();
@@ -373,6 +403,7 @@ namespace FactorioOrganizer
 			{
 				Crafts.UnloadEveryMods();
 				Program.ActualNextForm = Program.NextFormToShow.Form1;
+				this.EditsWereMade = false;
 				this.Close();
 				this.DestroyCraftsEvents();
 			}

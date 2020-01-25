@@ -276,6 +276,7 @@ namespace FactorioOrganizer
 										this.Mod.listCrafts.Insert(mouseindex + 1, newmc);
 										this.SelectIndex(mouseindex + 1);
 
+										this.Raise_UserDidSomeChange();
 									}
 									if (rep == optRemove)
 									{

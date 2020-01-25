@@ -200,7 +200,7 @@
 			// ButtonLoadModsInsideFolder
 			// 
 			this.ButtonLoadModsInsideFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.ButtonLoadModsInsideFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.ButtonLoadModsInsideFolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(0)))));
 			this.ButtonLoadModsInsideFolder.ForeColor = System.Drawing.Color.White;
 			this.ButtonLoadModsInsideFolder.Location = new System.Drawing.Point(696, 201);
 			this.ButtonLoadModsInsideFolder.Name = "ButtonLoadModsInsideFolder";

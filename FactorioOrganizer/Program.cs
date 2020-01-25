@@ -55,19 +55,26 @@ namespace FactorioOrganizer
 					 * 
 					 * -help1      show the help form of form1
 					 * -helpmods   show the help form of the mod editer
+					 * -h          "help" of the command line. at the time of this comment, it just show possible arguments.
 					 * 
 					 */
 					
 					if (args.Length >= 2)
 					{
 						//MessageBox.Show(args[1]);
+						string arg1 = args[1].Replace("-", string.Empty).Replace("/", string.Empty);
 
 						//we check here the second arg
-						if (args[1] == "-help1")
+						if (arg1 == "h")
+						{
+							Program.ActualNextForm = NextFormToShow.none;
+							MessageBox.Show("-h for this message\n-help1 for the help of the map editer\n-helpmods for the help of the mod editer");
+						}
+						if (arg1 == "help1")
 						{
 							Program.ActualNextForm = NextFormToShow.FormHelp1;
 						}
-						if (args[1] == "-helpmods")
+						if (arg1 == "helpmods")
 						{
 							Program.ActualNextForm = NextFormToShow.FormHelpMod;
 						}

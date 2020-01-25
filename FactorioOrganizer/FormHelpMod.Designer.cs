@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHelpMod));
 			this.MainPanel = new System.Windows.Forms.Panel();
 			this.MainTextBox = new System.Windows.Forms.TextBox();
 			this.MainPanel.SuspendLayout();
@@ -46,22 +47,19 @@
 			// 
 			// MainTextBox
 			// 
-			this.MainTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
 			this.MainTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MainTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.MainTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.MainTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MainTextBox.ForeColor = System.Drawing.Color.White;
-			this.MainTextBox.Location = new System.Drawing.Point(12, 12);
+			this.MainTextBox.Location = new System.Drawing.Point(0, 0);
 			this.MainTextBox.Multiline = true;
 			this.MainTextBox.Name = "MainTextBox";
 			this.MainTextBox.ReadOnly = true;
 			this.MainTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.MainTextBox.Size = new System.Drawing.Size(657, 557);
+			this.MainTextBox.Size = new System.Drawing.Size(681, 581);
 			this.MainTextBox.TabIndex = 0;
-			this.MainTextBox.Text = "--------[ How does Factorio Organizer\'s mods work ]--------\r\n\r\nFactorio Organizer" +
-    "\'s mods are just a bunch of items and crafts.";
+			this.MainTextBox.Text = resources.GetString("MainTextBox.Text");
 			// 
 			// FormHelpMod
 			// 
